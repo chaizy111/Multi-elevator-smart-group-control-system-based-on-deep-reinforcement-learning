@@ -1,0 +1,146 @@
+[
+  {
+    "model_id": "ppo-curriculum",
+    "sha256": "1a8600fdbecbd2933afed8f4d9fd8c8651f8b88858d9ceffb5f6feccb3cf68c1",
+    "checkpoint": "artifacts/models/ppo-curriculum/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 42,
+    "checkpoint_steps": 40960,
+    "budget": 60000,
+    "dispatch_only": false,
+    "attention": true
+  },
+  {
+    "model_id": "ppo-dispatch-only",
+    "sha256": "64271db1764043b07e83258c385cf19f37b88df5a9328c45226835a762b1db6b",
+    "checkpoint": "artifacts/models/ppo-dispatch-only/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 101,
+    "checkpoint_steps": 30720,
+    "budget": 60000,
+    "dispatch_only": true,
+    "attention": true
+  },
+  {
+    "model_id": "ppo-no-attention",
+    "sha256": "8f81e29df0fc5a8d53f3e2078733cd35c52d2c158fa933b7fd76c3ff463eac79",
+    "checkpoint": "artifacts/models/ppo-no-attention/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 101,
+    "checkpoint_steps": 30720,
+    "budget": 60000,
+    "dispatch_only": false,
+    "attention": false
+  },
+  {
+    "model_id": "ppo-no-fairness",
+    "sha256": "1c17b0acf45515188202bbffec70f483fa2417888570ade82593390b90e909bc",
+    "checkpoint": "artifacts/models/ppo-no-fairness/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 101,
+    "checkpoint_steps": 30720,
+    "budget": 60000,
+    "dispatch_only": false,
+    "attention": true
+  },
+  {
+    "model_id": "ppo-seed101",
+    "sha256": "e39120f87c4da21907bf7036b655ef26b0456d744faff6745846fc3e63d8b3a8",
+    "checkpoint": "artifacts/models/ppo-seed101/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 101,
+    "checkpoint_steps": 60000,
+    "budget": 60000,
+    "dispatch_only": false,
+    "attention": true
+  },
+  {
+    "model_id": "ppo-seed202",
+    "sha256": "58ed9772a7b71f928489ac9421cfe0f71122fb785f438d7db37e5e715b768ea0",
+    "checkpoint": "artifacts/models/ppo-seed202/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 202,
+    "checkpoint_steps": 40960,
+    "budget": 60000,
+    "dispatch_only": false,
+    "attention": true
+  },
+  {
+    "model_id": "ppo-seed303",
+    "sha256": "f5224d4ff9923d01f4a696e7a7c89f2890fe590c526a448e0ebb821db4309a34",
+    "checkpoint": "artifacts/models/ppo-seed303/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 303,
+    "checkpoint_steps": 30720,
+    "budget": 60000,
+    "dispatch_only": false,
+    "attention": true
+  },
+  {
+    "model_id": "ppo-smoke",
+    "sha256": "837296a75475810fc7cfbb9c0f9173f43bdd0c32343bd6dd2da8b0e2b6b32190",
+    "checkpoint": "artifacts/models/ppo-smoke/weights.pt",
+    "versions": {
+      "simulator": "event-v3-arrival-cooldown",
+      "observation": "public-24-8-9-20-v1",
+      "action": "dispatch8-reposition5-v1",
+      "reward": "integrated-v2-start-cutoff",
+      "route": "insertion-16-v1",
+      "architecture": "shared-attention-128-v1"
+    },
+    "seed": 42,
+    "checkpoint_steps": 10000,
+    "budget": 10000,
+    "dispatch_only": false,
+    "attention": true
+  }
+]

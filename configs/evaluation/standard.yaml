@@ -1,0 +1,658 @@
+controllers:
+- round_robin
+- eta
+- eta_zone
+- ppo:ppo-seed101
+- ppo:ppo-seed202
+- ppo:ppo-seed303
+scenarios:
+- name: 8F3E-normal-low
+  seeds: &id001
+  - 9001
+  - 9002
+  - 9003
+  - 9004
+  - 9005
+  - 9006
+  - 9007
+  - 9008
+  - 9009
+  - 9010
+  - 9011
+  - 9012
+  - 9013
+  - 9014
+  - 9015
+  - 9016
+  - 9017
+  - 9018
+  - 9019
+  - 9020
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 3
+- name: 8F3E-normal-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 9
+- name: 8F3E-normal-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 15
+- name: 8F3E-morning-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 3
+- name: 8F3E-morning-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 9
+- name: 8F3E-morning-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 15
+- name: 8F3E-evening-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 3
+- name: 8F3E-evening-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 9
+- name: 8F3E-evening-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 15
+- name: 8F3E-interfloor-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 3
+- name: 8F3E-interfloor-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 9
+- name: 8F3E-interfloor-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 15
+- name: 8F3E-burst-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 3
+- name: 8F3E-burst-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 9
+- name: 8F3E-burst-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 15
+- name: 12F4E-normal-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 4
+- name: 12F4E-normal-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 12
+- name: 12F4E-normal-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 20
+- name: 12F4E-morning-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 4
+- name: 12F4E-morning-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 12
+- name: 12F4E-morning-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 20
+- name: 12F4E-evening-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 4
+- name: 12F4E-evening-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 12
+- name: 12F4E-evening-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 20
+- name: 12F4E-interfloor-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 4
+- name: 12F4E-interfloor-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 12
+- name: 12F4E-interfloor-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 20
+- name: 12F4E-burst-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 4
+- name: 12F4E-burst-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 12
+- name: 12F4E-burst-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 20
+- name: 20F6E-normal-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 6
+- name: 20F6E-normal-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 18
+- name: 20F6E-normal-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 30
+- name: 20F6E-morning-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 6
+- name: 20F6E-morning-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 18
+- name: 20F6E-morning-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 30
+- name: 20F6E-evening-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 6
+- name: 20F6E-evening-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 18
+- name: 20F6E-evening-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 30
+- name: 20F6E-interfloor-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 6
+- name: 20F6E-interfloor-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 18
+- name: 20F6E-interfloor-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 30
+- name: 20F6E-burst-low
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 6
+- name: 20F6E-burst-medium
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 18
+- name: 20F6E-burst-high
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 30

@@ -1,0 +1,10 @@
+building:
+  floor_count: 12
+  elevator_count: 4
+  capacity: 12
+simulation:
+  arrival_horizon_s: 1800
+  max_drain_s: 1800
+traffic:
+  pattern: normal
+  arrival_rate_per_min: 12

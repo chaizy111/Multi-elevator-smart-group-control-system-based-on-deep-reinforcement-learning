@@ -1,0 +1,49 @@
+{
+  "scope": "in-process HTTP client with real spawn worker; 10ms status polling, 12F4E normal traffic at20x after actual arrivals",
+  "samples": [
+    {
+      "command": "pause",
+      "milliseconds": 41.821999999228865
+    },
+    {
+      "command": "resume",
+      "milliseconds": 19.233082999562612
+    },
+    {
+      "command": "pause",
+      "milliseconds": 34.355333000348764
+    },
+    {
+      "command": "resume",
+      "milliseconds": 21.63220799957344
+    },
+    {
+      "command": "pause",
+      "milliseconds": 19.64541699999245
+    },
+    {
+      "command": "resume",
+      "milliseconds": 38.601374999416294
+    },
+    {
+      "command": "pause",
+      "milliseconds": 21.012499999415013
+    },
+    {
+      "command": "resume",
+      "milliseconds": 22.094915999332443
+    },
+    {
+      "command": "pause",
+      "milliseconds": 36.09912499996426
+    },
+    {
+      "command": "resume",
+      "milliseconds": 22.035666999727255
+    }
+  ],
+  "p95_ms": 40.37271874931321,
+  "max_ms": 41.821999999228865,
+  "target_ms": 500,
+  "target_passed": true
+}

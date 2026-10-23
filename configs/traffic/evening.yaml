@@ -1,0 +1,4 @@
+pattern: evening
+arrival_rate_per_min: 12
+segments: []
+bursts: []

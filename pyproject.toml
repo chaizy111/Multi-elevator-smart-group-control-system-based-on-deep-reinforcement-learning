@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elevator-control"
+version = "0.1.0"
+description = "Deterministic elevator group simulation and event-driven PPO"
+requires-python = ">=3.11,<3.12"
+dependencies = ["numpy==2.4.6", "pandas==3.1.0", "pydantic==2.14.1", "PyYAML==6.0.3", "gymnasium==1.4.0", "torch==2.14.1", "fastapi==0.159.1", "uvicorn[standard]==0.54.0", "typer==0.27.3", "matplotlib==3.11.2"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "pytest-cov==7.1.0", "hypothesis==6.170.5", "httpx==0.28.1", "ruff==0.17.1", "pyright==1.1.414"]
+
+[project.scripts]
+elevator = "elevator_control.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "--basetemp=.cache/pytest"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["实施方案.md", "基于深度强化学习的多电梯智能群控系统（进阶版）.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pyright]
+include = ["src"]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+
+# Default uv sync includes the same development checks as the pip dev extra.
+[dependency-groups]
+dev = ["pytest==9.1.1", "pytest-cov==7.1.0", "hypothesis==6.170.5", "httpx==0.28.1", "ruff==0.17.1", "pyright==1.1.414"]

@@ -1,0 +1,55 @@
+controllers:
+- round_robin
+- eta
+- eta_zone
+- ppo:ppo-seed101
+- ppo:ppo-seed202
+- ppo:ppo-seed303
+scenarios:
+- name: 12F4E-mixed
+  seeds:
+  - 9001
+  - 9002
+  - 9003
+  - 9004
+  - 9005
+  - 9006
+  - 9007
+  - 9008
+  - 9009
+  - 9010
+  - 9011
+  - 9012
+  - 9013
+  - 9014
+  - 9015
+  - 9016
+  - 9017
+  - 9018
+  - 9019
+  - 9020
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 12
+      segments:
+      - start_s: 0
+        end_s: 40
+        pattern: morning
+        arrival_rate_per_min: 12
+      - start_s: 40
+        end_s: 80
+        pattern: normal
+        arrival_rate_per_min: 12
+      - start_s: 80
+        end_s: 120
+        pattern: evening
+        arrival_rate_per_min: 12

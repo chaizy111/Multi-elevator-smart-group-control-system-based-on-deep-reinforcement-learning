@@ -1,0 +1,337 @@
+{
+  "status": "PASSED",
+  "runs": [
+    {
+      "controller": "round_robin",
+      "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
+      "run_id": "run-fdd30a0b307b",
+      "metrics": {
+        "sample_count": 8,
+        "picked_count": 8,
+        "completed_count": 8,
+        "unpicked": 0,
+        "unfinished": 0,
+        "mean_wait_s": 6.4458481249999995,
+        "p95_wait_s": 8.8,
+        "max_wait_s": 8.8,
+        "mean_travel_s": 11.2,
+        "mean_system_time_s": 17.645848125,
+        "long_wait_ratio": 0.0,
+        "throughput_per_min": 2.0,
+        "completion_ratio": 1.0,
+        "conditional_wait": false,
+        "censored_mean_wait_lower_bound_s": 6.4458481249999995,
+        "long_wait_cohort_lower_bound": 0.0,
+        "long_wait_unknown_count": 0,
+        "eligible_for_ranking": true,
+        "floor_fairness": {
+          "1": {
+            "count": 1,
+            "mean_wait_s": 5.543827,
+            "p95_wait_s": 5.543827
+          },
+          "2": {
+            "count": 4,
+            "mean_wait_s": 5.905739499999999,
+            "p95_wait_s": 8.242918999999999
+          },
+          "3": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          },
+          "4": {
+            "count": 3,
+            "mean_wait_s": 7.466666666666668,
+            "p95_wait_s": 8.8
+          },
+          "5": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          }
+        },
+        "worst_floor_mean_wait_s": 7.466666666666668,
+        "distance_floors": 24.0,
+        "distance_m": 72.0,
+        "reposition_distance_floors": 0.0,
+        "empty_distance_floors": 9.999999999999998,
+        "loaded_distance_floors": 14.000000000000004,
+        "energy_proxy": 33.0,
+        "door_cycles": 16,
+        "starts": 16,
+        "drain_time_s": 18.322206,
+        "drain_timeout": false,
+        "costs": {
+          "wait": 51.566784999999996,
+          "ride": 89.60000000000002,
+          "energy": 33.0,
+          "fairness": 0.0
+        },
+        "utilization": {
+          "E1": {
+            "busy": 0.5089566023838572,
+            "service": 0.5089566023838572,
+            "reposition": 0.0,
+            "door": 0.2776126922093768
+          },
+          "E2": {
+            "busy": 0.393284647296617,
+            "service": 0.393284647296617,
+            "reposition": 0.0,
+            "door": 0.27761269220937673
+          }
+        }
+      }
+    },
+    {
+      "controller": "eta",
+      "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
+      "run_id": "run-99e05788f0b5",
+      "metrics": {
+        "sample_count": 8,
+        "picked_count": 8,
+        "completed_count": 8,
+        "unpicked": 0,
+        "unfinished": 0,
+        "mean_wait_s": 5.73772525,
+        "p95_wait_s": 8.134116599999999,
+        "max_wait_s": 8.8,
+        "mean_travel_s": 11.9,
+        "mean_system_time_s": 17.637725250000003,
+        "long_wait_ratio": 0.0,
+        "throughput_per_min": 2.5,
+        "completion_ratio": 1.0,
+        "conditional_wait": false,
+        "censored_mean_wait_lower_bound_s": 5.73772525,
+        "long_wait_cohort_lower_bound": 0.0,
+        "long_wait_unknown_count": 0,
+        "eligible_for_ranking": true,
+        "floor_fairness": {
+          "1": {
+            "count": 1,
+            "mean_wait_s": 6.343827,
+            "p95_wait_s": 6.343827
+          },
+          "2": {
+            "count": 4,
+            "mean_wait_s": 4.76512475,
+            "p95_wait_s": 4.8
+          },
+          "3": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          },
+          "4": {
+            "count": 3,
+            "mean_wait_s": 6.832492000000001,
+            "p95_wait_s": 8.6097476
+          },
+          "5": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          }
+        },
+        "worst_floor_mean_wait_s": 6.832492000000001,
+        "distance_floors": 20.0,
+        "distance_m": 60.0,
+        "reposition_distance_floors": 0.0,
+        "empty_distance_floors": 8.0,
+        "loaded_distance_floors": 12.000000000000002,
+        "energy_proxy": 28.099999999999998,
+        "door_cycles": 15,
+        "starts": 15,
+        "drain_time_s": 27.812026,
+        "drain_timeout": false,
+        "costs": {
+          "wait": 45.901801999999996,
+          "ride": 95.19999999999999,
+          "energy": 28.099999999999998,
+          "fairness": 0.0
+        },
+        "utilization": {
+          "E1": {
+            "busy": 0.42215780196396185,
+            "service": 0.42215780196396185,
+            "reposition": 0.0,
+            "door": 0.25978941659320737
+          },
+          "E2": {
+            "busy": 0.34097360927858467,
+            "service": 0.34097360927858467,
+            "reposition": 0.0,
+            "door": 0.23272801903141493
+          }
+        }
+      }
+    },
+    {
+      "controller": "eta_zone",
+      "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
+      "run_id": "run-329497cc4098",
+      "metrics": {
+        "sample_count": 8,
+        "picked_count": 8,
+        "completed_count": 8,
+        "unpicked": 0,
+        "unfinished": 0,
+        "mean_wait_s": 6.282075625,
+        "p95_wait_s": 8.64033945,
+        "max_wait_s": 8.8,
+        "mean_travel_s": 11.9,
+        "mean_system_time_s": 18.182075625,
+        "long_wait_ratio": 0.0,
+        "throughput_per_min": 2.5,
+        "completion_ratio": 1.0,
+        "conditional_wait": false,
+        "censored_mean_wait_lower_bound_s": 6.282075625,
+        "long_wait_cohort_lower_bound": 0.0,
+        "long_wait_unknown_count": 0,
+        "eligible_for_ranking": true,
+        "floor_fairness": {
+          "1": {
+            "count": 1,
+            "mean_wait_s": 8.343827,
+            "p95_wait_s": 8.343827
+          },
+          "2": {
+            "count": 4,
+            "mean_wait_s": 6.878194499999999,
+            "p95_wait_s": 7.18443715
+          },
+          "3": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          },
+          "4": {
+            "count": 3,
+            "mean_wait_s": 4.800000000000001,
+            "p95_wait_s": 8.2
+          },
+          "5": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          }
+        },
+        "worst_floor_mean_wait_s": 8.343827,
+        "distance_floors": 31.0,
+        "distance_m": 93.0,
+        "reposition_distance_floors": 10.999999999999998,
+        "empty_distance_floors": 18.999999999999996,
+        "loaded_distance_floors": 12.0,
+        "energy_proxy": 39.50000000000001,
+        "door_cycles": 15,
+        "starts": 19,
+        "drain_time_s": 29.812026,
+        "drain_timeout": false,
+        "costs": {
+          "wait": 50.25660500000001,
+          "ride": 95.19999999999997,
+          "energy": 39.50000000000001,
+          "fairness": 0.0
+        },
+        "utilization": {
+          "E1": {
+            "busy": 0.4832722841622874,
+            "service": 0.4165219686702587,
+            "reposition": 0.06675031549202866,
+            "door": 0.25632121148938997
+          },
+          "E2": {
+            "busy": 0.4165219686702588,
+            "service": 0.3364215900798244,
+            "reposition": 0.08010037859043438,
+            "door": 0.22962108529257858
+          }
+        }
+      }
+    },
+    {
+      "controller": "ppo",
+      "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
+      "run_id": "run-543e192f1932",
+      "metrics": {
+        "sample_count": 8,
+        "picked_count": 8,
+        "completed_count": 8,
+        "unpicked": 0,
+        "unfinished": 0,
+        "mean_wait_s": 7.316642249999999,
+        "p95_wait_s": 9.66135465,
+        "max_wait_s": 9.71018,
+        "mean_travel_s": 9.9,
+        "mean_system_time_s": 17.21664225,
+        "long_wait_ratio": 0.0,
+        "throughput_per_min": 2.0,
+        "completion_ratio": 1.0,
+        "conditional_wait": false,
+        "censored_mean_wait_lower_bound_s": 7.316642249999999,
+        "long_wait_cohort_lower_bound": 0.0,
+        "long_wait_unknown_count": 0,
+        "eligible_for_ranking": true,
+        "floor_fairness": {
+          "1": {
+            "count": 1,
+            "mean_wait_s": 6.8,
+            "p95_wait_s": 6.8
+          },
+          "2": {
+            "count": 4,
+            "mean_wait_s": 7.3332844999999995,
+            "p95_wait_s": 9.68925485
+          },
+          "3": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          },
+          "4": {
+            "count": 3,
+            "mean_wait_s": 7.466666666666668,
+            "p95_wait_s": 8.8
+          },
+          "5": {
+            "count": 0,
+            "mean_wait_s": null,
+            "p95_wait_s": null
+          }
+        },
+        "worst_floor_mean_wait_s": 7.466666666666668,
+        "distance_floors": 23.0,
+        "distance_m": 69.0,
+        "reposition_distance_floors": 0.0,
+        "empty_distance_floors": 10.999999999999998,
+        "loaded_distance_floors": 12.000000000000002,
+        "energy_proxy": 30.799999999999997,
+        "door_cycles": 14,
+        "starts": 14,
+        "drain_time_s": 19.922206,
+        "drain_timeout": false,
+        "costs": {
+          "wait": 58.533138,
+          "ride": 79.20000000000003,
+          "energy": 30.799999999999997,
+          "fairness": 0.0
+        },
+        "utilization": {
+          "E1": {
+            "busy": 0.5145716470479318,
+            "service": 0.5145716470479318,
+            "reposition": 0.0,
+            "door": 0.28587313724885105
+          },
+          "E2": {
+            "busy": 0.30588425685627063,
+            "service": 0.30588425685627063,
+            "reposition": 0.0,
+            "door": 0.20582865881917273
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+schema_version: 1
+seed: 42
+building:
+  floor_count: 30
+  elevator_count: 8
+  capacity: 20
+simulation:
+  arrival_horizon_s: 300
+  max_drain_s: 1800
+traffic:
+  pattern: normal
+  arrival_rate_per_min: 24

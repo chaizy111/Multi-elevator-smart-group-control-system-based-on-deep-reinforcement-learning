@@ -1,0 +1,20 @@
+num_envs: 4
+rollout_steps: 128
+minibatch: 256
+epochs: 4
+validation_interval: 20
+seed: 42
+total_decisions: 20000
+stage: T1
+dispatch_only: true
+simulation:
+  building:
+    floor_count: 8
+    elevator_count: 3
+    capacity: 12
+  simulation:
+    arrival_horizon_s: 120
+    max_drain_s: 1200
+  traffic:
+    pattern: normal
+    arrival_rate_per_min: 6

@@ -1,0 +1,13 @@
+
+> elevator-control-web@0.1.0 build
+> tsc -b && vite build
+
+vite v7.1.12 building for production...
+transforming...
+✓ 621 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.36 kB │ gzip:   0.29 kB
+dist/assets/index-Duc7hk8t.css     13.33 kB │ gzip:   3.68 kB
+dist/assets/index-Da6F9WU-.js   1,362.60 kB │ gzip: 450.02 kB
+✓ built in 1.46s

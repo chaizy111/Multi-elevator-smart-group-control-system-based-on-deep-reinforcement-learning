@@ -1,0 +1,54 @@
+training_seed_range:
+- 100000
+- 999999
+validation_seeds:
+- 2000000
+- 2000001
+- 2000002
+test_seeds:
+- 9001
+- 9002
+- 9003
+- 9004
+- 9005
+- 9006
+- 9007
+- 9008
+- 9009
+- 9010
+- 9011
+- 9012
+- 9013
+- 9014
+- 9015
+- 9016
+- 9017
+- 9018
+- 9019
+- 9020
+pressure_seeds:
+- 9101
+- 9102
+- 9103
+- 9104
+- 9105
+excluded_training_buildings:
+- - 12
+  - 3
+- - 18
+  - 5
+extrapolation_buildings:
+- - 24
+  - 7
+- - 30
+  - 8
+training_domain:
+  floors:
+  - 5
+  - 20
+  elevators:
+  - 2
+  - 6
+arrival_horizon_s: 120
+reason: fixed short episodes for complete CPU matrix; conclusions limited to this
+  exposure

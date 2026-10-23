@@ -1,0 +1,260 @@
+{
+  "config": {
+    "configFile": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/frontend/playwright.config.ts",
+    "rootDir": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/frontend/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../reports/playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/frontend/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": {
+      "command": "\"/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python\" -m elevator_control.cli serve --host 127.0.0.1 --port 8765",
+      "cwd": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning",
+      "url": "http://127.0.0.1:8765/api/v1/health",
+      "reuseExistingServer": false,
+      "env": {
+        "PYTHONPATH": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/src",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "MPLCONFIGDIR": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache/matplotlib",
+        "XDG_CACHE_HOME": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache",
+        "TMPDIR": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache/tmp"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "application.spec.ts",
+      "file": "application.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "5F2E ETA: configure, pause, resume, export, reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2757,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T03:42:55.134Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac4d568caf1644a25ff7-1c6d02636bc3e10d3c47",
+          "file": "application.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "12F4E round_robin: actual run and trained model",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1175,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T03:42:58.860Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac4d568caf1644a25ff7-d39c29c245787acbdfb9",
+          "file": "application.spec.ts",
+          "line": 93,
+          "column": 3
+        },
+        {
+          "title": "30F8E ppo: actual run and trained model",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3214,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T03:43:00.039Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac4d568caf1644a25ff7-f3f2bd4d75a2782b4abe",
+          "file": "application.spec.ts",
+          "line": 93,
+          "column": 3
+        },
+        {
+          "title": "same-trace experiment, confidence intervals, real training curves",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T03:43:03.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac4d568caf1644a25ff7-b2be3c67d2acb4921679",
+          "file": "application.spec.ts",
+          "line": 139,
+          "column": 1
+        },
+        {
+          "title": "narrow viewport preserves configuration and simulation controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1232,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T03:43:07.890Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac4d568caf1644a25ff7-104a80052df3d7477b65",
+          "file": "application.spec.ts",
+          "line": 209,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-23T03:42:53.012Z",
+    "duration": 16154.161,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

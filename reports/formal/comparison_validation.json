@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "source_runs": 5400,
+  "source_scenarios": 45,
+  "traces": 900,
+  "policies_per_trace": 6,
+  "model_seeds": [
+    101,
+    202,
+    303
+  ],
+  "aggregation": "equal trace then equal independent model seed; all standard loads and medium-only separately",
+  "target_crosscheck": "PASSED",
+  "related_statistics_tests": 7,
+  "ruff": "PASSED",
+  "pyright": "PASSED",
+  "documentation_links": "PASSED",
+  "manual_experiments_and_models_match_live_api": true,
+  "training_checkpoints_unchanged": true
+}

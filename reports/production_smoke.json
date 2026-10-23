@@ -1,0 +1,250 @@
+{
+  "status": "PASSED",
+  "url": "http://127.0.0.1:8000",
+  "run_id": "run-f30cd5bfbe0c4f7a",
+  "building": "30F8E",
+  "model": "ppo-curriculum",
+  "registered_models": 8,
+  "job_status": "COMPLETED",
+  "final": {
+    "sample_count": 4,
+    "picked_count": 4,
+    "completed_count": 4,
+    "unpicked": 0,
+    "unfinished": 0,
+    "mean_wait_s": 33.8,
+    "p95_wait_s": 49.3,
+    "max_wait_s": 50.8,
+    "mean_travel_s": 23.799999999999997,
+    "mean_system_time_s": 57.599999999999994,
+    "long_wait_ratio": 0.0,
+    "throughput_per_min": 0.0,
+    "completion_ratio": 1.0,
+    "conditional_wait": false,
+    "censored_mean_wait_lower_bound_s": 33.8,
+    "long_wait_cohort_lower_bound": 0.0,
+    "long_wait_unknown_count": 0,
+    "eligible_for_ranking": true,
+    "floor_fairness": {
+      "1": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "2": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "3": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "4": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "5": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "6": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "7": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "8": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "9": {
+        "count": 1,
+        "mean_wait_s": 18.8,
+        "p95_wait_s": 18.8
+      },
+      "10": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "11": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "12": {
+        "count": 1,
+        "mean_wait_s": 24.8,
+        "p95_wait_s": 24.8
+      },
+      "13": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "14": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "15": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "16": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "17": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "18": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "19": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "20": {
+        "count": 1,
+        "mean_wait_s": 40.8,
+        "p95_wait_s": 40.8
+      },
+      "21": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "22": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "23": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "24": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "25": {
+        "count": 1,
+        "mean_wait_s": 50.8,
+        "p95_wait_s": 50.8
+      },
+      "26": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "27": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "28": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "29": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "30": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      }
+    },
+    "worst_floor_mean_wait_s": 50.8,
+    "distance_floors": 100.0,
+    "distance_m": 300.0,
+    "reposition_distance_floors": 0.0,
+    "empty_distance_floors": 62.0,
+    "loaded_distance_floors": 38.00000000000001,
+    "energy_proxy": 113.79999999999991,
+    "door_cycles": 8,
+    "starts": 8,
+    "drain_time_s": 67.47952,
+    "drain_timeout": false,
+    "costs": {
+      "wait": 135.20000000000005,
+      "ride": 95.20000000000006,
+      "energy": 113.79999999999991,
+      "fairness": 0.0
+    },
+    "utilization": {
+      "E1": {
+        "busy": 0.7755475201355119,
+        "service": 0.7755475201355119,
+        "reposition": 0.0,
+        "door": 0.09848222477911257
+      },
+      "E2": {
+        "busy": 0.4677905677007845,
+        "service": 0.4677905677007845,
+        "reposition": 0.0,
+        "door": 0.09848222477911256
+      },
+      "E3": {
+        "busy": 0.8165817804601417,
+        "service": 0.8165817804601417,
+        "reposition": 0.0,
+        "door": 0.0984822247791126
+      },
+      "E4": {
+        "busy": 0.385722047051524,
+        "service": 0.385722047051524,
+        "reposition": 0.0,
+        "door": 0.0984822247791126
+      },
+      "E5": {
+        "busy": 0.0,
+        "service": 0.0,
+        "reposition": 0.0,
+        "door": 0.0
+      },
+      "E6": {
+        "busy": 0.0,
+        "service": 0.0,
+        "reposition": 0.0,
+        "door": 0.0
+      },
+      "E7": {
+        "busy": 0.0,
+        "service": 0.0,
+        "reposition": 0.0,
+        "door": 0.0
+      },
+      "E8": {
+        "busy": 0.0,
+        "service": 0.0,
+        "reposition": 0.0,
+        "door": 0.0
+      }
+    }
+  },
+  "archived_trend_points": 226,
+  "artifact_download_matches": true
+}

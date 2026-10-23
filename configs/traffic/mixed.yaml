@@ -1,0 +1,16 @@
+pattern: normal
+arrival_rate_per_min: 12
+segments:
+- start_s: 0
+  end_s: 600
+  pattern: morning
+  arrival_rate_per_min: 12
+- start_s: 600
+  end_s: 1200
+  pattern: normal
+  arrival_rate_per_min: 12
+- start_s: 1200
+  end_s: 1800
+  pattern: evening
+  arrival_rate_per_min: 12
+bursts: []

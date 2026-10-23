@@ -1,0 +1,48 @@
+name: deterministic-simulation-and-real-ppo
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - name: Install frozen dependencies in project
+        run: bash scripts/bootstrap.sh
+      - name: Install real browser
+        run: |
+          source scripts/project_env.sh
+          node frontend/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Train bounded CPU curriculum for real E2E fixtures
+        run: |
+          source scripts/project_env.sh
+          uv run elevator train --config configs/training/smoke.yaml --output artifacts/training/smoke
+          uv run python scripts/run_curriculum.py
+      - name: Check physics, learning, API, types, builds and browser
+        run: |
+          source scripts/project_env.sh
+          uv run python scripts/run_quality.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-evidence
+          path: |
+            reports/quality/
+            reports/playwright.json
+            reports/acceptance_smoke.json
+            reports/browser-*.png
+            frontend/test-results/
+          if-no-files-found: warn

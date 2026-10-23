@@ -1,0 +1,12 @@
+{
+  "building": "12F4E",
+  "horizon_s": 1800,
+  "controller": "eta",
+  "passengers": 351,
+  "completion_ratio": 1.0,
+  "wall_seconds": 1.1578112080005667,
+  "run_id": "run-5803c4926fc4",
+  "includes": "trace generation + full physical audit + all CSV/JSON archive",
+  "target_seconds": 30,
+  "target_passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu": "arm",
+  "python": "3.11.17",
+  "logical_cpu_count": 10,
+  "memory_bytes": 25769803776,
+  "inference": {
+    "model_id": "ppo-curriculum",
+    "model_hash": "1a8600fdbecbd2933afed8f4d9fd8c8651f8b88858d9ceffb5f6feccb3cf68c1",
+    "torch": "2.14.1",
+    "device": "cpu",
+    "threads": 1,
+    "p50_ms": 0.2976039995701285,
+    "p95_ms": 0.34088510110450443,
+    "scope": "batch1 network only; excludes route and observation"
+  },
+  "platform_system": "Darwin"
+}

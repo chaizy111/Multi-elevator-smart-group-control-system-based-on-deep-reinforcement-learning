@@ -1,0 +1,62 @@
+[
+  {
+    "stage": "smoke",
+    "status": "COMPLETED",
+    "steps": 10000,
+    "episodes": 674,
+    "elapsed_s": 15.335749833000591,
+    "dispatch_samples": 5351,
+    "reposition_samples": 4649,
+    "truncation_rate": 0.0,
+    "best_validation_cost": 0.6431938783333335,
+    "last_validation_cost": 0.6431938783333335,
+    "dispatch_gradient": 30.708111732790712,
+    "reposition_gradient": 137.01951833302155,
+    "best_step": 10000
+  },
+  {
+    "stage": "t1",
+    "status": "COMPLETED",
+    "steps": 20000,
+    "episodes": 926,
+    "elapsed_s": 23.534231916999488,
+    "dispatch_samples": 11167,
+    "reposition_samples": 8833,
+    "truncation_rate": 0.0,
+    "best_validation_cost": 1.0725053249999994,
+    "last_validation_cost": 1.1016014100000007,
+    "dispatch_gradient": 25.78365503808891,
+    "reposition_gradient": 0.0,
+    "best_step": 10240
+  },
+  {
+    "stage": "t2",
+    "status": "COMPLETED",
+    "steps": 40000,
+    "episodes": 1988,
+    "elapsed_s": 50.62979375000032,
+    "dispatch_samples": 23420,
+    "reposition_samples": 16580,
+    "truncation_rate": 0.0,
+    "best_validation_cost": 0.9655563722222219,
+    "last_validation_cost": 0.9819011105555556,
+    "dispatch_gradient": 49.51885255108937,
+    "reposition_gradient": 134.75638300408173,
+    "best_step": 20480
+  },
+  {
+    "stage": "t3",
+    "status": "COMPLETED",
+    "steps": 60000,
+    "episodes": 1541,
+    "elapsed_s": 124.45524470800046,
+    "dispatch_samples": 46961,
+    "reposition_samples": 13039,
+    "truncation_rate": 0.0,
+    "best_validation_cost": 1.8119614140961346,
+    "last_validation_cost": 2.102837793200026,
+    "dispatch_gradient": 78.6137434951961,
+    "reposition_gradient": 148.97437850310234,
+    "best_step": 40960
+  }
+]

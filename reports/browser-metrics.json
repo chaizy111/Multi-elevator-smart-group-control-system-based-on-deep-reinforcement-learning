@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "metrics_version": "cohort-v2-all-floors",
+  "termination_reason": "completed",
+  "at_horizon": {
+    "sample_count": 4,
+    "picked_count": 2,
+    "completed_count": 0,
+    "unpicked": 2,
+    "unfinished": 4,
+    "mean_wait_s": 6.800000000000001,
+    "p95_wait_s": 8.6,
+    "max_wait_s": 8.8,
+    "mean_travel_s": null,
+    "mean_system_time_s": null,
+    "long_wait_ratio": 0.0,
+    "throughput_per_min": 0.0,
+    "completion_ratio": 0.0,
+    "conditional_wait": true,
+    "censored_mean_wait_lower_bound_s": 4.33685,
+    "long_wait_cohort_lower_bound": 0.0,
+    "long_wait_unknown_count": 2,
+    "eligible_for_ranking": false,
+    "floor_fairness": {
+      "1": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "2": {
+        "count": 1,
+        "mean_wait_s": 4.8,
+        "p95_wait_s": 4.8
+      },
+      "3": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "4": {
+        "count": 1,
+        "mean_wait_s": 8.8,
+        "p95_wait_s": 8.8
+      },
+      "5": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      }
+    },
+    "worst_floor_mean_wait_s": 8.8,
+    "distance_floors": 6.9434525,
+    "energy_proxy": 8.526488250000002
+  },
+  "final": {
+    "sample_count": 4,
+    "picked_count": 4,
+    "completed_count": 4,
+    "unpicked": 0,
+    "unfinished": 0,
+    "mean_wait_s": 6.5723145,
+    "p95_wait_s": 8.53503625,
+    "max_wait_s": 8.8,
+    "mean_travel_s": 13.599999999999998,
+    "mean_system_time_s": 20.1723145,
+    "long_wait_ratio": 0.0,
+    "throughput_per_min": 0.0,
+    "completion_ratio": 1.0,
+    "conditional_wait": false,
+    "censored_mean_wait_lower_bound_s": 6.5723145,
+    "long_wait_cohort_lower_bound": 0.0,
+    "long_wait_unknown_count": 0,
+    "eligible_for_ranking": true,
+    "floor_fairness": {
+      "1": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "2": {
+        "count": 2,
+        "mean_wait_s": 5.2278415,
+        "p95_wait_s": 5.61289885
+      },
+      "3": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "4": {
+        "count": 2,
+        "mean_wait_s": 7.9167875,
+        "p95_wait_s": 8.71167875
+      },
+      "5": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      }
+    },
+    "worst_floor_mean_wait_s": 7.9167875,
+    "distance_floors": 12.0,
+    "distance_m": 36.0,
+    "reposition_distance_floors": 0.0,
+    "empty_distance_floors": 4.0,
+    "loaded_distance_floors": 8.0,
+    "energy_proxy": 16.399999999999995,
+    "door_cycles": 7,
+    "starts": 6,
+    "drain_time_s": 22.513095,
+    "drain_timeout": false,
+    "costs": {
+      "wait": 26.289258,
+      "ride": 54.39999999999999,
+      "energy": 16.399999999999995,
+      "fairness": 0.0
+    },
+    "utilization": {
+      "E1": {
+        "busy": 0.9220688354964514,
+        "service": 0.9220688354964514,
+        "reposition": 0.0,
+        "door": 0.4516255520798944
+      },
+      "E2": {
+        "busy": 0.4516255520798944,
+        "service": 0.4516255520798944,
+        "reposition": 0.0,
+        "door": 0.35753689539658307
+      }
+    }
+  }
+}

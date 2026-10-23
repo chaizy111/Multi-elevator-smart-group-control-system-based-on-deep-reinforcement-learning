@@ -1,0 +1,51 @@
+num_envs: 4
+rollout_steps: 128
+minibatch: 256
+epochs: 4
+validation_interval: 20
+seed: 42
+total_decisions: 60000
+stage: T3
+domain_randomization: true
+simulation:
+  building:
+    floor_count: 8
+    elevator_count: 3
+    capacity: 12
+  simulation:
+    arrival_horizon_s: 120
+    max_drain_s: 1200
+  traffic:
+    pattern: normal
+    arrival_rate_per_min: 6
+scenarios:
+- building:
+    floor_count: 8
+    elevator_count: 3
+    capacity: 12
+  simulation:
+    arrival_horizon_s: 120
+    max_drain_s: 1200
+  traffic:
+    pattern: normal
+    arrival_rate_per_min: 6
+- building:
+    floor_count: 12
+    elevator_count: 4
+    capacity: 12
+  simulation:
+    arrival_horizon_s: 120
+    max_drain_s: 1200
+  traffic:
+    pattern: morning
+    arrival_rate_per_min: 8
+- building:
+    floor_count: 20
+    elevator_count: 6
+    capacity: 12
+  simulation:
+    arrival_horizon_s: 120
+    max_drain_s: 1200
+  traffic:
+    pattern: evening
+    arrival_rate_per_min: 12

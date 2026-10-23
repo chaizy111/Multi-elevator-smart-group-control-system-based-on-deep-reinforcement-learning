@@ -1,0 +1,238 @@
+controllers:
+- eta
+- ppo:ppo-seed101
+- ppo_stay:ppo-seed101
+- ppo:ppo-dispatch-only
+- ppo:ppo-no-attention
+- ppo:ppo-no-fairness
+scenarios:
+- name: 8F3E-normal-ablation
+  seeds: &id001
+  - 9001
+  - 9002
+  - 9003
+  - 9004
+  - 9005
+  - 9006
+  - 9007
+  - 9008
+  - 9009
+  - 9010
+  - 9011
+  - 9012
+  - 9013
+  - 9014
+  - 9015
+  - 9016
+  - 9017
+  - 9018
+  - 9019
+  - 9020
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 9
+- name: 8F3E-morning-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 9
+- name: 8F3E-evening-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 9
+- name: 8F3E-interfloor-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 9
+- name: 8F3E-burst-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 9
+- name: 12F4E-normal-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 12
+- name: 12F4E-morning-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 12
+- name: 12F4E-evening-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 12
+- name: 12F4E-interfloor-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 12
+- name: 12F4E-burst-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 12
+      elevator_count: 4
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 12
+- name: 20F6E-normal-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 18
+- name: 20F6E-morning-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: morning
+      arrival_rate_per_min: 18
+- name: 20F6E-evening-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: evening
+      arrival_rate_per_min: 18
+- name: 20F6E-interfloor-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: interfloor
+      arrival_rate_per_min: 18
+- name: 20F6E-burst-ablation
+  seeds: *id001
+  config:
+    building:
+      floor_count: 20
+      elevator_count: 6
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 7200
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 18

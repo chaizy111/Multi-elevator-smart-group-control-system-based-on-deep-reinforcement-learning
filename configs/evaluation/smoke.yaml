@@ -1,0 +1,35 @@
+controllers:
+- round_robin
+- eta
+- eta_zone
+scenarios:
+- name: small-normal
+  seeds:
+  - 9001
+  - 9002
+  config:
+    building:
+      floor_count: 5
+      elevator_count: 2
+      capacity: 6
+    simulation:
+      arrival_horizon_s: 60
+      max_drain_s: 600
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 4
+- name: medium-burst
+  seeds:
+  - 9001
+  - 9002
+  config:
+    building:
+      floor_count: 8
+      elevator_count: 3
+      capacity: 6
+    simulation:
+      arrival_horizon_s: 60
+      max_drain_s: 600
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 6

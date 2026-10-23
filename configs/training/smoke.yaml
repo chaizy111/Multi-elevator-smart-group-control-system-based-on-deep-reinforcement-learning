@@ -1,0 +1,19 @@
+seed: 42
+total_decisions: 10000
+num_envs: 1
+rollout_steps: 256
+minibatch: 128
+epochs: 4
+validation_interval: 20
+stage: T0
+simulation:
+  building:
+    floor_count: 5
+    elevator_count: 2
+    capacity: 6
+  simulation:
+    arrival_horizon_s: 120
+    max_drain_s: 600
+  traffic:
+    pattern: normal
+    arrival_rate_per_min: 4

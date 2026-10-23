@@ -1,0 +1,50 @@
+controllers:
+- round_robin
+- eta
+- ppo:ppo-seed101
+- ppo:ppo-seed202
+- ppo:ppo-seed303
+scenarios:
+- name: 30F8E-normal-stress
+  seeds:
+  - 9101
+  - 9102
+  - 9103
+  - 9104
+  - 9105
+  config:
+    building:
+      floor_count: 30
+      elevator_count: 8
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 1800
+      snapshot_interval_s: 5
+    traffic:
+      pattern: normal
+      arrival_rate_per_min: 120
+- name: 30F8E-burst-stress
+  seeds:
+  - 9101
+  - 9102
+  - 9103
+  - 9104
+  - 9105
+  config:
+    building:
+      floor_count: 30
+      elevator_count: 8
+      capacity: 12
+    simulation:
+      arrival_horizon_s: 120
+      max_drain_s: 1800
+      snapshot_interval_s: 5
+    traffic:
+      pattern: burst
+      arrival_rate_per_min: 120
+      bursts:
+      - time_s: 30
+        window_s: 0
+        count: 100
+        origin: 30
