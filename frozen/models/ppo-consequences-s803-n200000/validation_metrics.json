@@ -1,0 +1,2306 @@
+{
+  "complete": true,
+  "feasible": false,
+  "constraint_violation": 0.03917464473327703,
+  "cost": 2.58143867781496,
+  "mean_wait": 13.329796227152157,
+  "p95": 34.506505717777756,
+  "distance": 160.52592592592592,
+  "results": [
+    {
+      "seed": 61000000,
+      "trace_hash": "a35a1ee8b5c13046d7435db25855dcd254bf78fe06c467756c67c6f0e772cbed",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 3.0,
+      "cost": 0.400174625,
+      "eligible_for_ranking": true,
+      "sample_count": 5,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.292955000000001,
+      "p95_wait_s": 12.6390226,
+      "distance_floors": 50.0
+    },
+    {
+      "seed": 61000001,
+      "trace_hash": "9df06eaab5298bb9dfd11f9b8355bf651dcda7d0367bf78d079ebf1a8c36798a",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 3.0,
+      "cost": 0.5029966366666665,
+      "eligible_for_ranking": true,
+      "sample_count": 5,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.5355964,
+      "p95_wait_s": 16.5741896,
+      "distance_floors": 62.999999999999986
+    },
+    {
+      "seed": 61000002,
+      "trace_hash": "5205631a1bb3981636d1b7181597f1ddbd2f3188d4c97fc8362cc5e5386e47c0",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 3.0,
+      "cost": 0.570346566666667,
+      "eligible_for_ranking": true,
+      "sample_count": 11,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.87163090909091,
+      "p95_wait_s": 9.822477,
+      "distance_floors": 63.99999999999999
+    },
+    {
+      "seed": 61000100,
+      "trace_hash": "b233794c3ad3920cf8ad91fa5dfced1fb3976e27166c56c71dae1c720f2ebb2e",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 9.0,
+      "cost": 0.9522145516666658,
+      "eligible_for_ranking": true,
+      "sample_count": 16,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.1080456875,
+      "p95_wait_s": 12.5292665,
+      "distance_floors": 101.99999999999994
+    },
+    {
+      "seed": 61000101,
+      "trace_hash": "c897437578480a0cd3a489857a771a107cea8228fd78b98433768854c2f351bb",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 9.0,
+      "cost": 0.7857620199999997,
+      "eligible_for_ranking": true,
+      "sample_count": 18,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.14984511111111,
+      "p95_wait_s": 13.833620799999997,
+      "distance_floors": 73.99999999999997
+    },
+    {
+      "seed": 61000102,
+      "trace_hash": "64f5dc5ef98852e50f72f7abad555b1762fda661d7468962e6745c1267bbefd8",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 9.0,
+      "cost": 1.2245593333333327,
+      "eligible_for_ranking": true,
+      "sample_count": 25,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.395024,
+      "p95_wait_s": 16.67982679999999,
+      "distance_floors": 95.99999999999997
+    },
+    {
+      "seed": 61000200,
+      "trace_hash": "4ef6a4b6797c2f3f259ae9d6839bb6b226b1918ae021f6eeef647d2ac928fb31",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 15.0,
+      "cost": 1.5925090933333341,
+      "eligible_for_ranking": true,
+      "sample_count": 27,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.544646518518517,
+      "p95_wait_s": 29.730586399999993,
+      "distance_floors": 111.0
+    },
+    {
+      "seed": 61000201,
+      "trace_hash": "1851d4d5a0b0938132d3dfa8aa8a714295cf494b33388b2513fb76aaa212ba16",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 15.0,
+      "cost": 2.251376986666667,
+      "eligible_for_ranking": true,
+      "sample_count": 39,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.041184410256411,
+      "p95_wait_s": 50.0047633,
+      "distance_floors": 105.00000000000003
+    },
+    {
+      "seed": 61000202,
+      "trace_hash": "3c08aee5d68ad65458342ac0e3d09c2223f729d7dfb14472933c1c5fef341501",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "normal",
+      "rate": 15.0,
+      "cost": 1.745492938333333,
+      "eligible_for_ranking": true,
+      "sample_count": 31,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.109540741935483,
+      "p95_wait_s": 29.0193485,
+      "distance_floors": 106.99999999999991
+    },
+    {
+      "seed": 61000300,
+      "trace_hash": "4931221c92ab5f67de26f379587091b8685f0bdd706dc304304a0cfbf9b7dc47",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 3.0,
+      "cost": 0.2852959033333334,
+      "eligible_for_ranking": true,
+      "sample_count": 5,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 4.0155084,
+      "p95_wait_s": 6.4620336,
+      "distance_floors": 39.0
+    },
+    {
+      "seed": 61000301,
+      "trace_hash": "4b7fbb7bdfaf05d32293dfe42ca8b139e88c563ab3bd1671fb155662c08243ba",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 3.0,
+      "cost": 0.640140945,
+      "eligible_for_ranking": true,
+      "sample_count": 10,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.958456699999999,
+      "p95_wait_s": 10.6711254,
+      "distance_floors": 69.0
+    },
+    {
+      "seed": 61000302,
+      "trace_hash": "4a61c90b4bb6e9ea7050a78310fb68c61696e25886eba274ed621f0ddfa3db8d",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 3.0,
+      "cost": 0.24344326333333344,
+      "eligible_for_ranking": true,
+      "sample_count": 3,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.021986000000001,
+      "p95_wait_s": 8.6,
+      "distance_floors": 34.0
+    },
+    {
+      "seed": 61000400,
+      "trace_hash": "6c241bedcbcd01634bb393dde2e34a8f771eff2997f509d29871d138c89e00cf",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 9.0,
+      "cost": 0.9400519633333337,
+      "eligible_for_ranking": true,
+      "sample_count": 23,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.832659913043478,
+      "p95_wait_s": 12.586711599999996,
+      "distance_floors": 72.0
+    },
+    {
+      "seed": 61000401,
+      "trace_hash": "ee23d8323043fe1383ba62c524815ce4c28f4dfde75717a2743401a81ec8d64e",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 9.0,
+      "cost": 1.1617713783333339,
+      "eligible_for_ranking": true,
+      "sample_count": 19,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.838043526315788,
+      "p95_wait_s": 16.1506384,
+      "distance_floors": 97.00000000000003
+    },
+    {
+      "seed": 61000402,
+      "trace_hash": "7057d46247f9564ceaa349fd03d94edeee19f883dfd0b64a5c523ec5196b4e77",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 9.0,
+      "cost": 0.8418384983333335,
+      "eligible_for_ranking": true,
+      "sample_count": 19,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.109636789473685,
+      "p95_wait_s": 15.065329999999998,
+      "distance_floors": 66.99999999999999
+    },
+    {
+      "seed": 61000500,
+      "trace_hash": "d0d0978cfd6267bad02e8580705f0065aeffc2234dbdec06cc435ea95f517d0c",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 15.0,
+      "cost": 1.7572201333333328,
+      "eligible_for_ranking": true,
+      "sample_count": 38,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.81137052631579,
+      "p95_wait_s": 14.220026999999996,
+      "distance_floors": 97.99999999999997
+    },
+    {
+      "seed": 61000501,
+      "trace_hash": "6bb0c385e6b81d0c6fb83a32bf9e3906bd287331370a48004e02e56da8dbfee1",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 15.0,
+      "cost": 1.9210228300426895,
+      "eligible_for_ranking": true,
+      "sample_count": 35,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.142720571428573,
+      "p95_wait_s": 21.170664199999997,
+      "distance_floors": 98.99999999999994
+    },
+    {
+      "seed": 61000502,
+      "trace_hash": "6951fd38eb2bbf96544f60358d1fce40e92bd44e78dbb963467f402fa878af27",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "morning",
+      "rate": 15.0,
+      "cost": 1.0792187699999998,
+      "eligible_for_ranking": true,
+      "sample_count": 24,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.04046925,
+      "p95_wait_s": 12.28522505,
+      "distance_floors": 74.99999999999999
+    },
+    {
+      "seed": 61000600,
+      "trace_hash": "fae5306655afab52acc5f1c69a5396507c4cca9abc59dcd35879ab115f2e305d",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 3.0,
+      "cost": 0.5042750599999999,
+      "eligible_for_ranking": true,
+      "sample_count": 6,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.447505999999999,
+      "p95_wait_s": 20.657048,
+      "distance_floors": 54.0
+    },
+    {
+      "seed": 61000601,
+      "trace_hash": "65cb7be6f32daf6a379c420f15784281bb1231b3f58e3573eec9c4ed20071b76",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 3.0,
+      "cost": 0.556497381666667,
+      "eligible_for_ranking": true,
+      "sample_count": 6,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.3730715,
+      "p95_wait_s": 15.3,
+      "distance_floors": 71.99999999999994
+    },
+    {
+      "seed": 61000602,
+      "trace_hash": "3e92af2e47d1d015d028fa34bc6f39643619d80d875bcb4a7ad36a65019cb47a",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 3.0,
+      "cost": 0.2585450116666668,
+      "eligible_for_ranking": true,
+      "sample_count": 4,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 5.92175175,
+      "p95_wait_s": 9.899999999999999,
+      "distance_floors": 36.0
+    },
+    {
+      "seed": 61000700,
+      "trace_hash": "e6755ccbb6f402e384a9397046c6bfea4a372d4798030028bd2399afb52e0798",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 9.0,
+      "cost": 0.7055298916666668,
+      "eligible_for_ranking": true,
+      "sample_count": 13,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.79676423076923,
+      "p95_wait_s": 21.60818699999998,
+      "distance_floors": 68.00000000000001
+    },
+    {
+      "seed": 61000701,
+      "trace_hash": "0593b64d60c90510584a28d424a74ea7d59306232798f84a3a92786459233616",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 9.0,
+      "cost": 0.6489968683333336,
+      "eligible_for_ranking": true,
+      "sample_count": 12,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.87317675,
+      "p95_wait_s": 20.20389999999999,
+      "distance_floors": 64.00000000000001
+    },
+    {
+      "seed": 61000702,
+      "trace_hash": "aac4eb96533b75f3780ecccc9cf5d4f15fb5248c84a3916627812c4a9ac2af12",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 9.0,
+      "cost": 1.0616818383333348,
+      "eligible_for_ranking": true,
+      "sample_count": 19,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.977321210526316,
+      "p95_wait_s": 24.02264459999999,
+      "distance_floors": 97.0
+    },
+    {
+      "seed": 61000800,
+      "trace_hash": "10ffaf864d24a2f0e555aef38ecbe9df26baabbe1faf47016612d1f9837544d1",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 15.0,
+      "cost": 1.7405173350000003,
+      "eligible_for_ranking": true,
+      "sample_count": 36,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.466955583333332,
+      "p95_wait_s": 29.36863175,
+      "distance_floors": 94.00000000000007
+    },
+    {
+      "seed": 61000801,
+      "trace_hash": "7d38826195eb50bd494d4fefcf219ffd6b7d6dd6ec1c1f4c8981e7b978ebcd07",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 15.0,
+      "cost": 2.208618551666668,
+      "eligible_for_ranking": true,
+      "sample_count": 37,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.485706243243246,
+      "p95_wait_s": 35.94345439999999,
+      "distance_floors": 112.00000000000003
+    },
+    {
+      "seed": 61000802,
+      "trace_hash": "66bdf90952db804bcf07f712af4cf6d494a5039ee32344a25756fe2fcc9749fd",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "evening",
+      "rate": 15.0,
+      "cost": 1.4260532583333343,
+      "eligible_for_ranking": true,
+      "sample_count": 28,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.23471267857143,
+      "p95_wait_s": 21.957526,
+      "distance_floors": 97.99999999999994
+    },
+    {
+      "seed": 61000900,
+      "trace_hash": "ef161d3b344c60fcb9ad403b3d85a3369aefca15c47199e51cd65d49d644e287",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 3.0,
+      "cost": 0.4919748116666667,
+      "eligible_for_ranking": true,
+      "sample_count": 7,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.966412428571427,
+      "p95_wait_s": 14.793744899999998,
+      "distance_floors": 59.0
+    },
+    {
+      "seed": 61000901,
+      "trace_hash": "e5a9005ab7aab8ba191d3c4ff9532589a72b1aeb5bdfbaa36c13fa1467f46ebc",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 3.0,
+      "cost": 0.5441078333333337,
+      "eligible_for_ranking": true,
+      "sample_count": 9,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.40718888888889,
+      "p95_wait_s": 9.2506918,
+      "distance_floors": 62.0
+    },
+    {
+      "seed": 61000902,
+      "trace_hash": "edcda3b254428418feb47b5f6884f0aafd090c3f1daa00d29fdca0ec960f0ad7",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 3.0,
+      "cost": 0.2639380216666667,
+      "eligible_for_ranking": true,
+      "sample_count": 2,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 16.461406500000002,
+      "p95_wait_s": 22.88614065,
+      "distance_floors": 36.0
+    },
+    {
+      "seed": 61001000,
+      "trace_hash": "fc9b28960b1f73864911d510507418b0bdd295aa545e15ecaee60a6091cde224",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 9.0,
+      "cost": 0.9590502899999997,
+      "eligible_for_ranking": true,
+      "sample_count": 20,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.8295087,
+      "p95_wait_s": 11.7198183,
+      "distance_floors": 77.0
+    },
+    {
+      "seed": 61001001,
+      "trace_hash": "e960b2e33bd43ce6304424d12884de31ff766e0fda8525f137a7476ffb7f9aa1",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 9.0,
+      "cost": 0.7580426016666666,
+      "eligible_for_ranking": true,
+      "sample_count": 14,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.9489686428571416,
+      "p95_wait_s": 15.141044299999997,
+      "distance_floors": 71.0
+    },
+    {
+      "seed": 61001002,
+      "trace_hash": "7e76e65ec3048af75cf6556c7d98ce13360336b447b8e64b5e231816248e39ed",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 9.0,
+      "cost": 0.7184229616666671,
+      "eligible_for_ranking": true,
+      "sample_count": 14,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.410984071428571,
+      "p95_wait_s": 14.3326154,
+      "distance_floors": 73.0
+    },
+    {
+      "seed": 61001100,
+      "trace_hash": "11d4e2030d944f983d2c087f34a1120cc4f6f4d19fecaba28b1426b47f328977",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 15.0,
+      "cost": 1.9777622349999995,
+      "eligible_for_ranking": true,
+      "sample_count": 36,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.491592805555555,
+      "p95_wait_s": 19.37325475,
+      "distance_floors": 100.0
+    },
+    {
+      "seed": 61001101,
+      "trace_hash": "a0ef728cb082e64b6965e1defeffd4989a0ca98e5e871d62eb74479d83f1c4c9",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 15.0,
+      "cost": 1.4559924816666663,
+      "eligible_for_ranking": true,
+      "sample_count": 27,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.893166259259258,
+      "p95_wait_s": 26.453888999999997,
+      "distance_floors": 104.99999999999999
+    },
+    {
+      "seed": 61001102,
+      "trace_hash": "da2ad260de131eb3d1ce702a8faa3e7144b69dad0447325fca06df10dde2206e",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "interfloor",
+      "rate": 15.0,
+      "cost": 1.3800192799999995,
+      "eligible_for_ranking": true,
+      "sample_count": 28,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.115413142857141,
+      "p95_wait_s": 20.43279464999999,
+      "distance_floors": 84.00000000000001
+    },
+    {
+      "seed": 61001200,
+      "trace_hash": "a76e59943e08275b9d16619c1e66a7987ed0e75976c90c454da8620aa525b820",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 3.0,
+      "cost": 1.7391762692637487,
+      "eligible_for_ranking": true,
+      "sample_count": 36,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.612631277777774,
+      "p95_wait_s": 37.622616,
+      "distance_floors": 76.99999999999996
+    },
+    {
+      "seed": 61001201,
+      "trace_hash": "a40735503fc99c00b2ab5733619bfb4769e4d3425c4b2f85ed97b57d7b20ffb9",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 3.0,
+      "cost": 1.715679393333333,
+      "eligible_for_ranking": true,
+      "sample_count": 37,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.736963135135134,
+      "p95_wait_s": 23.693120999999998,
+      "distance_floors": 75.99999999999997
+    },
+    {
+      "seed": 61001202,
+      "trace_hash": "a38b45433ca0b884eabf331c3cc6a3a45e1b92060f4d52d38bab02bb97a56049",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 3.0,
+      "cost": 1.4561695883333323,
+      "eligible_for_ranking": true,
+      "sample_count": 36,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.046159805555554,
+      "p95_wait_s": 13.695850499999999,
+      "distance_floors": 76.0
+    },
+    {
+      "seed": 61001300,
+      "trace_hash": "f4210e7f2b2feb7108bcbb31ca71ba622766e414680e9a784c593ffbe624e58b",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 9.0,
+      "cost": 2.012010534999999,
+      "eligible_for_ranking": true,
+      "sample_count": 40,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.578158025000002,
+      "p95_wait_s": 31.666032499999954,
+      "distance_floors": 91.99999999999997
+    },
+    {
+      "seed": 61001301,
+      "trace_hash": "5c11febc0b63a8636f8ca21555af78296f6216d326122911f7119561ce352222",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 9.0,
+      "cost": 3.878794936913408,
+      "eligible_for_ranking": true,
+      "sample_count": 52,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 22.342966538461535,
+      "p95_wait_s": 79.60737344999988,
+      "distance_floors": 128.99999999999994
+    },
+    {
+      "seed": 61001302,
+      "trace_hash": "8cdb47e61e1fb5d5c91fbd5a5942280011a69b446bb33eb597d176c2b475b044",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 9.0,
+      "cost": 2.690526567866037,
+      "eligible_for_ranking": true,
+      "sample_count": 46,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 17.51594097826087,
+      "p95_wait_s": 52.7445825,
+      "distance_floors": 88.00000000000004
+    },
+    {
+      "seed": 61001400,
+      "trace_hash": "c074cfe0e049c39e8167fce2a1283ce4ce70d7a5572a255121d3401eb8df9163",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 15.0,
+      "cost": 5.77082914295358,
+      "eligible_for_ranking": true,
+      "sample_count": 62,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 28.527398516129033,
+      "p95_wait_s": 106.39822964999995,
+      "distance_floors": 143.99999999999986
+    },
+    {
+      "seed": 61001401,
+      "trace_hash": "06fec4670b738cb562f57b6845268b41944ece27a14bb5486b971859b95fe445",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 15.0,
+      "cost": 4.926196641394282,
+      "eligible_for_ranking": true,
+      "sample_count": 65,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 26.096591369230776,
+      "p95_wait_s": 118.67030619999996,
+      "distance_floors": 113.99999999999997
+    },
+    {
+      "seed": 61001402,
+      "trace_hash": "c3032f1d8d07efff4816630f64e491436408f1bda3eb35c15523c205720b08dc",
+      "building": [
+        8,
+        3
+      ],
+      "pattern": "burst",
+      "rate": 15.0,
+      "cost": 3.832472076161193,
+      "eligible_for_ranking": true,
+      "sample_count": 52,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 17.91637351923077,
+      "p95_wait_s": 76.19900909999993,
+      "distance_floors": 141.00000000000009
+    },
+    {
+      "seed": 61001500,
+      "trace_hash": "db205d0077bdd8875b1178d282d0e0730ecf2f2925a384e1d5045a2f4c02c833",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 4.0,
+      "cost": 0.607801371666667,
+      "eligible_for_ranking": true,
+      "sample_count": 7,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.21726042857143,
+      "p95_wait_s": 15.465187699999998,
+      "distance_floors": 79.00000000000001
+    },
+    {
+      "seed": 61001501,
+      "trace_hash": "17d5919532ee29caf6bdac5c86a2a274005c9b9e921a011d10b4af99db33e142",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 4.0,
+      "cost": 0.5671686933333332,
+      "eligible_for_ranking": true,
+      "sample_count": 8,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.152652,
+      "p95_wait_s": 12.1,
+      "distance_floors": 65.0
+    },
+    {
+      "seed": 61001502,
+      "trace_hash": "564fb32a3bf5af31733784350ef167e512f3e258729536e100d350be6a11c7a7",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 4.0,
+      "cost": 0.5723894883333338,
+      "eligible_for_ranking": true,
+      "sample_count": 6,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.528948833333333,
+      "p95_wait_s": 17.08026975,
+      "distance_floors": 78.0
+    },
+    {
+      "seed": 61001600,
+      "trace_hash": "6235ff93fade55d8081711a787b44629ad8a8b0507262fca3924506a8dfbfdb2",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 12.0,
+      "cost": 2.741801341666669,
+      "eligible_for_ranking": true,
+      "sample_count": 39,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.416430897435896,
+      "p95_wait_s": 27.60905540000001,
+      "distance_floors": 179.99999999999994
+    },
+    {
+      "seed": 61001601,
+      "trace_hash": "05fc9b7b62de42d3a481bd33dbdae1b5ca50f0182e1877419d662e2b6c60d90e",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 12.0,
+      "cost": 1.2540971166666657,
+      "eligible_for_ranking": true,
+      "sample_count": 20,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.997913500000001,
+      "p95_wait_s": 15.258043300000008,
+      "distance_floors": 125.00000000000004
+    },
+    {
+      "seed": 61001602,
+      "trace_hash": "11d956266d7ba42d4b24a2e9bc3af788e000a4e784961285db220f1b0d1c5cdd",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 12.0,
+      "cost": 2.297332787478638,
+      "eligible_for_ranking": true,
+      "sample_count": 30,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.785877633333333,
+      "p95_wait_s": 49.57294154999998,
+      "distance_floors": 158.00000000000003
+    },
+    {
+      "seed": 61001700,
+      "trace_hash": "995eed22c6e67e5625e0d261a5595103e8aa5ba1c3cfff0f9b7a2070e77eeb82",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 20.0,
+      "cost": 2.7225622774447014,
+      "eligible_for_ranking": true,
+      "sample_count": 39,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.758204641025644,
+      "p95_wait_s": 27.6862686,
+      "distance_floors": 162.00000000000003
+    },
+    {
+      "seed": 61001701,
+      "trace_hash": "497dfaf3c598aab112b29f899347bb6fa0712941d546c5e9652121b747d9e76c",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 20.0,
+      "cost": 2.3754993183333335,
+      "eligible_for_ranking": true,
+      "sample_count": 34,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.800576205882354,
+      "p95_wait_s": 42.90846729999999,
+      "distance_floors": 158.0
+    },
+    {
+      "seed": 61001702,
+      "trace_hash": "88a7430c24e2fa98859f4c4d035030a95b8990c4e7bf369b8edb7b53f876c910",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "normal",
+      "rate": 20.0,
+      "cost": 2.8747025412789924,
+      "eligible_for_ranking": true,
+      "sample_count": 44,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.47975090909091,
+      "p95_wait_s": 33.50373005,
+      "distance_floors": 155.00000000000006
+    },
+    {
+      "seed": 61001800,
+      "trace_hash": "6cbe827476ec7cc62c4098b7e767bd497bb2448f9b82eb1628ebb713b8a62585",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 4.0,
+      "cost": 0.535715643333333,
+      "eligible_for_ranking": true,
+      "sample_count": 7,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.015626571428571,
+      "p95_wait_s": 7.4572767,
+      "distance_floors": 64.99999999999999
+    },
+    {
+      "seed": 61001801,
+      "trace_hash": "e5d8502944f78c52fef5f6bda6dcfbabdbfd950c00b537458fac0a6c21e88234",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 4.0,
+      "cost": 0.7222176433333332,
+      "eligible_for_ranking": true,
+      "sample_count": 9,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.690065111111111,
+      "p95_wait_s": 10.608097599999999,
+      "distance_floors": 92.0
+    },
+    {
+      "seed": 61001802,
+      "trace_hash": "20a5c428611eac203c139d788deee5ed63f2b5ca1b6b796cea93b18260bd2fbb",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 4.0,
+      "cost": 0.5818636183333338,
+      "eligible_for_ranking": true,
+      "sample_count": 7,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.296881571428571,
+      "p95_wait_s": 12.662718099999996,
+      "distance_floors": 78.00000000000001
+    },
+    {
+      "seed": 61001900,
+      "trace_hash": "8fe3cad2ba636706b64b5b5d7dfd012cfbc055893b70d74b33d59fec8f39e405",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 12.0,
+      "cost": 1.089348095000002,
+      "eligible_for_ranking": true,
+      "sample_count": 17,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.545226882352941,
+      "p95_wait_s": 11.4797818,
+      "distance_floors": 116.0
+    },
+    {
+      "seed": 61001901,
+      "trace_hash": "425a65789ac9c5521a1a508165a974de6ebe41ebe5642ad1067827447e262b2a",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 12.0,
+      "cost": 1.0617579549999991,
+      "eligible_for_ranking": true,
+      "sample_count": 21,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 6.212132047619049,
+      "p95_wait_s": 10.950731,
+      "distance_floors": 89.99999999999997
+    },
+    {
+      "seed": 61001902,
+      "trace_hash": "0a68f6acb8dea106863a9264e1eef1a7e379e24ad584ef5228f5bd8831009cac",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 12.0,
+      "cost": 1.604552116666667,
+      "eligible_for_ranking": true,
+      "sample_count": 30,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.000375666666665,
+      "p95_wait_s": 22.31132664999997,
+      "distance_floors": 115.00000000000007
+    },
+    {
+      "seed": 61002000,
+      "trace_hash": "6c3d6a7abd4fddf84695b4b5987825561044ae6535a9271fdb2ff31c90245972",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 20.0,
+      "cost": 1.8140573483333342,
+      "eligible_for_ranking": true,
+      "sample_count": 35,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.387268828571427,
+      "p95_wait_s": 21.728248999999984,
+      "distance_floors": 114.0
+    },
+    {
+      "seed": 61002001,
+      "trace_hash": "d73054acae841b870e571f35666f4af282cdd52e476f385e92f55aa51da88b79",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 20.0,
+      "cost": 2.1816227766666647,
+      "eligible_for_ranking": true,
+      "sample_count": 31,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.404311806451613,
+      "p95_wait_s": 27.0241325,
+      "distance_floors": 165.99999999999994
+    },
+    {
+      "seed": 61002002,
+      "trace_hash": "a4be5c9ec56691ab5c978a0fccb24f22858befde3b0b5f2c547bf9eeb62c6e38",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "morning",
+      "rate": 20.0,
+      "cost": 2.526052178333331,
+      "eligible_for_ranking": true,
+      "sample_count": 46,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.913289282608696,
+      "p95_wait_s": 22.84698825,
+      "distance_floors": 135.00000000000006
+    },
+    {
+      "seed": 61002100,
+      "trace_hash": "1300568a051635295f4b52fb62d177b80f55661fcd78ec75f2ca396f4cb4c756",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 4.0,
+      "cost": 0.5203999999999999,
+      "eligible_for_ranking": true,
+      "sample_count": 4,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.8,
+      "p95_wait_s": 19.299999999999997,
+      "distance_floors": 72.0
+    },
+    {
+      "seed": 61002101,
+      "trace_hash": "3fb9671226f01fc148fe074014b336813c43f2760ac867853c5787958a3e09ba",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 4.0,
+      "cost": 0.800261993333333,
+      "eligible_for_ranking": true,
+      "sample_count": 10,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.141719599999998,
+      "p95_wait_s": 24.552881249999988,
+      "distance_floors": 76.0
+    },
+    {
+      "seed": 61002102,
+      "trace_hash": "1b264e2685367acac9f7fc4be97d9e59122a012d9c14529f72dcf8b928d07ce4",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 4.0,
+      "cost": 0.478732565,
+      "eligible_for_ranking": true,
+      "sample_count": 4,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.159884750000002,
+      "p95_wait_s": 20.673817049999997,
+      "distance_floors": 62.0
+    },
+    {
+      "seed": 61002200,
+      "trace_hash": "57a998405911e8daacfeff03ffc946bb44ea53f47246d09f57885c375b01a22b",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 12.0,
+      "cost": 1.5525713749999996,
+      "eligible_for_ranking": true,
+      "sample_count": 26,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.450108653846154,
+      "p95_wait_s": 25.67488775,
+      "distance_floors": 128.0
+    },
+    {
+      "seed": 61002201,
+      "trace_hash": "1cc66d3fdfdb947eff8a55a54d8cc9af67c7b6c6d1677b1e0dfd3ac5fb80e3fa",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 12.0,
+      "cost": 1.3875595599999988,
+      "eligible_for_ranking": true,
+      "sample_count": 23,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.533727652173914,
+      "p95_wait_s": 16.3263927,
+      "distance_floors": 123.99999999999997
+    },
+    {
+      "seed": 61002202,
+      "trace_hash": "511ed8c066bce274d9a8798b2def321c623cf67cc87b4b316a7eb48b51e0fce9",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 12.0,
+      "cost": 1.6001757283333298,
+      "eligible_for_ranking": true,
+      "sample_count": 24,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.489393208333334,
+      "p95_wait_s": 26.399999999999984,
+      "distance_floors": 146.00000000000006
+    },
+    {
+      "seed": 61002300,
+      "trace_hash": "0e45652cd5f193aca52013973e94a6d453d32f48f9ebf32e7d05b89f0cfb031b",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 20.0,
+      "cost": 2.5972516153462473,
+      "eligible_for_ranking": true,
+      "sample_count": 39,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.92198546153846,
+      "p95_wait_s": 39.34294020000003,
+      "distance_floors": 166.00000000000006
+    },
+    {
+      "seed": 61002301,
+      "trace_hash": "d9f8749075ac621c152be88b74b135ca24edaaecf8c914b25167037b8b192cd4",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 20.0,
+      "cost": 2.253986388333333,
+      "eligible_for_ranking": true,
+      "sample_count": 32,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.08661978125,
+      "p95_wait_s": 39.8141064,
+      "distance_floors": 165.0
+    },
+    {
+      "seed": 61002302,
+      "trace_hash": "91764773e0cbc8e310d278aa6446b69c690256099a79a74f53388bda6fb91d85",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "evening",
+      "rate": 20.0,
+      "cost": 2.339145409999996,
+      "eligible_for_ranking": true,
+      "sample_count": 42,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.143505857142857,
+      "p95_wait_s": 38.47043089999992,
+      "distance_floors": 131.00000000000009
+    },
+    {
+      "seed": 61002400,
+      "trace_hash": "4d1856437dc346ab774370300ba1a2a658ab3b8b85156e5496f9f4912ded6bdf",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 4.0,
+      "cost": 0.6251462816666671,
+      "eligible_for_ranking": true,
+      "sample_count": 9,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.980863222222222,
+      "p95_wait_s": 14.5494696,
+      "distance_floors": 73.0
+    },
+    {
+      "seed": 61002401,
+      "trace_hash": "0520a80fd2d211c12fc50d06436331c3b997ae18601ebaa2e965ae6558a3578a",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 4.0,
+      "cost": 0.7378064116666668,
+      "eligible_for_ranking": true,
+      "sample_count": 9,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.375983,
+      "p95_wait_s": 21.0872566,
+      "distance_floors": 85.00000000000001
+    },
+    {
+      "seed": 61002402,
+      "trace_hash": "5e9f90b427313608ea9bf78f3ddaee16c1a0962fbca9a363169cd3b52694b77a",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 4.0,
+      "cost": 1.0558145783333313,
+      "eligible_for_ranking": true,
+      "sample_count": 11,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.96624972727273,
+      "p95_wait_s": 26.401471,
+      "distance_floors": 117.00000000000001
+    },
+    {
+      "seed": 61002500,
+      "trace_hash": "1ab312ea659e49f2b469e122505a0c9f9b6010dbd12130ab6e61537efd63f903",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 12.0,
+      "cost": 1.0530598300000005,
+      "eligible_for_ranking": true,
+      "sample_count": 13,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.20737676923077,
+      "p95_wait_s": 22.719999999999995,
+      "distance_floors": 113.0
+    },
+    {
+      "seed": 61002501,
+      "trace_hash": "2b472aa29f11060793d25ac69e6279a5ea1098bf47a3ee593ff38dbdd5b71d4b",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 12.0,
+      "cost": 1.7325777949999996,
+      "eligible_for_ranking": true,
+      "sample_count": 26,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.029487576923078,
+      "p95_wait_s": 21.3819215,
+      "distance_floors": 156.00000000000006
+    },
+    {
+      "seed": 61002502,
+      "trace_hash": "f706f4ac52a1281f2b5821789d7880409cd211430f8acc56669c6f8092902d1c",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 12.0,
+      "cost": 1.5623591050000023,
+      "eligible_for_ranking": true,
+      "sample_count": 24,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.099810958333334,
+      "p95_wait_s": 24.359500899999983,
+      "distance_floors": 140.0
+    },
+    {
+      "seed": 61002600,
+      "trace_hash": "6495d3706449131aca0836d90ed6535fbe56ab198f313e851eafb6ef76aa40e5",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 20.0,
+      "cost": 4.2992256221692084,
+      "eligible_for_ranking": true,
+      "sample_count": 53,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 20.10607698113208,
+      "p95_wait_s": 66.8518462,
+      "distance_floors": 175.0
+    },
+    {
+      "seed": 61002601,
+      "trace_hash": "c20862a7dec76516e6f99a0eb8af8539d01343e748fa9f4513fb4d2c1ab40653",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 20.0,
+      "cost": 2.9279476844950922,
+      "eligible_for_ranking": true,
+      "sample_count": 46,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.454229413043475,
+      "p95_wait_s": 63.002626,
+      "distance_floors": 144.0
+    },
+    {
+      "seed": 61002602,
+      "trace_hash": "637ccb8f13eb2e48b352a3818a8e030cf580d86b95781beffc58ddd7f08268c4",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "interfloor",
+      "rate": 20.0,
+      "cost": 3.1713093826856773,
+      "eligible_for_ranking": true,
+      "sample_count": 49,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.998078775510203,
+      "p95_wait_s": 31.659191799999984,
+      "distance_floors": 162.0
+    },
+    {
+      "seed": 61002700,
+      "trace_hash": "08c8a776f942f710684eabb1ca8099e962268a9efdee6e2f883193a15156fa57",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 4.0,
+      "cost": 1.8950532783333336,
+      "eligible_for_ranking": true,
+      "sample_count": 34,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.54682255882353,
+      "p95_wait_s": 21.8953889,
+      "distance_floors": 114.99999999999989
+    },
+    {
+      "seed": 61002701,
+      "trace_hash": "b66e5fdd7e5ed0c84c991cf1c2b835d7f099e26b8d0c76f85b560d3b23b56863",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 4.0,
+      "cost": 2.4614484573400546,
+      "eligible_for_ranking": true,
+      "sample_count": 37,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 18.882840081081085,
+      "p95_wait_s": 60.60407839999996,
+      "distance_floors": 136.00000000000006
+    },
+    {
+      "seed": 61002702,
+      "trace_hash": "613098ed54f65b774285beaca073f3ea948e91f56aa533e60a91bf8da5a3831d",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 4.0,
+      "cost": 2.549442066666668,
+      "eligible_for_ranking": true,
+      "sample_count": 41,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.022566829268293,
+      "p95_wait_s": 22.527281,
+      "distance_floors": 161.99999999999991
+    },
+    {
+      "seed": 61002800,
+      "trace_hash": "546c33331d0e2a62e386b327593a7bba8d6937d36527b7907f24c2525dc456ca",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 12.0,
+      "cost": 2.68808644666667,
+      "eligible_for_ranking": true,
+      "sample_count": 47,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.755571659574466,
+      "p95_wait_s": 24.116252599999992,
+      "distance_floors": 159.00000000000006
+    },
+    {
+      "seed": 61002801,
+      "trace_hash": "48d6e39dccaaeab960737ca6d545126441ce318cca176162294a3a999063ad12",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 12.0,
+      "cost": 3.8256722260603255,
+      "eligible_for_ranking": true,
+      "sample_count": 54,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 18.650637055555556,
+      "p95_wait_s": 53.390989099999935,
+      "distance_floors": 178.00000000000006
+    },
+    {
+      "seed": 61002802,
+      "trace_hash": "421d1454bfc7cfec107e04e03598da6b3af964e63f49c7a2bfec8a3434bd8686",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 12.0,
+      "cost": 3.9343109617442136,
+      "eligible_for_ranking": true,
+      "sample_count": 56,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 19.055354553571426,
+      "p95_wait_s": 47.29214825,
+      "distance_floors": 173.99999999999991
+    },
+    {
+      "seed": 61002900,
+      "trace_hash": "08f414ebcd88be2e0b04ea1577adb6d36efc157fcefc62c8fdef77209fe58953",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 20.0,
+      "cost": 5.555564862169677,
+      "eligible_for_ranking": true,
+      "sample_count": 64,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 18.836992796875002,
+      "p95_wait_s": 81.3919554499999,
+      "distance_floors": 235.00000000000009
+    },
+    {
+      "seed": 61002901,
+      "trace_hash": "4974be9fdaa5cdce83c2ed6fead06b83f7d90f747e930982e40bc475197cae58",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 20.0,
+      "cost": 10.973029475293028,
+      "eligible_for_ranking": true,
+      "sample_count": 79,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 41.198820721518985,
+      "p95_wait_s": 141.664818,
+      "distance_floors": 269.99999999999983
+    },
+    {
+      "seed": 61002902,
+      "trace_hash": "4483b795bc9d9651f9a9110644adb080d844916bb7727adb248cf2b895807948",
+      "building": [
+        12,
+        4
+      ],
+      "pattern": "burst",
+      "rate": 20.0,
+      "cost": 5.902291541588867,
+      "eligible_for_ranking": true,
+      "sample_count": 69,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 21.72117850724637,
+      "p95_wait_s": 80.939453,
+      "distance_floors": 229.99999999999986
+    },
+    {
+      "seed": 61003000,
+      "trace_hash": "9fff21c5375ed8998e95dcde9ce2f551d48df8d708e15d1af65beb4d77cee142",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 6.0,
+      "cost": 1.241941121666667,
+      "eligible_for_ranking": true,
+      "sample_count": 8,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.485584124999999,
+      "p95_wait_s": 28.3478744,
+      "distance_floors": 162.00000000000006
+    },
+    {
+      "seed": 61003001,
+      "trace_hash": "008c5db9b780c4a66000062e0932081c534d04c4ba64a45be045ab048e84f01a",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 6.0,
+      "cost": 1.2241022366666672,
+      "eligible_for_ranking": true,
+      "sample_count": 10,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.2401342,
+      "p95_wait_s": 15.08786624999999,
+      "distance_floors": 162.99999999999994
+    },
+    {
+      "seed": 61003002,
+      "trace_hash": "84578b2ecfc35ef3aaa5390cf9ab44a95e674db8a44780621be4ccb7e5c65183",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 6.0,
+      "cost": 1.044553468333333,
+      "eligible_for_ranking": true,
+      "sample_count": 7,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.538868714285714,
+      "p95_wait_s": 22.53802549999999,
+      "distance_floors": 145.0
+    },
+    {
+      "seed": 61003100,
+      "trace_hash": "47a05fb1d2fdbbb5fb50ef11268649430012b390fde87fff05a9219859808fa7",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 18.0,
+      "cost": 2.372123018333328,
+      "eligible_for_ranking": true,
+      "sample_count": 29,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.193579689655174,
+      "p95_wait_s": 24.518223199999987,
+      "distance_floors": 244.9999999999998
+    },
+    {
+      "seed": 61003101,
+      "trace_hash": "fae0f7d4b1f0ae6d6d52d21b83778478e7261347c824e473d714832d08b9fc12",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 18.0,
+      "cost": 2.2673548483333272,
+      "eligible_for_ranking": true,
+      "sample_count": 31,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.075255129032259,
+      "p95_wait_s": 23.540789,
+      "distance_floors": 231.00000000000009
+    },
+    {
+      "seed": 61003102,
+      "trace_hash": "45c911c66b48c6149768b7769d93ae71f05062d496d1ebc9585c187d969f3fcc",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 18.0,
+      "cost": 3.9325009149999826,
+      "eligible_for_ranking": true,
+      "sample_count": 50,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.813610979999998,
+      "p95_wait_s": 43.040440099999984,
+      "distance_floors": 305.9999999999998
+    },
+    {
+      "seed": 61003200,
+      "trace_hash": "ea902aeec7f4731716512a67f366b986a1788a226a04ae2091c5ec192518931f",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 30.0,
+      "cost": 6.599786684150529,
+      "eligible_for_ranking": true,
+      "sample_count": 67,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 23.52360974626866,
+      "p95_wait_s": 97.23251309999995,
+      "distance_floors": 315.0000000000003
+    },
+    {
+      "seed": 61003201,
+      "trace_hash": "79d9e8fea50bcc84bde15f6d07fb47fbffcc224cb63f0f543e6521546ae13d10",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 30.0,
+      "cost": 5.6652967657587405,
+      "eligible_for_ranking": true,
+      "sample_count": 64,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 17.302326640624997,
+      "p95_wait_s": 57.26062999999991,
+      "distance_floors": 330.0000000000001
+    },
+    {
+      "seed": 61003202,
+      "trace_hash": "7be2c36f895368e6e1ce9b72e9cb319b99a22873941630108822fdb0e635b4f6",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "normal",
+      "rate": 30.0,
+      "cost": 6.342847361749285,
+      "eligible_for_ranking": true,
+      "sample_count": 63,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 22.267215444444442,
+      "p95_wait_s": 80.5606277,
+      "distance_floors": 344.00000000000125
+    },
+    {
+      "seed": 61003300,
+      "trace_hash": "6dfa8ee042d59693b11d61e4cdf0a6cc48fe0241f0ed0f06f8503c9cd08681ca",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 6.0,
+      "cost": 1.2236441733333336,
+      "eligible_for_ranking": true,
+      "sample_count": 11,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.127864,
+      "p95_wait_s": 20.195639,
+      "distance_floors": 160.99999999999997
+    },
+    {
+      "seed": 61003301,
+      "trace_hash": "1133137c98ff2dbb61b8128b214d92a94d945b46ca6bafd51f6e89aa559c6d05",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 6.0,
+      "cost": 1.2885753749999935,
+      "eligible_for_ranking": true,
+      "sample_count": 12,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.797102083333334,
+      "p95_wait_s": 14.647189999999997,
+      "distance_floors": 162.00000000000009
+    },
+    {
+      "seed": 61003302,
+      "trace_hash": "d196107bb5450c261059e6f2670731dba6903b98ac7808faa425bae36e15dba4",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 6.0,
+      "cost": 1.4700278566666636,
+      "eligible_for_ranking": true,
+      "sample_count": 13,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.844362615384615,
+      "p95_wait_s": 20.743991199999986,
+      "distance_floors": 197.0
+    },
+    {
+      "seed": 61003400,
+      "trace_hash": "1825a5643e38aceb6d5ae03150ffdab6d2de8cc20dcb67827b7e2a878cf30cdb",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 18.0,
+      "cost": 2.039283579999997,
+      "eligible_for_ranking": true,
+      "sample_count": 28,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.061790999999999,
+      "p95_wait_s": 10.43873945,
+      "distance_floors": 201.00000000000003
+    },
+    {
+      "seed": 61003401,
+      "trace_hash": "1068594430f1281729f4b8abb82d1c9ddf19b7cff22f44dd3051517b568c20e8",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 18.0,
+      "cost": 2.827030323333325,
+      "eligible_for_ranking": true,
+      "sample_count": 37,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.615626864864867,
+      "p95_wait_s": 24.619126399999974,
+      "distance_floors": 268.0
+    },
+    {
+      "seed": 61003402,
+      "trace_hash": "f38135f7e28a614565269523bfb4b84061a1c1034760c12088ae413ccd851d00",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 18.0,
+      "cost": 2.3715153149999963,
+      "eligible_for_ranking": true,
+      "sample_count": 31,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.673199645161293,
+      "p95_wait_s": 13.0819285,
+      "distance_floors": 234.0000000000001
+    },
+    {
+      "seed": 61003500,
+      "trace_hash": "50eee0f23420eb6074e8ca01dd2638584c06b604e4aa7e6fbacd2cd25789fbe1",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 30.0,
+      "cost": 3.509113258333324,
+      "eligible_for_ranking": true,
+      "sample_count": 53,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 8.548451981132075,
+      "p95_wait_s": 18.150039599999992,
+      "distance_floors": 263.00000000000006
+    },
+    {
+      "seed": 61003501,
+      "trace_hash": "22ded9caa3817d2e15c63aef7bd23a0acff77b61d7dad8503605403f382dc54e",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 30.0,
+      "cost": 3.73313619333332,
+      "eligible_for_ranking": true,
+      "sample_count": 54,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 10.734476222222224,
+      "p95_wait_s": 27.27287974999999,
+      "distance_floors": 276.99999999999955
+    },
+    {
+      "seed": 61003502,
+      "trace_hash": "156c09762789994646401efc54cc01aa73a9d20d9030ee07765770a2a64166f3",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "morning",
+      "rate": 30.0,
+      "cost": 3.216947951666668,
+      "eligible_for_ranking": true,
+      "sample_count": 58,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 7.189461568965519,
+      "p95_wait_s": 14.405274799999988,
+      "distance_floors": 213.99999999999983
+    },
+    {
+      "seed": 61003600,
+      "trace_hash": "fb6c16e9c54f83c4602851fd43a7ac939aa04b39150f4c7b76c318d0fb9690f3",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 6.0,
+      "cost": 1.1877656033333341,
+      "eligible_for_ranking": true,
+      "sample_count": 9,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.697706888888888,
+      "p95_wait_s": 35.4187136,
+      "distance_floors": 149.99999999999994
+    },
+    {
+      "seed": 61003601,
+      "trace_hash": "207931f9b8bef1d79e8aec84fa835eac17319ca6ff2aa993bfce02212893f083",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 6.0,
+      "cost": 1.623559816666666,
+      "eligible_for_ranking": true,
+      "sample_count": 12,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 17.327990833333338,
+      "p95_wait_s": 39.05999999999999,
+      "distance_floors": 202.00000000000003
+    },
+    {
+      "seed": 61003602,
+      "trace_hash": "8541741313c0c35cdcdfc06445ea5a0b3929f63b46808ee2b3eaae9c21ed211e",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 6.0,
+      "cost": 1.2035679333333336,
+      "eligible_for_ranking": true,
+      "sample_count": 10,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.784075999999999,
+      "p95_wait_s": 28.57180669999999,
+      "distance_floors": 153.0
+    },
+    {
+      "seed": 61003700,
+      "trace_hash": "970e448d04eefc0554b4ece2c3998956553a63d629c1c3a6c9bbfb2323e68011",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 18.0,
+      "cost": 2.8755652966666596,
+      "eligible_for_ranking": true,
+      "sample_count": 35,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.219405085714286,
+      "p95_wait_s": 35.639525299999974,
+      "distance_floors": 240.99999999999986
+    },
+    {
+      "seed": 61003701,
+      "trace_hash": "ff76934ce8076b82e207bea39d8b5120c0cb773bea85752e74bd4e1f461f04c5",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 18.0,
+      "cost": 4.277123866666665,
+      "eligible_for_ranking": true,
+      "sample_count": 46,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 18.74770260869565,
+      "p95_wait_s": 43.148305,
+      "distance_floors": 325.0000000000001
+    },
+    {
+      "seed": 61003702,
+      "trace_hash": "45bc546b496133e642c9bf1058d2ffbd00d4e3051c75788fcefd311f49360ea3",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 18.0,
+      "cost": 3.3252313099999897,
+      "eligible_for_ranking": true,
+      "sample_count": 43,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.029739209302324,
+      "p95_wait_s": 30.6056073,
+      "distance_floors": 263.0000000000002
+    },
+    {
+      "seed": 61003800,
+      "trace_hash": "1efcf9e7c3a564b8cde2ea07e1977eac33f13423bfcb46ca6805891087922576",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 30.0,
+      "cost": 5.741654500118758,
+      "eligible_for_ranking": true,
+      "sample_count": 69,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 17.76349508695652,
+      "p95_wait_s": 56.472592799999994,
+      "distance_floors": 287.9999999999999
+    },
+    {
+      "seed": 61003801,
+      "trace_hash": "7b568e52ed245f43e94418f6dd610b34c89c20d15e71e09474653e188073916b",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 30.0,
+      "cost": 3.83192960333333,
+      "eligible_for_ranking": true,
+      "sample_count": 52,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.894572346153845,
+      "p95_wait_s": 33.56666874999996,
+      "distance_floors": 284.99999999999994
+    },
+    {
+      "seed": 61003802,
+      "trace_hash": "264cf1a6aac0db2d67ab8d257d0c6d14ddc55d03602ddd0b8f9c6aa2e9a7de56",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "evening",
+      "rate": 30.0,
+      "cost": 3.3215673291231993,
+      "eligible_for_ranking": true,
+      "sample_count": 46,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.627649782608696,
+      "p95_wait_s": 42.42659925,
+      "distance_floors": 245.99999999999991
+    },
+    {
+      "seed": 61003900,
+      "trace_hash": "0114a8aad238d3e7a0890a3f8abfd086febaa34e6b0b3d7050670792a7fe3a7b",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 6.0,
+      "cost": 1.94443881796481,
+      "eligible_for_ranking": true,
+      "sample_count": 17,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 16.361166588235296,
+      "p95_wait_s": 45.84006599999998,
+      "distance_floors": 213.0
+    },
+    {
+      "seed": 61003901,
+      "trace_hash": "529793e30c01e940a8d0456f46f7d1852aafd924535369c74a3d9f21a0d0254b",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 6.0,
+      "cost": 1.4720284916666677,
+      "eligible_for_ranking": true,
+      "sample_count": 14,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.785506785714286,
+      "p95_wait_s": 41.99193905,
+      "distance_floors": 168.00000000000003
+    },
+    {
+      "seed": 61003902,
+      "trace_hash": "6d389c7c27bc0876cd64b98933d66f142128e4b5f48055f282eafbbb76d895ae",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 6.0,
+      "cost": 0.9712669666666678,
+      "eligible_for_ranking": true,
+      "sample_count": 7,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 9.582882857142858,
+      "p95_wait_s": 17.33168,
+      "distance_floors": 143.0
+    },
+    {
+      "seed": 61004000,
+      "trace_hash": "e8c06680e7ee1afeb21c7e3941aa432952b76519c18a92be6f97f56f432e5b64",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 18.0,
+      "cost": 4.437721912761068,
+      "eligible_for_ranking": true,
+      "sample_count": 43,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 23.474092999999996,
+      "p95_wait_s": 50.24695869999999,
+      "distance_floors": 313.9999999999997
+    },
+    {
+      "seed": 61004001,
+      "trace_hash": "633ef1f07fe969c8ac9a0793886dd6c09a945efc0c7d28e457409c987954f9c6",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 18.0,
+      "cost": 3.091239759999988,
+      "eligible_for_ranking": true,
+      "sample_count": 40,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 12.717096399999999,
+      "p95_wait_s": 35.414090899999984,
+      "distance_floors": 273.9999999999996
+    },
+    {
+      "seed": 61004002,
+      "trace_hash": "53f8fd9151dac823e461c864d3b54d673baac171402a8dd0c78a6c5fdc1eb7b6",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 18.0,
+      "cost": 3.1580794216666757,
+      "eligible_for_ranking": true,
+      "sample_count": 36,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 14.493545916666667,
+      "p95_wait_s": 29.5265745,
+      "distance_floors": 278.0000000000002
+    },
+    {
+      "seed": 61004100,
+      "trace_hash": "f13f78c7116ed7492664ec275fb65515de1cfb11cd827b72ec8c5ac45ab4d23c",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 30.0,
+      "cost": 6.0512640569411165,
+      "eligible_for_ranking": true,
+      "sample_count": 70,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 19.154992728571433,
+      "p95_wait_s": 78.12342929999997,
+      "distance_floors": 315.99999999999994
+    },
+    {
+      "seed": 61004101,
+      "trace_hash": "854bbac35a6b8031ee13e1865af98a290de4f35c8b139ec492f640da43a430d1",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 30.0,
+      "cost": 6.052332374755171,
+      "eligible_for_ranking": true,
+      "sample_count": 71,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 16.304676281690142,
+      "p95_wait_s": 37.817965,
+      "distance_floors": 353.0000000000008
+    },
+    {
+      "seed": 61004102,
+      "trace_hash": "73d7b8a2083bc7444ee85603cd6617ba8f490665b9095703827c96e82910f95e",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "interfloor",
+      "rate": 30.0,
+      "cost": 7.262585119809992,
+      "eligible_for_ranking": true,
+      "sample_count": 75,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 21.93031616,
+      "p95_wait_s": 77.44179689999999,
+      "distance_floors": 348.0000000000008
+    },
+    {
+      "seed": 61004200,
+      "trace_hash": "00cd20d33b14eece90337f1e695733719335c638785d1d2b98d4159c339f8e51",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 6.0,
+      "cost": 4.683010265281813,
+      "eligible_for_ranking": true,
+      "sample_count": 44,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 28.513083931818183,
+      "p95_wait_s": 49.23343780000001,
+      "distance_floors": 319.99999999999955
+    },
+    {
+      "seed": 61004201,
+      "trace_hash": "d2e50c208bd49c36a8cefe75998873f09b7b015cd045c31f589c90ece7d67cfa",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 6.0,
+      "cost": 4.455652695000013,
+      "eligible_for_ranking": true,
+      "sample_count": 42,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 27.723800404761906,
+      "p95_wait_s": 41.664019399999994,
+      "distance_floors": 280.9999999999997
+    },
+    {
+      "seed": 61004202,
+      "trace_hash": "b326cb930fd60b74a2dcff89c680dfb622b42dd005a2819481b421ba5086b8c6",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 6.0,
+      "cost": 3.1818952316666573,
+      "eligible_for_ranking": true,
+      "sample_count": 47,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 11.259513595744684,
+      "p95_wait_s": 19.965508899999996,
+      "distance_floors": 239.00000000000006
+    },
+    {
+      "seed": 61004300,
+      "trace_hash": "9de1cde4f1286ccdc9207841d329c13378018f52fe182b8a6507d13130744258",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 18.0,
+      "cost": 5.686427320886076,
+      "eligible_for_ranking": true,
+      "sample_count": 66,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 21.384895742424245,
+      "p95_wait_s": 60.25693174999999,
+      "distance_floors": 316.0
+    },
+    {
+      "seed": 61004301,
+      "trace_hash": "77a0fae6fbc3c71be6c80b5cf9f91ac4995567a8ee6bfba0379cfb992f046ca2",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 18.0,
+      "cost": 5.973144302243682,
+      "eligible_for_ranking": true,
+      "sample_count": 74,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 15.76910817567567,
+      "p95_wait_s": 51.71314624999994,
+      "distance_floors": 339.0000000000009
+    },
+    {
+      "seed": 61004302,
+      "trace_hash": "df27bc1131bff8251a6092bf145b56d22ba4beaf22266bc13c61bc712301ca73",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 18.0,
+      "cost": 4.633260763333331,
+      "eligible_for_ranking": true,
+      "sample_count": 62,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 13.206394483870968,
+      "p95_wait_s": 31.7359238,
+      "distance_floors": 307.00000000000045
+    },
+    {
+      "seed": 61004400,
+      "trace_hash": "b06f07f37b38fc04765938a97c6f5d4f21149a901e5b54578075cc226558d3ac",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 30.0,
+      "cost": 16.324960841440905,
+      "eligible_for_ranking": true,
+      "sample_count": 103,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 41.06121997087378,
+      "p95_wait_s": 142.37357809999995,
+      "distance_floors": 507.0000000000004
+    },
+    {
+      "seed": 61004401,
+      "trace_hash": "52b7bad9d3f1c4ea259df8511a5647489241f5fadb8a87228a6d30281cd5c7bd",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 30.0,
+      "cost": 15.389875182194874,
+      "eligible_for_ranking": true,
+      "sample_count": 103,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 36.981114456310685,
+      "p95_wait_s": 170.24773619999962,
+      "distance_floors": 464.0000000000024
+    },
+    {
+      "seed": 61004402,
+      "trace_hash": "e6c8854d78a3de98f054634a151544ff936bfaf99d49e6b82eac93ef27c6afff",
+      "building": [
+        20,
+        6
+      ],
+      "pattern": "burst",
+      "rate": 30.0,
+      "cost": 10.779202020150004,
+      "eligible_for_ranking": true,
+      "sample_count": 100,
+      "completion_ratio": 1.0,
+      "mean_wait_s": 28.181434720000002,
+      "p95_wait_s": 110.53013974999999,
+      "distance_floors": 373.9999999999997
+    }
+  ]
+}

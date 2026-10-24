@@ -1,0 +1,3509 @@
+{
+  "schema_version": 1,
+  "model_id": "ppo-opt-s401-n200000-e1",
+  "sha256": "d38817cd60caa86651bff5c9b06fe1e3be9daaf450a7d3fca6f873907cd78aa3",
+  "versions": {
+    "simulator": "event-v3-arrival-cooldown",
+    "observation": "public-insertion6-v2",
+    "action": "dispatch8-reposition5-v1",
+    "reward": "integrated-v2-start-cutoff",
+    "route": "insertion-16-v1",
+    "architecture": "insertion-prior-residual-v2"
+  },
+  "attention": false,
+  "support": {
+    "max_floors": 30,
+    "max_elevators": 8
+  },
+  "region_mapping": "array_split(2..F,3), lower median; Lobby=1",
+  "training_config": {
+    "seed": 401,
+    "total_decisions": 200000,
+    "num_envs": 4,
+    "rollout_steps": 128,
+    "minibatch": 256,
+    "epochs": 4,
+    "learning_rate": 0.0001,
+    "min_learning_rate": 3e-05,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "dt_ref": 10.0,
+    "clip": 0.2,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.001,
+    "target_kl": 0.02,
+    "max_grad_norm": 0.5,
+    "validation_interval": 40,
+    "device": "cpu",
+    "attention": false,
+    "dispatch_only": false,
+    "domain_randomization": true,
+    "stage": "O1",
+    "simulation": {
+      "schema_version": 1,
+      "seed": 42,
+      "building": {
+        "floor_count": 8,
+        "elevator_count": 3,
+        "capacity": 12,
+        "lobby_floor": 1,
+        "floor_height_m": 3.0,
+        "initial_floors": null
+      },
+      "physics": {
+        "seconds_per_floor": 2.0,
+        "door_open_s": 2.0,
+        "door_close_s": 2.0,
+        "board_s_per_person": 0.8,
+        "alight_s_per_person": 0.8,
+        "empty_distance_weight": 1.0,
+        "loaded_distance_weight": 1.3,
+        "door_cycle_weight": 0.2,
+        "start_weight": 0.1
+      },
+      "simulation": {
+        "arrival_horizon_s": 120.0,
+        "max_drain_s": 1200.0,
+        "snapshot_interval_s": 1.0,
+        "max_passengers": 100000,
+        "start_time_of_day_s": 28800.0,
+        "max_events": 10000000
+      },
+      "traffic": {
+        "pattern": "normal",
+        "arrival_rate_per_min": 6.0,
+        "segments": [],
+        "bursts": []
+      },
+      "controller": {
+        "name": "eta",
+        "model_id": null
+      },
+      "reposition": {
+        "idle_review_s": 30.0,
+        "cooldown_s": 30.0,
+        "enabled": true
+      },
+      "metrics": {
+        "long_wait_threshold_s": 60.0
+      },
+      "reward": {
+        "wait_weight": 1.0,
+        "ride_weight": 0.2,
+        "energy_weight": 0.05,
+        "fairness_weight": 0.5,
+        "passenger_scale": 10.0,
+        "time_scale_s": 60.0,
+        "distance_scale_floors": 10.0,
+        "long_wait_threshold_s": 60.0
+      }
+    },
+    "scenarios": [
+      {
+        "schema_version": 1,
+        "seed": 42,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 1200.0,
+          "snapshot_interval_s": 1.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 6.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 42,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 1200.0,
+          "snapshot_interval_s": 1.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 8.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 42,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 1200.0,
+          "snapshot_interval_s": 1.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 12.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      }
+    ],
+    "candidate_policy": true,
+    "prior_weights": [
+      1.0,
+      0.2,
+      0.0,
+      1.0,
+      0.2,
+      0.0
+    ],
+    "residual_scale": 2.0,
+    "validation_scenarios": [
+      {
+        "schema_version": 1,
+        "seed": 2001000,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 3.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001001,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 9.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001002,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 15.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001003,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 3.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001004,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 9.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001005,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 15.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001006,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 3.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001007,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 9.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001008,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 15.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001009,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 3.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001010,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 9.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001011,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 15.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001012,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 3.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001013,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 9.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001014,
+        "building": {
+          "floor_count": 8,
+          "elevator_count": 3,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 15.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001015,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 4.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001016,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 12.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001017,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 20.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001018,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 4.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001019,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 12.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001020,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 20.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001021,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 4.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001022,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 12.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001023,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 20.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001024,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 4.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001025,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 12.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001026,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 20.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001027,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 4.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001028,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 12.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001029,
+        "building": {
+          "floor_count": 12,
+          "elevator_count": 4,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 20.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001030,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 6.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001031,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 18.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001032,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "normal",
+          "arrival_rate_per_min": 30.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001033,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 6.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001034,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 18.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001035,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "morning",
+          "arrival_rate_per_min": 30.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001036,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 6.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001037,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 18.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001038,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "evening",
+          "arrival_rate_per_min": 30.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001039,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 6.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001040,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 18.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001041,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "interfloor",
+          "arrival_rate_per_min": 30.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001042,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 6.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001043,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 18.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      },
+      {
+        "schema_version": 1,
+        "seed": 2001044,
+        "building": {
+          "floor_count": 20,
+          "elevator_count": 6,
+          "capacity": 12,
+          "lobby_floor": 1,
+          "floor_height_m": 3.0,
+          "initial_floors": null
+        },
+        "physics": {
+          "seconds_per_floor": 2.0,
+          "door_open_s": 2.0,
+          "door_close_s": 2.0,
+          "board_s_per_person": 0.8,
+          "alight_s_per_person": 0.8,
+          "empty_distance_weight": 1.0,
+          "loaded_distance_weight": 1.3,
+          "door_cycle_weight": 0.2,
+          "start_weight": 0.1
+        },
+        "simulation": {
+          "arrival_horizon_s": 120.0,
+          "max_drain_s": 7200.0,
+          "snapshot_interval_s": 5.0,
+          "max_passengers": 100000,
+          "start_time_of_day_s": 28800.0,
+          "max_events": 10000000
+        },
+        "traffic": {
+          "pattern": "burst",
+          "arrival_rate_per_min": 30.0,
+          "segments": [],
+          "bursts": []
+        },
+        "controller": {
+          "name": "eta",
+          "model_id": null
+        },
+        "reposition": {
+          "idle_review_s": 30.0,
+          "cooldown_s": 30.0,
+          "enabled": true
+        },
+        "metrics": {
+          "long_wait_threshold_s": 60.0
+        },
+        "reward": {
+          "wait_weight": 1.0,
+          "ride_weight": 0.2,
+          "energy_weight": 0.05,
+          "fairness_weight": 0.5,
+          "passenger_scale": 10.0,
+          "time_scale_s": 60.0,
+          "distance_scale_floors": 10.0,
+          "long_wait_threshold_s": 60.0
+        }
+      }
+    ],
+    "validation_seed_start": 2001000,
+    "selection_mode": "distance_constrained"
+  },
+  "training_steps": 40960,
+  "parameter_count": 162439,
+  "seed": 401,
+  "validation": {
+    "complete": true,
+    "cost": 2.0329523641388634,
+    "mean_wait": 11.205364308404704,
+    "p95": 26.32291615555556,
+    "results": [
+      {
+        "seed": 2001000,
+        "cost": 0.1784381066666667,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.274288,
+        "p95_wait_s": 15.8663343,
+        "distance": 16.0,
+        "eta_distance": 16.0,
+        "eta_wait": 10.274288,
+        "eta_p95": 15.8663343,
+        "scenario_hash": "abac40c90248684612c309a3043bf12dcc4f90a14793d80abbb39c510d69e885"
+      },
+      {
+        "seed": 2001001,
+        "cost": 0.7238893166666676,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 7.346239333333333,
+        "p95_wait_s": 15.399999999999999,
+        "distance": 69.0,
+        "eta_distance": 60.99999999999999,
+        "eta_wait": 8.3532558,
+        "eta_p95": 20.91898539999997,
+        "scenario_hash": "34393891846663a9660377f56fc30e5fc6c86c4b03ca1e0de6ee04f66a12fb68"
+      },
+      {
+        "seed": 2001002,
+        "cost": 1.055033098333333,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 6.935550333333333,
+        "p95_wait_s": 14.760143399999997,
+        "distance": 73.0,
+        "eta_distance": 69.0,
+        "eta_wait": 5.69873488888889,
+        "eta_p95": 8.291468799999999,
+        "scenario_hash": "59e406da6e306d0f9b222d08d2c4c9e8abaab4f7d555bd9907844085b39febd5"
+      },
+      {
+        "seed": 2001003,
+        "cost": 0.1761666666666667,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 3.6,
+        "p95_wait_s": 4.8,
+        "distance": 18.0,
+        "eta_distance": 18.0,
+        "eta_wait": 3.6,
+        "eta_p95": 4.8,
+        "scenario_hash": "6fcd37e22f42de1ee07acdfc6ff586cd52a4d3f2e558cdb9fe1f224919060528"
+      },
+      {
+        "seed": 2001004,
+        "cost": 0.7591696883333338,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 7.280090650000001,
+        "p95_wait_s": 12.8,
+        "distance": 55.0,
+        "eta_distance": 40.0,
+        "eta_wait": 8.14445615,
+        "eta_p95": 26.185892200000005,
+        "scenario_hash": "f2346c3332fd9aec055d9e8113b774b5caeb326da03df485ccfdf360f3d340cd"
+      },
+      {
+        "seed": 2001005,
+        "cost": 1.7593747699999993,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 7.791068142857144,
+        "p95_wait_s": 15.915275049999984,
+        "distance": 91.0,
+        "eta_distance": 129.0,
+        "eta_wait": 20.276497047619046,
+        "eta_p95": 83.67961984999998,
+        "scenario_hash": "b3f24836283048f04f4f9a517637a5dbb695d593e5805c8836b9d9547dff2128"
+      },
+      {
+        "seed": 2001006,
+        "cost": 0.38827229999999996,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.563896666666666,
+        "p95_wait_s": 15.3,
+        "distance": 42.0,
+        "eta_distance": 30.0,
+        "eta_wait": 11.075566333333333,
+        "eta_p95": 16.7,
+        "scenario_hash": "4d910590cd51386433d518cfdc3179b4e0f8d7af2ad3d24cb40179c532e1ff6b"
+      },
+      {
+        "seed": 2001007,
+        "cost": 0.9238162983333338,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 9.395869352941176,
+        "p95_wait_s": 19.331896799999996,
+        "distance": 88.00000000000006,
+        "eta_distance": 61.999999999999986,
+        "eta_wait": 12.439004235294119,
+        "eta_p95": 37.16012959999999,
+        "scenario_hash": "f4a5e8378460d7b783fac534cc65803fe4c6354f012251490b2a7270f37e4d8f"
+      },
+      {
+        "seed": 2001008,
+        "cost": 1.624245876666666,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.326894727272727,
+        "p95_wait_s": 23.392367399999998,
+        "distance": 100.99999999999997,
+        "eta_distance": 87.99999999999999,
+        "eta_wait": 10.34221006060606,
+        "eta_p95": 31.039999999999996,
+        "scenario_hash": "1fa991af79050a0485b77d55c0b7d7a0c44391e77c1c9d6bcfbe9db57a50d412"
+      },
+      {
+        "seed": 2001009,
+        "cost": 0.36312454166666663,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 6.912747222222222,
+        "p95_wait_s": 13.599999999999998,
+        "distance": 35.0,
+        "eta_distance": 40.0,
+        "eta_wait": 8.35781711111111,
+        "eta_p95": 15.9219292,
+        "scenario_hash": "b4dc9391d2defde4df50a5e9dcfab5a33271bd351c027c1fc6e69541b8a60507"
+      },
+      {
+        "seed": 2001010,
+        "cost": 0.47794174166666686,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 7.467087083333333,
+        "p95_wait_s": 13.499999999999996,
+        "distance": 43.0,
+        "eta_distance": 37.0,
+        "eta_wait": 12.898481583333334,
+        "eta_p95": 45.39993599999998,
+        "scenario_hash": "544162821b08a49c1d38d2275fc7e2437e791387170ec0bfe3196fdadc37299d"
+      },
+      {
+        "seed": 2001011,
+        "cost": 0.8025290016666664,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 6.327713086956522,
+        "p95_wait_s": 10.608157599999998,
+        "distance": 65.00000000000003,
+        "eta_distance": 75.0,
+        "eta_wait": 5.880601434782607,
+        "eta_p95": 12.239999999999998,
+        "scenario_hash": "cebf7c13e3fc0c223d901f7b935295f63ab5e2b9421d8f7c474a4e2c0604ad54"
+      },
+      {
+        "seed": 2001012,
+        "cost": 1.1730525766666666,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.748114387096773,
+        "p95_wait_s": 16.8,
+        "distance": 42.0,
+        "eta_distance": 74.0,
+        "eta_wait": 66.47606151612904,
+        "eta_p95": 155.697766,
+        "scenario_hash": "08167da0dd26ef73092b3ec52628b43baadc2cd4cda024d0565f51deff02b270"
+      },
+      {
+        "seed": 2001013,
+        "cost": 1.7360407066666668,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 7.9266179130434775,
+        "p95_wait_s": 14.83943525,
+        "distance": 78.00000000000003,
+        "eta_distance": 130.0,
+        "eta_wait": 21.603992565217393,
+        "eta_p95": 90.4323835,
+        "scenario_hash": "ebcd05e27c9ad1abcaa8f3c6c442c01e31b8cb406d382bfd02f22935d6aa7e49"
+      },
+      {
+        "seed": 2001014,
+        "cost": 3.956337630775263,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 18.300875301886794,
+        "p95_wait_s": 74.7035964,
+        "distance": 128.0000000000001,
+        "eta_distance": 123.00000000000001,
+        "eta_wait": 52.57205435849056,
+        "eta_p95": 173.5288272,
+        "scenario_hash": "f56d3530f1182de3e8b1857e4d53522707d41f58d261813604bd8217c8d70b3e"
+      },
+      {
+        "seed": 2001015,
+        "cost": 0.6233313666666671,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.651882,
+        "p95_wait_s": 25.389569849999997,
+        "distance": 55.99999999999999,
+        "eta_distance": 55.99999999999999,
+        "eta_wait": 10.651882,
+        "eta_p95": 25.389569849999997,
+        "scenario_hash": "640d6bbeaafcf40d5c72b011db022212324f0d16444662c40b92d0bdde1e643b"
+      },
+      {
+        "seed": 2001016,
+        "cost": 2.0399177283333283,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 12.875539206896553,
+        "p95_wait_s": 31.771338799999995,
+        "distance": 142.0,
+        "eta_distance": 114.00000000000006,
+        "eta_wait": 24.710887068965516,
+        "eta_p95": 94.76692799999991,
+        "scenario_hash": "39ee9c5ba7dee9764ca4c1e770507d54d7e5ade932d725ec553b8a6058aadc18"
+      },
+      {
+        "seed": 2001017,
+        "cost": 1.3158534049999981,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 6.923409,
+        "p95_wait_s": 12.3617759,
+        "distance": 116.00000000000004,
+        "eta_distance": 112.99999999999994,
+        "eta_wait": 12.666461074074073,
+        "eta_p95": 28.739563199999996,
+        "scenario_hash": "e3438e867eac7d0265dc39a9a55b1cf50b99112a314fead868ae91461bf89d4d"
+      },
+      {
+        "seed": 2001018,
+        "cost": 0.14773333333333336,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 4.8,
+        "p95_wait_s": 9.599999999999998,
+        "distance": 15.0,
+        "eta_distance": 15.0,
+        "eta_wait": 4.8,
+        "eta_p95": 9.599999999999998,
+        "scenario_hash": "99a38af23f1977417cb427a1121161eaea80a7b99322311cf9639a914df81681"
+      },
+      {
+        "seed": 2001019,
+        "cost": 1.4785515049999995,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 8.9210301,
+        "p95_wait_s": 19.37341405,
+        "distance": 109.99999999999997,
+        "eta_distance": 99.99999999999997,
+        "eta_wait": 14.93637963333333,
+        "eta_p95": 56.6619112,
+        "scenario_hash": "8196d7a0d88709e85a211be66072bfee8e882435578679979a41447f3e1587b5"
+      },
+      {
+        "seed": 2001020,
+        "cost": 1.8863639750000005,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 7.678532976190475,
+        "p95_wait_s": 13.795004549999994,
+        "distance": 119.00000000000001,
+        "eta_distance": 125.00000000000001,
+        "eta_wait": 20.400003952380953,
+        "eta_p95": 106.0053227999999,
+        "scenario_hash": "f5833d259e7715d0fdefbb89041d0de5e98a911343d07a13c7ed8bbdb2ab2930"
+      },
+      {
+        "seed": 2001021,
+        "cost": 0.2045333333333334,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 14.8,
+        "p95_wait_s": 22.0,
+        "distance": 24.0,
+        "eta_distance": 24.0,
+        "eta_wait": 14.8,
+        "eta_p95": 22.0,
+        "scenario_hash": "28ebc12413fcae815887cb2926c69e4ef0b792e65972598e3cb6b7453c3d99a1"
+      },
+      {
+        "seed": 2001022,
+        "cost": 1.6539692333333322,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.630397931034484,
+        "p95_wait_s": 26.836644199999995,
+        "distance": 125.99999999999999,
+        "eta_distance": 113.99999999999999,
+        "eta_wait": 52.532936931034484,
+        "eta_p95": 191.93204239999992,
+        "scenario_hash": "13d4f09c454d5be36544647e8587177c254cddfd2a5a4928c8c05b1a3c1ca821"
+      },
+      {
+        "seed": 2001023,
+        "cost": 2.1887033183333324,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 10.531105026315792,
+        "p95_wait_s": 21.62210685,
+        "distance": 157.99999999999997,
+        "eta_distance": 153.00000000000006,
+        "eta_wait": 36.17906442105264,
+        "eta_p95": 175.6444647,
+        "scenario_hash": "ac65646cf674a3a3409499f1af7955c7a2ed1f7582670c4af4b9729e71e95909"
+      },
+      {
+        "seed": 2001024,
+        "cost": 0.29816666666666664,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 8.399999999999999,
+        "p95_wait_s": 16.4,
+        "distance": 33.0,
+        "eta_distance": 27.0,
+        "eta_wait": 9.4413376,
+        "eta_p95": 19.469330799999998,
+        "scenario_hash": "6c8cd407efb545f150d87e607c6e88469325e74219e891d6c537f3055ca98345"
+      },
+      {
+        "seed": 2001025,
+        "cost": 1.329608866666666,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 9.531743076923076,
+        "p95_wait_s": 22.546364750000002,
+        "distance": 109.00000000000003,
+        "eta_distance": 86.99999999999997,
+        "eta_wait": 19.245972615384613,
+        "eta_p95": 59.8325355,
+        "scenario_hash": "a50efa40d81754e5f33c9f2d303c9b505eda94544028eb9eb99c594caf8d0b6f"
+      },
+      {
+        "seed": 2001026,
+        "cost": 1.3000334783333347,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 8.654786391304349,
+        "p95_wait_s": 26.429578199999984,
+        "distance": 121.00000000000004,
+        "eta_distance": 107.00000000000003,
+        "eta_wait": 37.93668795652173,
+        "eta_p95": 165.48494509999998,
+        "scenario_hash": "6e8ffb478c799c2c7276a0fd94eac23d96388a08e9b6a42b47d1547c2b3aa6ca"
+      },
+      {
+        "seed": 2001027,
+        "cost": 1.935091270000001,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 14.622076722222223,
+        "p95_wait_s": 24.575587249999998,
+        "distance": 93.0,
+        "eta_distance": 127.0,
+        "eta_wait": 48.06777283333333,
+        "eta_p95": 192.04431350000002,
+        "scenario_hash": "30a53d6c5796ce0a11469b7616ac2f37ba0bce8e6b4bfcfae6d1c00311707e8e"
+      },
+      {
+        "seed": 2001028,
+        "cost": 2.9318782698048267,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 12.535835586206897,
+        "p95_wait_s": 24.92747749999998,
+        "distance": 142.99999999999991,
+        "eta_distance": 208.99999999999991,
+        "eta_wait": 66.68369506896552,
+        "eta_p95": 269.5461385,
+        "scenario_hash": "f1ba0d8782134bb0db0f21c04bb5d3ae033792e0095c043053c24ed07350e537"
+      },
+      {
+        "seed": 2001029,
+        "cost": 5.919813611759502,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 20.25843795833333,
+        "p95_wait_s": 66.6827626,
+        "distance": 203.99999999999994,
+        "eta_distance": 219.99999999999991,
+        "eta_wait": 34.31150375000001,
+        "eta_p95": 154.30031205000003,
+        "scenario_hash": "dc467ffd196d9c29a8842fa8a35d06481003830d085589c78b58c9215a4f2f0e"
+      },
+      {
+        "seed": 2001030,
+        "cost": 1.374402816666663,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 16.49869214285715,
+        "p95_wait_s": 44.53999999999999,
+        "distance": 140.99999999999994,
+        "eta_distance": 105.99999999999996,
+        "eta_wait": 25.13686242857143,
+        "eta_p95": 82.70854119999998,
+        "scenario_hash": "047e612e1b1339e48a6e31c25f39f30c40e600405d7b0298724607af5e38f5c1"
+      },
+      {
+        "seed": 2001031,
+        "cost": 3.4133706133333352,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 12.947496930232559,
+        "p95_wait_s": 28.399999999999995,
+        "distance": 278.0,
+        "eta_distance": 227.99999999999997,
+        "eta_wait": 60.54371002325581,
+        "eta_p95": 253.09606419999997,
+        "scenario_hash": "3ac7bcf807678b719987a40375affb32fc0376ce6dea1b14506e9dbf8f564b18"
+      },
+      {
+        "seed": 2001032,
+        "cost": 4.141270875000007,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 14.63312548076923,
+        "p95_wait_s": 39.16,
+        "distance": 279.0000000000001,
+        "eta_distance": 234.99999999999997,
+        "eta_wait": 50.244078057692306,
+        "eta_p95": 191.5785322499999,
+        "scenario_hash": "4c3aefffdd7efa07758c4dc220bc64e27bc28f5994ed06bb9e78a55e1d8dd1f9"
+      },
+      {
+        "seed": 2001033,
+        "cost": 1.0186436416666642,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 5.40615607142857,
+        "p95_wait_s": 10.906429750000001,
+        "distance": 117.0,
+        "eta_distance": 112.0,
+        "eta_wait": 5.152626357142856,
+        "eta_p95": 9.60642975,
+        "scenario_hash": "e4536b44d81284f746f7870a5ae50ea651762652d59bee4d2288f6240539eb6f"
+      },
+      {
+        "seed": 2001034,
+        "cost": 2.131777016666662,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 8.098370000000001,
+        "p95_wait_s": 15.599999999999998,
+        "distance": 184.00000000000003,
+        "eta_distance": 183.0,
+        "eta_wait": 22.820928060606057,
+        "eta_p95": 82.8874192,
+        "scenario_hash": "039ef40684e378489bfec9b427994a6028d317794339bc1a817bff45f2032300"
+      },
+      {
+        "seed": 2001035,
+        "cost": 4.49058082833333,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 13.781917865671641,
+        "p95_wait_s": 30.266719999999992,
+        "distance": 285.9999999999998,
+        "eta_distance": 437.9999999999998,
+        "eta_wait": 32.54469276119403,
+        "eta_p95": 188.24741509999993,
+        "scenario_hash": "6b4f924fa843b2ffa2415dc2cd72182be2eb40994e422a10ce7b891890e8a502"
+      },
+      {
+        "seed": 2001036,
+        "cost": 1.2243334016666678,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 19.052730999999998,
+        "p95_wait_s": 45.2,
+        "distance": 126.00000000000001,
+        "eta_distance": 104.0,
+        "eta_wait": 38.97674672727274,
+        "eta_p95": 120.630975,
+        "scenario_hash": "f7c18d8b6cdc944937f74421787c8a3d784aea4619886a8940b6792c5a21eb21"
+      },
+      {
+        "seed": 2001037,
+        "cost": 3.2821793766666527,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 15.48369065,
+        "p95_wait_s": 40.92705434999999,
+        "distance": 255.99999999999991,
+        "eta_distance": 202.99999999999997,
+        "eta_wait": 41.239585075,
+        "eta_p95": 128.62028729999992,
+        "scenario_hash": "70ddde2bf0af7787df6132d4f24c696a64298d8dee8731e58d5369122416571a"
+      },
+      {
+        "seed": 2001038,
+        "cost": 3.734965896666664,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 11.94106317857143,
+        "p95_wait_s": 30.865311,
+        "distance": 270.99999999999966,
+        "eta_distance": 305.00000000000006,
+        "eta_wait": 96.15737116071429,
+        "eta_p95": 350.53576125,
+        "scenario_hash": "cd0035b33ed7f6bd380ed12cf9e83c3e189a7c754b8237886bb1b2df13ee4102"
+      },
+      {
+        "seed": 2001039,
+        "cost": 0.9774847449999989,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 12.017349727272727,
+        "p95_wait_s": 30.799999999999997,
+        "distance": 112.0,
+        "eta_distance": 104.0,
+        "eta_wait": 27.600231545454548,
+        "eta_p95": 87.64364850000001,
+        "scenario_hash": "ee97461b17e31ca2ace3f927888b982416ef439f0d3ccbf60ff4fd89f8b4dad7"
+      },
+      {
+        "seed": 2001040,
+        "cost": 3.56172316166666,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 12.864550999999999,
+        "p95_wait_s": 38.523237899999984,
+        "distance": 276.99999999999966,
+        "eta_distance": 226.0,
+        "eta_wait": 41.4075974468085,
+        "eta_p95": 226.4857043999999,
+        "scenario_hash": "12bea8c93830d774f5d3c72eaf41600747ac046484bd5b8a13b93c235e5ce2fe"
+      },
+      {
+        "seed": 2001041,
+        "cost": 4.0857288966666605,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 14.873534679245287,
+        "p95_wait_s": 38.194953,
+        "distance": 292.9999999999997,
+        "eta_distance": 256.0,
+        "eta_wait": 48.143222547169806,
+        "eta_p95": 234.54841199999998,
+        "scenario_hash": "5232867fc29949888065b76a090dafadede58f83edf20ed84204c379d90ef3d5"
+      },
+      {
+        "seed": 2001042,
+        "cost": 3.1883645049999996,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 17.489970522727273,
+        "p95_wait_s": 42.44759845,
+        "distance": 178.99999999999997,
+        "eta_distance": 345.00000000000017,
+        "eta_wait": 93.83989561363637,
+        "eta_p95": 352.6161346500001,
+        "scenario_hash": "675e8586659f572bd78fd8b34ff4b41cd23207ef923bacb3b42df1edb591d19f"
+      },
+      {
+        "seed": 2001043,
+        "cost": 5.445790248320885,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 15.002441694444444,
+        "p95_wait_s": 42.120094950000016,
+        "distance": 292.0000000000001,
+        "eta_distance": 391.0000000000001,
+        "eta_wait": 84.78221081944444,
+        "eta_p95": 280.17424410000007,
+        "scenario_hash": "c65da73a3c67516285049449dd756007a744cd9b98525f44ea85660a12607d10"
+      },
+      {
+        "seed": 2001044,
+        "cost": 8.06125868058841,
+        "completion_ratio": 1.0,
+        "mean_wait_s": 21.138474758620692,
+        "p95_wait_s": 60.65099690000003,
+        "distance": 350.00000000000045,
+        "eta_distance": 392.0000000000003,
+        "eta_wait": 97.73591502298854,
+        "eta_p95": 379.43888840000005,
+        "scenario_hash": "41b68036de64f6b839eec939d8202efd68012d1ef352e3e0297aab3b6dd20328"
+      }
+    ],
+    "distance_ratio": 0.958621800032201,
+    "wait_ratio": 0.3522017760842539,
+    "p95_ratio": 0.2244238319512142,
+    "feasible": true
+  },
+  "selection": "distance_constrained",
+  "policy_family": "candidate-cost-prior-residual-ppo",
+  "torch_version": "2.14.1",
+  "buffer_elements": 6
+}
