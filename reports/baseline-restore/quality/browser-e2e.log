@@ -1,0 +1,34 @@
+
+> elevator-control-web@0.1.0 test:e2e
+> playwright test
+
+[2m[WebServer] [22mINFO:     Started server process [75146]
+[2m[WebServer] [22mINFO:     Waiting for application startup.
+[2m[WebServer] [22mINFO:     Application startup complete.
+[2m[WebServer] [22mINFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+
+Running 5 tests using 1 worker
+
+(node:75155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:75155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22mINFO:     127.0.0.1:49815 - "WebSocket /ws/v1/simulations/run-b87e0e5bebd949f9" [accepted]
+[2m[WebServer] [22mINFO:     connection open
+[2m[WebServer] [22mINFO:     127.0.0.1:49816 - "WebSocket /ws/v1/simulations/run-e48989f300d143b9" [accepted]
+[2m[WebServer] [22mINFO:     connection open
+  ✓  1 tests/e2e/application.spec.ts:3:1 › 5F2E ETA: configure, pause, resume, export, reset (2.3s)
+[2m[WebServer] [22mINFO:     127.0.0.1:49823 - "WebSocket /ws/v1/simulations/run-f8ea8ec97fb14193" [accepted]
+[2m[WebServer] [22mINFO:     connection open
+  ✓  2 tests/e2e/application.spec.ts:93:3 › 12F4E round_robin: actual run and trained model (1.2s)
+[2m[WebServer] [22mINFO:     127.0.0.1:49828 - "WebSocket /ws/v1/simulations/run-cc96a507159c4b91" [accepted]
+[2m[WebServer] [22mINFO:     connection open
+  ✓  3 tests/e2e/application.spec.ts:93:3 › 30F8E ppo: actual run and trained model (3.2s)
+  ✓  4 tests/e2e/application.spec.ts:139:1 › same-trace experiment, confidence intervals, real training curves (4.6s)
+[2m[WebServer] [22mINFO:     127.0.0.1:49835 - "WebSocket /ws/v1/simulations/run-7734541032244fb8" [accepted]
+[2m[WebServer] [22mINFO:     connection open
+[2m[WebServer] [22mINFO:     127.0.0.1:49836 - "WebSocket /ws/v1/simulations/run-7da22b418d764dae" [accepted]
+[2m[WebServer] [22mINFO:     connection open
+  ✓  5 tests/e2e/application.spec.ts:209:1 › narrow viewport preserves configuration and simulation controls (1.2s)
+
+  5 passed (14.9s)

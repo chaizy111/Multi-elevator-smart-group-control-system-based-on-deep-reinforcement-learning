@@ -15,12 +15,31 @@ from elevator_control.traffic.trace import TrafficTrace, generate
 class ElevatorEnv(gym.Env):
     metadata = {"render_modes": []}
 
-    def __init__(self, config: SimulationConfig | None = None, trace: TrafficTrace | None = None):
+    def __init__(
+        self,
+        config: SimulationConfig | None = None,
+        trace: TrafficTrace | None = None,
+        *,
+        candidate_inputs: bool = False,
+    ):
+        self.candidate_inputs = candidate_inputs
         self.base_config = config or SimulationConfig()
         self.fixed_trace = trace
         self.observation_space = observation_space()
+        if candidate_inputs:
+            self.observation_space["candidates"] = gym.spaces.Box(
+                -1000, 1000, shape=(8, 6), dtype=np.float32
+            )
         self.action_space = gym.spaces.Discrete(13)
         self.sim: Simulator | None = None
+
+    def _observation(self, sim):
+        obs, clipping = build_observation(sim)
+        if self.candidate_inputs:
+            from elevator_control.env.candidates import candidate_features
+
+            obs["candidates"] = candidate_features(sim)
+        return obs, clipping
 
     def reset(self, *, seed=None, options=None):
         super().reset(seed=seed)
@@ -29,7 +48,7 @@ class ElevatorEnv(gym.Env):
             cfg.seed = int(seed)
         self.sim = Simulator(cfg, self.fixed_trace or generate(cfg), audit=False)
         self.sim.advance_until_decision_or_end()
-        obs, clip = build_observation(self.sim)
+        obs, clip = self._observation(self.sim)
         return obs, dict(
             decision_id=self.sim.current.decision_id if self.sim.current else None,
             clipping_ratio=clip,
@@ -45,7 +64,7 @@ class ElevatorEnv(gym.Env):
         sim.apply_action(d.decision_id, int(action))
         sim.advance_until_decision_or_end()
         costs = {k: sim.costs[k] - previous[k] for k in previous}
-        obs, clip = build_observation(sim)
+        obs, clip = self._observation(sim)
         terminated = sim.done and sim.reason == "completed"
         truncated = sim.done and not terminated
         info: dict[str, Any] = dict(

@@ -1,0 +1,133 @@
+{
+  "status": "PASSED",
+  "checks": [
+    {
+      "name": "pytest",
+      "command": [
+        "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=reports/quality/pytest.xml"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 16.044809874991188,
+      "log": "reports/quality/pytest.log"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.051186666009016335,
+      "log": "reports/quality/ruff.log"
+    },
+    {
+      "name": "format",
+      "command": [
+        "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.02201858299667947,
+      "log": "reports/quality/format.log"
+    },
+    {
+      "name": "pyright",
+      "command": [
+        "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python",
+        "-m",
+        "pyright",
+        "--pythonpath",
+        "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.644138582982123,
+      "log": "reports/quality/pyright.log"
+    },
+    {
+      "name": "frontend-format",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "format:check"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.3574056249926798,
+      "log": "reports/quality/frontend-format.log"
+    },
+    {
+      "name": "frontend-types",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.6732475419994444,
+      "log": "reports/quality/frontend-types.log"
+    },
+    {
+      "name": "frontend-unit",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "test"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5027773750189226,
+      "log": "reports/quality/frontend-unit.log"
+    },
+    {
+      "name": "frontend-build",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.37637829099549,
+      "log": "reports/quality/frontend-build.log"
+    },
+    {
+      "name": "real-chain",
+      "command": [
+        "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/bin/python",
+        "scripts/run_acceptance.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.3463620420079678,
+      "log": "reports/quality/real-chain.log"
+    },
+    {
+      "name": "browser-e2e",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "test:e2e"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 15.413340625003912,
+      "log": "reports/quality/browser-e2e.log"
+    }
+  ]
+}

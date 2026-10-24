@@ -1,0 +1,41 @@
+[
+  {
+    "model": "consequences-s801-n200000",
+    "legal_dispatch_samples": 52,
+    "mean_local_derivative": {
+      "pickup_minutes": -0.53116375207901,
+      "new_finish_minutes": -0.8110575079917908,
+      "added_distance_tens": -1.3363215923309326,
+      "existing_pickup_delay_minutes": -1.0139336585998535,
+      "existing_finish_delay_minutes": -1.3919963836669922,
+      "route_extension_minutes": -1.1650466918945312
+    },
+    "note": "Local score sensitivity on public regression states; not globally constant policy weights."
+  },
+  {
+    "model": "consequences-s802-n200000",
+    "legal_dispatch_samples": 52,
+    "mean_local_derivative": {
+      "pickup_minutes": -0.40056031942367554,
+      "new_finish_minutes": -0.19825387001037598,
+      "added_distance_tens": -0.5259384512901306,
+      "existing_pickup_delay_minutes": -0.5344521403312683,
+      "existing_finish_delay_minutes": -0.6137832999229431,
+      "route_extension_minutes": -0.4253557622432709
+    },
+    "note": "Local score sensitivity on public regression states; not globally constant policy weights."
+  },
+  {
+    "model": "consequences-s803-n200000",
+    "legal_dispatch_samples": 52,
+    "mean_local_derivative": {
+      "pickup_minutes": -0.35358482599258423,
+      "new_finish_minutes": -0.5451307892799377,
+      "added_distance_tens": -0.6482697129249573,
+      "existing_pickup_delay_minutes": -0.6725624799728394,
+      "existing_finish_delay_minutes": -0.6071864366531372,
+      "route_extension_minutes": -0.5191673636436462
+    },
+    "note": "Local score sensitivity on public regression states; not globally constant policy weights."
+  }
+]

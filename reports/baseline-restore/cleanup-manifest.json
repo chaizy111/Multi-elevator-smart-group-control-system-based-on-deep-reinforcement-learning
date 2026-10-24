@@ -1,0 +1,873 @@
+{
+  "baseline_commit": "18fd731",
+  "moved_reports": [
+    {
+      "source": "reports/chart-layout/after-1440.png",
+      "destination": "references/round2-3/reports/chart-layout/after-1440.png"
+    },
+    {
+      "source": "reports/chart-layout/after-390.png",
+      "destination": "references/round2-3/reports/chart-layout/after-390.png"
+    },
+    {
+      "source": "reports/chart-layout/after-900.png",
+      "destination": "references/round2-3/reports/chart-layout/after-900.png"
+    },
+    {
+      "source": "reports/chart-layout/after-optimization.png",
+      "destination": "references/round2-3/reports/chart-layout/after-optimization.png"
+    },
+    {
+      "source": "reports/chart-layout/before.png",
+      "destination": "references/round2-3/reports/chart-layout/before.png"
+    },
+    {
+      "source": "reports/chart-layout/checks.json",
+      "destination": "references/round2-3/reports/chart-layout/checks.json"
+    },
+    {
+      "source": "reports/frontend-ppo/changes.csv",
+      "destination": "references/round2-3/reports/frontend-ppo/changes.csv"
+    },
+    {
+      "source": "reports/frontend-ppo/curriculum-suite.yaml",
+      "destination": "references/round2-3/reports/frontend-ppo/curriculum-suite.yaml"
+    },
+    {
+      "source": "reports/frontend-ppo/evaluation.log",
+      "destination": "references/round2-3/reports/frontend-ppo/evaluation.log"
+    },
+    {
+      "source": "reports/frontend-ppo/report.md",
+      "destination": "references/round2-3/reports/frontend-ppo/report.md"
+    },
+    {
+      "source": "reports/frontend-ppo/results.json",
+      "destination": "references/round2-3/reports/frontend-ppo/results.json"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/r2-standard-changes.csv",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/r2-standard-changes.csv"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/r2-standard-summary.csv",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/r2-standard-summary.csv"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/r3-classic-evaluation.log",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/r3-classic-evaluation.log"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/r3-classic-suite.yaml",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/r3-classic-suite.yaml"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/r3-standard-changes.csv",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/r3-standard-changes.csv"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/r3-standard-summary.csv",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/r3-standard-summary.csv"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/results.json",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/results.json"
+    },
+    {
+      "source": "reports/frontend-ppo/rounds/verification.json",
+      "destination": "references/round2-3/reports/frontend-ppo/rounds/verification.json"
+    },
+    {
+      "source": "reports/frontend-ppo/summary.csv",
+      "destination": "references/round2-3/reports/frontend-ppo/summary.csv"
+    },
+    {
+      "source": "reports/frontend-ppo/verification.json",
+      "destination": "references/round2-3/reports/frontend-ppo/verification.json"
+    },
+    {
+      "source": "reports/maintenance/cleanup/compatibility.json",
+      "destination": "references/round2-3/reports/maintenance/cleanup/compatibility.json"
+    },
+    {
+      "source": "reports/maintenance/cleanup/full-quality.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/full-quality.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/model-hashes-before.json",
+      "destination": "references/round2-3/reports/maintenance/cleanup/model-hashes-before.json"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/browser-e2e.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/browser-e2e.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/checks.json",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/checks.json"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/format.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/format.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/frontend-build.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/frontend-build.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/frontend-format.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/frontend-format.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/frontend-types.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/frontend-types.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/frontend-unit.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/frontend-unit.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/pyright.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/pyright.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/pytest.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/pytest.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/pytest.xml",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/pytest.xml"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/real-chain.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/real-chain.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/quality-before/ruff.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/quality-before/ruff.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/targeted-tests.log",
+      "destination": "references/round2-3/reports/maintenance/cleanup/targeted-tests.log"
+    },
+    {
+      "source": "reports/maintenance/cleanup/verification.json",
+      "destination": "references/round2-3/reports/maintenance/cleanup/verification.json"
+    },
+    {
+      "source": "reports/optimization-evaluation.log",
+      "destination": "references/round2-3/reports/optimization-evaluation.log"
+    },
+    {
+      "source": "reports/optimization-quality.log",
+      "destination": "references/round2-3/reports/optimization-quality.log"
+    },
+    {
+      "source": "reports/optimization-scan.log",
+      "destination": "references/round2-3/reports/optimization-scan.log"
+    },
+    {
+      "source": "reports/optimization-train-401.log",
+      "destination": "references/round2-3/reports/optimization-train-401.log"
+    },
+    {
+      "source": "reports/optimization-train-402.log",
+      "destination": "references/round2-3/reports/optimization-train-402.log"
+    },
+    {
+      "source": "reports/optimization-train-403.log",
+      "destination": "references/round2-3/reports/optimization-train-403.log"
+    },
+    {
+      "source": "reports/optimization/acceptance.md",
+      "destination": "references/round2-3/reports/optimization/acceptance.md"
+    },
+    {
+      "source": "reports/optimization/audit-console.log",
+      "destination": "references/round2-3/reports/optimization/audit-console.log"
+    },
+    {
+      "source": "reports/optimization/benchmark-console.log",
+      "destination": "references/round2-3/reports/optimization/benchmark-console.log"
+    },
+    {
+      "source": "reports/optimization/benchmark.json",
+      "destination": "references/round2-3/reports/optimization/benchmark.json"
+    },
+    {
+      "source": "reports/optimization/browser-comparison.png",
+      "destination": "references/round2-3/reports/optimization/browser-comparison.png"
+    },
+    {
+      "source": "reports/optimization/browser-training.png",
+      "destination": "references/round2-3/reports/optimization/browser-training.png"
+    },
+    {
+      "source": "reports/optimization/chosen_prior.json",
+      "destination": "references/round2-3/reports/optimization/chosen_prior.json"
+    },
+    {
+      "source": "reports/optimization/comparison.png",
+      "destination": "references/round2-3/reports/optimization/comparison.png"
+    },
+    {
+      "source": "reports/optimization/comparison.svg",
+      "destination": "references/round2-3/reports/optimization/comparison.svg"
+    },
+    {
+      "source": "reports/optimization/decision_latency.json",
+      "destination": "references/round2-3/reports/optimization/decision_latency.json"
+    },
+    {
+      "source": "reports/optimization/delivery_checks.json",
+      "destination": "references/round2-3/reports/optimization/delivery_checks.json"
+    },
+    {
+      "source": "reports/optimization/effect_target.json",
+      "destination": "references/round2-3/reports/optimization/effect_target.json"
+    },
+    {
+      "source": "reports/optimization/frozen_selection.json",
+      "destination": "references/round2-3/reports/optimization/frozen_selection.json"
+    },
+    {
+      "source": "reports/optimization/old_decision_diagnosis.csv",
+      "destination": "references/round2-3/reports/optimization/old_decision_diagnosis.csv"
+    },
+    {
+      "source": "reports/optimization/old_distance_diagnosis.csv",
+      "destination": "references/round2-3/reports/optimization/old_distance_diagnosis.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-generalization-changes.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-generalization-changes.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-generalization-intervals.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-generalization-intervals.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-generalization-summary.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-generalization-summary.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-long-changes.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-long-changes.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-long-intervals.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-long-intervals.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-long-summary.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-long-summary.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-pressure-changes.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-pressure-changes.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-pressure-intervals.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-pressure-intervals.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-pressure-summary.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-pressure-summary.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-standard-changes.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-standard-changes.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-standard-intervals.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-standard-intervals.csv"
+    },
+    {
+      "source": "reports/optimization/optimization-standard-summary.csv",
+      "destination": "references/round2-3/reports/optimization/optimization-standard-summary.csv"
+    },
+    {
+      "source": "reports/optimization/pressure-completion.csv",
+      "destination": "references/round2-3/reports/optimization/pressure-completion.csv"
+    },
+    {
+      "source": "reports/optimization/prior_scan.csv",
+      "destination": "references/round2-3/reports/optimization/prior_scan.csv"
+    },
+    {
+      "source": "reports/optimization/production_smoke.json",
+      "destination": "references/round2-3/reports/optimization/production_smoke.json"
+    },
+    {
+      "source": "reports/optimization/protocol.json",
+      "destination": "references/round2-3/reports/optimization/protocol.json"
+    },
+    {
+      "source": "reports/optimization/raw_audit.json",
+      "destination": "references/round2-3/reports/optimization/raw_audit.json"
+    },
+    {
+      "source": "reports/optimization/report-console.log",
+      "destination": "references/round2-3/reports/optimization/report-console.log"
+    },
+    {
+      "source": "reports/optimization/report.md",
+      "destination": "references/round2-3/reports/optimization/report.md"
+    },
+    {
+      "source": "reports/optimization/results.json",
+      "destination": "references/round2-3/reports/optimization/results.json"
+    },
+    {
+      "source": "reports/optimization/scan-reproduction.json",
+      "destination": "references/round2-3/reports/optimization/scan-reproduction.json"
+    },
+    {
+      "source": "reports/optimization/scan-reproduction.log",
+      "destination": "references/round2-3/reports/optimization/scan-reproduction.log"
+    },
+    {
+      "source": "reports/optimization/server-startup.log",
+      "destination": "references/round2-3/reports/optimization/server-startup.log"
+    },
+    {
+      "source": "reports/optimization/standard-per-scenario.csv",
+      "destination": "references/round2-3/reports/optimization/standard-per-scenario.csv"
+    },
+    {
+      "source": "reports/optimization/training_summary.json",
+      "destination": "references/round2-3/reports/optimization/training_summary.json"
+    },
+    {
+      "source": "reports/optimization/validation_baselines.csv",
+      "destination": "references/round2-3/reports/optimization/validation_baselines.csv"
+    },
+    {
+      "source": "reports/quality-v1/browser-e2e.log",
+      "destination": "references/round2-3/reports/quality-v1/browser-e2e.log"
+    },
+    {
+      "source": "reports/quality-v1/checks.json",
+      "destination": "references/round2-3/reports/quality-v1/checks.json"
+    },
+    {
+      "source": "reports/quality-v1/format.log",
+      "destination": "references/round2-3/reports/quality-v1/format.log"
+    },
+    {
+      "source": "reports/quality-v1/frontend-build.log",
+      "destination": "references/round2-3/reports/quality-v1/frontend-build.log"
+    },
+    {
+      "source": "reports/quality-v1/frontend-format.log",
+      "destination": "references/round2-3/reports/quality-v1/frontend-format.log"
+    },
+    {
+      "source": "reports/quality-v1/frontend-types.log",
+      "destination": "references/round2-3/reports/quality-v1/frontend-types.log"
+    },
+    {
+      "source": "reports/quality-v1/frontend-unit.log",
+      "destination": "references/round2-3/reports/quality-v1/frontend-unit.log"
+    },
+    {
+      "source": "reports/quality-v1/pyright.log",
+      "destination": "references/round2-3/reports/quality-v1/pyright.log"
+    },
+    {
+      "source": "reports/quality-v1/pytest.log",
+      "destination": "references/round2-3/reports/quality-v1/pytest.log"
+    },
+    {
+      "source": "reports/quality-v1/pytest.xml",
+      "destination": "references/round2-3/reports/quality-v1/pytest.xml"
+    },
+    {
+      "source": "reports/quality-v1/real-chain.log",
+      "destination": "references/round2-3/reports/quality-v1/real-chain.log"
+    },
+    {
+      "source": "reports/quality-v1/ruff.log",
+      "destination": "references/round2-3/reports/quality-v1/ruff.log"
+    },
+    {
+      "source": "reports/quality-v2/browser-e2e.log",
+      "destination": "references/round2-3/reports/quality-v2/browser-e2e.log"
+    },
+    {
+      "source": "reports/quality-v2/checks.json",
+      "destination": "references/round2-3/reports/quality-v2/checks.json"
+    },
+    {
+      "source": "reports/quality-v2/format.log",
+      "destination": "references/round2-3/reports/quality-v2/format.log"
+    },
+    {
+      "source": "reports/quality-v2/frontend-build.log",
+      "destination": "references/round2-3/reports/quality-v2/frontend-build.log"
+    },
+    {
+      "source": "reports/quality-v2/frontend-format.log",
+      "destination": "references/round2-3/reports/quality-v2/frontend-format.log"
+    },
+    {
+      "source": "reports/quality-v2/frontend-types.log",
+      "destination": "references/round2-3/reports/quality-v2/frontend-types.log"
+    },
+    {
+      "source": "reports/quality-v2/frontend-unit.log",
+      "destination": "references/round2-3/reports/quality-v2/frontend-unit.log"
+    },
+    {
+      "source": "reports/quality-v2/pyright.log",
+      "destination": "references/round2-3/reports/quality-v2/pyright.log"
+    },
+    {
+      "source": "reports/quality-v2/pytest.log",
+      "destination": "references/round2-3/reports/quality-v2/pytest.log"
+    },
+    {
+      "source": "reports/quality-v2/pytest.xml",
+      "destination": "references/round2-3/reports/quality-v2/pytest.xml"
+    },
+    {
+      "source": "reports/quality-v2/real-chain.log",
+      "destination": "references/round2-3/reports/quality-v2/real-chain.log"
+    },
+    {
+      "source": "reports/quality-v2/ruff.log",
+      "destination": "references/round2-3/reports/quality-v2/ruff.log"
+    },
+    {
+      "source": "reports/rl-design-review/design-diagnosis.json",
+      "destination": "references/round2-3/reports/rl-design-review/design-diagnosis.json"
+    },
+    {
+      "source": "reports/rl-design-review/historical-per-scenario.csv",
+      "destination": "references/round2-3/reports/rl-design-review/historical-per-scenario.csv"
+    },
+    {
+      "source": "reports/rl-design-review/targeted-tests.log",
+      "destination": "references/round2-3/reports/rl-design-review/targeted-tests.log"
+    },
+    {
+      "source": "reports/rl-design-review/verification.json",
+      "destination": "references/round2-3/reports/rl-design-review/verification.json"
+    },
+    {
+      "source": "reports/rl-increment/acceptance.md",
+      "destination": "references/round2-3/reports/rl-increment/acceptance.md"
+    },
+    {
+      "source": "reports/rl-increment/audit-console.log",
+      "destination": "references/round2-3/reports/rl-increment/audit-console.log"
+    },
+    {
+      "source": "reports/rl-increment/backend-regression.log",
+      "destination": "references/round2-3/reports/rl-increment/backend-regression.log"
+    },
+    {
+      "source": "reports/rl-increment/browser-cache-default.log",
+      "destination": "references/round2-3/reports/rl-increment/browser-cache-default.log"
+    },
+    {
+      "source": "reports/rl-increment/browser-comparison.png",
+      "destination": "references/round2-3/reports/rl-increment/browser-comparison.png"
+    },
+    {
+      "source": "reports/rl-increment/browser-env-failure.log",
+      "destination": "references/round2-3/reports/rl-increment/browser-env-failure.log"
+    },
+    {
+      "source": "reports/rl-increment/browser-final.log",
+      "destination": "references/round2-3/reports/rl-increment/browser-final.log"
+    },
+    {
+      "source": "reports/rl-increment/browser-training.png",
+      "destination": "references/round2-3/reports/rl-increment/browser-training.png"
+    },
+    {
+      "source": "reports/rl-increment/comparison.png",
+      "destination": "references/round2-3/reports/rl-increment/comparison.png"
+    },
+    {
+      "source": "reports/rl-increment/comparison.svg",
+      "destination": "references/round2-3/reports/rl-increment/comparison.svg"
+    },
+    {
+      "source": "reports/rl-increment/decision-latency.json",
+      "destination": "references/round2-3/reports/rl-increment/decision-latency.json"
+    },
+    {
+      "source": "reports/rl-increment/delivery-checks.json",
+      "destination": "references/round2-3/reports/rl-increment/delivery-checks.json"
+    },
+    {
+      "source": "reports/rl-increment/evaluation-console.log",
+      "destination": "references/round2-3/reports/rl-increment/evaluation-console.log"
+    },
+    {
+      "source": "reports/rl-increment/explain-console.log",
+      "destination": "references/round2-3/reports/rl-increment/explain-console.log"
+    },
+    {
+      "source": "reports/rl-increment/focused-tests.log",
+      "destination": "references/round2-3/reports/rl-increment/focused-tests.log"
+    },
+    {
+      "source": "reports/rl-increment/freeze-console.log",
+      "destination": "references/round2-3/reports/rl-increment/freeze-console.log"
+    },
+    {
+      "source": "reports/rl-increment/frozen_selection.json",
+      "destination": "references/round2-3/reports/rl-increment/frozen_selection.json"
+    },
+    {
+      "source": "reports/rl-increment/generalization-summary.csv",
+      "destination": "references/round2-3/reports/rl-increment/generalization-summary.csv"
+    },
+    {
+      "source": "reports/rl-increment/learned-action-diagnosis.json",
+      "destination": "references/round2-3/reports/rl-increment/learned-action-diagnosis.json"
+    },
+    {
+      "source": "reports/rl-increment/learned-coefficients.csv",
+      "destination": "references/round2-3/reports/rl-increment/learned-coefficients.csv"
+    },
+    {
+      "source": "reports/rl-increment/long-summary.csv",
+      "destination": "references/round2-3/reports/rl-increment/long-summary.csv"
+    },
+    {
+      "source": "reports/rl-increment/model-inventory.json",
+      "destination": "references/round2-3/reports/rl-increment/model-inventory.json"
+    },
+    {
+      "source": "reports/rl-increment/production-first-smoke.json",
+      "destination": "references/round2-3/reports/rl-increment/production-first-smoke.json"
+    },
+    {
+      "source": "reports/rl-increment/production-smoke.json",
+      "destination": "references/round2-3/reports/rl-increment/production-smoke.json"
+    },
+    {
+      "source": "reports/rl-increment/protocol-v1.json",
+      "destination": "references/round2-3/reports/rl-increment/protocol-v1.json"
+    },
+    {
+      "source": "reports/rl-increment/protocol.json",
+      "destination": "references/round2-3/reports/rl-increment/protocol.json"
+    },
+    {
+      "source": "reports/rl-increment/quality-console.log",
+      "destination": "references/round2-3/reports/rl-increment/quality-console.log"
+    },
+    {
+      "source": "reports/rl-increment/quality-first-failure/browser-e2e.log",
+      "destination": "references/round2-3/reports/rl-increment/quality-first-failure/browser-e2e.log"
+    },
+    {
+      "source": "reports/rl-increment/quality-first-failure/checks.json",
+      "destination": "references/round2-3/reports/rl-increment/quality-first-failure/checks.json"
+    },
+    {
+      "source": "reports/rl-increment/quality-first-failure/console.log",
+      "destination": "references/round2-3/reports/rl-increment/quality-first-failure/console.log"
+    },
+    {
+      "source": "reports/rl-increment/quality-first-failure/pytest.log",
+      "destination": "references/round2-3/reports/rl-increment/quality-first-failure/pytest.log"
+    },
+    {
+      "source": "reports/rl-increment/raw-audit.json",
+      "destination": "references/round2-3/reports/rl-increment/raw-audit.json"
+    },
+    {
+      "source": "reports/rl-increment/report-console.log",
+      "destination": "references/round2-3/reports/rl-increment/report-console.log"
+    },
+    {
+      "source": "reports/rl-increment/report.md",
+      "destination": "references/round2-3/reports/rl-increment/report.md"
+    },
+    {
+      "source": "reports/rl-increment/results.json",
+      "destination": "references/round2-3/reports/rl-increment/results.json"
+    },
+    {
+      "source": "reports/rl-increment/sampling-diagnosis.json",
+      "destination": "references/round2-3/reports/rl-increment/sampling-diagnosis.json"
+    },
+    {
+      "source": "reports/rl-increment/standard-summary.csv",
+      "destination": "references/round2-3/reports/rl-increment/standard-summary.csv"
+    },
+    {
+      "source": "reports/rl-increment/train-constant-weights-s501.log",
+      "destination": "references/round2-3/reports/rl-increment/train-constant-weights-s501.log"
+    },
+    {
+      "source": "reports/rl-increment/train-constant-weights-s502.log",
+      "destination": "references/round2-3/reports/rl-increment/train-constant-weights-s502.log"
+    },
+    {
+      "source": "reports/rl-increment/train-constant-weights-s503.log",
+      "destination": "references/round2-3/reports/rl-increment/train-constant-weights-s503.log"
+    },
+    {
+      "source": "reports/rl-increment/train-context-weights-s501.log",
+      "destination": "references/round2-3/reports/rl-increment/train-context-weights-s501.log"
+    },
+    {
+      "source": "reports/rl-increment/train-context-weights-s502.log",
+      "destination": "references/round2-3/reports/rl-increment/train-context-weights-s502.log"
+    },
+    {
+      "source": "reports/rl-increment/train-context-weights-s503.log",
+      "destination": "references/round2-3/reports/rl-increment/train-context-weights-s503.log"
+    },
+    {
+      "source": "reports/rl-increment/train-focused-mlp-s501.log",
+      "destination": "references/round2-3/reports/rl-increment/train-focused-mlp-s501.log"
+    },
+    {
+      "source": "reports/rl-increment/train-focused-mlp-s502.log",
+      "destination": "references/round2-3/reports/rl-increment/train-focused-mlp-s502.log"
+    },
+    {
+      "source": "reports/rl-increment/train-focused-mlp-s503.log",
+      "destination": "references/round2-3/reports/rl-increment/train-focused-mlp-s503.log"
+    },
+    {
+      "source": "reports/rl-increment/training-stage.json",
+      "destination": "references/round2-3/reports/rl-increment/training-stage.json"
+    },
+    {
+      "source": "reports/rl-increment/training-summary.json",
+      "destination": "references/round2-3/reports/rl-increment/training-summary.json"
+    },
+    {
+      "source": "reports/rl-increment/validation-selection.csv",
+      "destination": "references/round2-3/reports/rl-increment/validation-selection.csv"
+    }
+  ],
+  "archived_artifacts_root": "artifacts/references/round2-3",
+  "deleted": [
+    "configs/evaluation/optimization/optimization-generalization.yaml",
+    "configs/evaluation/optimization/optimization-long.yaml",
+    "configs/evaluation/optimization/optimization-pressure.yaml",
+    "configs/evaluation/optimization/optimization-standard.yaml",
+    "configs/evaluation/rl-increment/generalization.yaml",
+    "configs/evaluation/rl-increment/long.yaml",
+    "configs/evaluation/rl-increment/standard.yaml",
+    "configs/training/optimization/s401-n200000-e1.json",
+    "configs/training/optimization/s402-n200000-e1.json",
+    "configs/training/optimization/s403-n200000-e1.json",
+    "configs/training/rl-increment/constant-weights-s501.json",
+    "configs/training/rl-increment/constant-weights-s502.json",
+    "configs/training/rl-increment/constant-weights-s503.json",
+    "configs/training/rl-increment/context-weights-s501.json",
+    "configs/training/rl-increment/context-weights-s502.json",
+    "configs/training/rl-increment/context-weights-s503.json",
+    "configs/training/rl-increment/focused-mlp-s501.json",
+    "configs/training/rl-increment/focused-mlp-s502.json",
+    "configs/training/rl-increment/focused-mlp-s503.json",
+    "configs/training/round4/baseline-s601.json",
+    "configs/training/round4/baseline-s602.json",
+    "configs/training/round4/baseline-s603.json",
+    "configs/training/round4/choice-s601.json",
+    "configs/training/round4/choice-s602.json",
+    "configs/training/round4/choice-s603.json",
+    "configs/training/round4/episodes-s601.json",
+    "configs/training/round4/episodes-s602.json",
+    "configs/training/round4/episodes-s603.json",
+    "configs/training/round4/gated-s601.json",
+    "configs/training/round4/gated-s602.json",
+    "configs/training/round4/gated-s603.json",
+    "configs/training/round4/mean-s601.json",
+    "configs/training/round4/mean-s602.json",
+    "configs/training/round4/mean-s603.json",
+    "configs/training/round4/mean-s604.json",
+    "configs/training/round4/mean-s605.json",
+    "configs/training/round4/nonnegative-s601.json",
+    "configs/training/round4/nonnegative-s602.json",
+    "configs/training/round4/nonnegative-s603.json",
+    "configs/training/round4/split-s601.json",
+    "configs/training/round4/split-s602.json",
+    "configs/training/round4/split-s603.json",
+    "scripts/audit_optimization.py",
+    "scripts/diagnose_round4.py",
+    "scripts/evaluate_optimization.py",
+    "scripts/evaluate_round4.py",
+    "scripts/optimization_report.py",
+    "scripts/optimize_policy.py",
+    "scripts/report_round4_development.py",
+    "scripts/research_rl_increment.py",
+    "scripts/research_round4.py",
+    "scripts/tune_round4_rules.py",
+    "src/elevator_control/controllers/rules.py",
+    "src/elevator_control/env/candidates.py",
+    "src/elevator_control/evaluation/paired_missing.py",
+    "src/elevator_control/rl/episodes.py",
+    "src/elevator_control/rl/optimization.py",
+    "src/elevator_control/rl/reference.py",
+    "src/elevator_control/rl/shaping.py",
+    "tests/integration/test_round4_rules.py",
+    "tests/integration/test_round4_training.py",
+    "tests/unit/test_candidates.py",
+    "tests/unit/test_focused_policy.py",
+    "tests/unit/test_round4.py",
+    "tests/unit/test_round4_constrained.py",
+    "tests/unit/test_round4_freeze.py",
+    "docs/env/candidates.md",
+    "docs/maintenance/code-cleanup.md",
+    "docs/rl/incremental-benefit.md",
+    "docs/rl/optimization.md",
+    "docs/rl/round4.md",
+    "docs/rl/前端PPO建模与流程.md",
+    "docs/rl/稳定增益优化方案.md",
+    "reports/round4",
+    "artifacts/round4",
+    "configs/training/round4",
+    "frontend/test-results",
+    ".cache/pytest"
+  ],
+  "removed_round4_models": [
+    "ppo-r4-split-s601",
+    "ppo-r4-nonnegative-s601",
+    "ppo-r4-gated-s602",
+    "ppo-r4-choice-s603",
+    "ppo-r4-choice-s602",
+    "ppo-r4-gated-s603",
+    "ppo-r4-mean-s601",
+    "ppo-r4-baseline-s601",
+    "ppo-r4-episodes-s601",
+    "ppo-r4-nonnegative-s603",
+    "ppo-r4-split-s603",
+    "ppo-r4-nonnegative-s602",
+    "ppo-r4-split-s602",
+    "ppo-r4-gated-s601",
+    "ppo-r4-choice-s601",
+    "ppo-r4-episodes-s603",
+    "ppo-r4-mean-s605",
+    "ppo-r4-mean-s602",
+    "ppo-r4-baseline-s602",
+    "ppo-r4-baseline-s603",
+    "ppo-r4-mean-s603",
+    "ppo-r4-mean-s604",
+    "ppo-r4-episodes-s602"
+  ],
+  "index_jobs_removed": [
+    "ppo-opt-s401-n200000-e1",
+    "ppo-opt-s402-n200000-e1",
+    "ppo-opt-s403-n200000-e1",
+    "optimization-standard",
+    "run-d01a902411bd4f28",
+    "optimization-long",
+    "run-f715e0edf36f4283",
+    "optimization-generalization",
+    "run-a12bf9f562654ba1",
+    "optimization-pressure",
+    "run-71bde419be754ca4",
+    "run-57a6bbe497f54bc3",
+    "run-235c12ace05c4275",
+    "experiment-6badb2c330e94cb0",
+    "ppo-r3-context-weights-s502",
+    "ppo-r3-context-weights-s501",
+    "ppo-r3-context-weights-s503",
+    "run-c25f227d92814a01",
+    "experiment-194e1eed28794935",
+    "experiment-ff67cf5f51794df5",
+    "ppo-r3-focused-mlp-s502",
+    "ppo-r3-focused-mlp-s501",
+    "ppo-r3-focused-mlp-s503",
+    "run-40a569eb2bc1453a",
+    "experiment-9f7fa3c5fb9a447b",
+    "experiment-d6372204f58e417a",
+    "ppo-r3-constant-weights-s502",
+    "ppo-r3-constant-weights-s503",
+    "ppo-r3-constant-weights-s501",
+    "run-bb6832f8c6d446c3",
+    "experiment-96b2bd31e8ad4a6a",
+    "rl-increment-standard",
+    "experiment-73032a1ba991476c",
+    "rl-increment-long",
+    "rl-increment-generalization",
+    "run-0e93caeced854e0d",
+    "run-71aef545132d44e2",
+    "experiment-f10dd5e95b624721",
+    "experiment-51f993afd12b4fd1",
+    "run-5f6b4f5360dc4e97",
+    "run-7a71a73ed29e47cc",
+    "experiment-9cf53454b9c14ce2",
+    "experiment-f5436d9de43840fe",
+    "run-51392f0bfa9740f3",
+    "experiment-d816725661ab4a5f",
+    "experiment-cc5fade80f7f4334",
+    "frontend-ppo-curriculum-standard",
+    "rl-increment-classic-supplement",
+    "ppo-r4-baseline-s602",
+    "ppo-r4-baseline-s603",
+    "ppo-r4-baseline-s601",
+    "ppo-r4-choice-s601",
+    "ppo-r4-choice-s603",
+    "ppo-r4-choice-s602",
+    "run-837ac45ce69b4d66",
+    "experiment-7eac0aa5f7c14ca2",
+    "experiment-f1323790b2e94fd7",
+    "ppo-r4-split-s603",
+    "ppo-r4-split-s602",
+    "ppo-r4-split-s601",
+    "ppo-r4-episodes-s603",
+    "ppo-r4-episodes-s602",
+    "ppo-r4-episodes-s601",
+    "ppo-r4-mean-s601",
+    "ppo-r4-mean-s602",
+    "ppo-r4-mean-s603",
+    "run-e78e565d8e0f4215",
+    "experiment-434d8af1c6324981",
+    "experiment-bd77bc88132d412d",
+    "experiment-b07845d8365b4b64",
+    "run-a83ca210e062472a",
+    "ppo-r4-nonnegative-s603",
+    "ppo-r4-nonnegative-s601",
+    "ppo-r4-nonnegative-s602",
+    "run-cbe00732235e4218",
+    "experiment-0252bce00cf74e9a",
+    "experiment-b0452741cc0c44ed",
+    "experiment-6ca7c4067dda4d68",
+    "ppo-r4-gated-s603",
+    "ppo-r4-gated-s602",
+    "ppo-r4-gated-s601",
+    "ppo-r4-mean-s605",
+    "ppo-r4-mean-s604",
+    "run-862b75846dd14eac",
+    "experiment-d445b34601f74444",
+    "experiment-faff2ce4be514b93",
+    "experiment-261bcaf1e8504f2d"
+  ],
+  "archived_index_jobs": 60,
+  "active_models": [
+    "ppo-curriculum",
+    "ppo-dispatch-only",
+    "ppo-no-attention",
+    "ppo-no-fairness",
+    "ppo-seed101",
+    "ppo-seed202",
+    "ppo-seed303",
+    "ppo-smoke"
+  ],
+  "reference_models": [
+    "ppo-opt-s401-n200000-e1",
+    "ppo-opt-s402-n200000-e1",
+    "ppo-opt-s403-n200000-e1",
+    "ppo-r3-constant-weights-s501",
+    "ppo-r3-constant-weights-s502",
+    "ppo-r3-constant-weights-s503",
+    "ppo-r3-context-weights-s501",
+    "ppo-r3-context-weights-s502",
+    "ppo-r3-context-weights-s503",
+    "ppo-r3-focused-mlp-s501",
+    "ppo-r3-focused-mlp-s502",
+    "ppo-r3-focused-mlp-s503"
+  ]
+}

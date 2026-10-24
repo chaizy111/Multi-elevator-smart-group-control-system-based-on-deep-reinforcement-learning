@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/src/elevator_control/research/candidate_ppo.py", line 421, in <module>
+    main()
+  File "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/src/elevator_control/research/candidate_ppo.py", line 403, in main
+    protocol = prepare()
+               ^^^^^^^^^
+  File "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/src/elevator_control/research/candidate_ppo.py", line 56, in prepare
+    raise ValueError("empty frozen cohort; revise before training")
+ValueError: empty frozen cohort; revise before training

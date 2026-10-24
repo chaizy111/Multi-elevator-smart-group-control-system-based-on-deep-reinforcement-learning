@@ -27,7 +27,9 @@ class Controller(Protocol):
     def close(self) -> None: ...
 
 
-def decision_view(sim: Simulator, *, include_observation: bool = False) -> DecisionView:
+def decision_view(
+    sim: Simulator, *, include_observation: bool = False, include_candidates: bool = False
+) -> DecisionView:
     d = sim.current
     if d is None:
         raise ValueError("no decision")
@@ -46,10 +48,14 @@ def decision_view(sim: Simulator, *, include_observation: bool = False) -> Decis
         if sim.now - sim.passengers[p].arrival_us <= 300000000
     )
     observation = None
-    if include_observation:
+    if include_observation or include_candidates:
         from elevator_control.env.observation import build_observation
 
         observation, _ = build_observation(sim)
+        if include_candidates:
+            from elevator_control.env.candidates import candidate_features
+
+            observation["candidates"] = candidate_features(sim)
     return DecisionView(d, sim.snapshot(), etas, arrivals, observation)
 
 
@@ -113,7 +119,11 @@ def apply_controller_action(
         raise ValueError("no active decision barrier")
     start = time.perf_counter()
     action = controller.act(
-        decision_view(sim, include_observation=getattr(controller, "requires_observation", False))
+        decision_view(
+            sim,
+            include_observation=getattr(controller, "requires_observation", False),
+            include_candidates=getattr(controller, "requires_candidates", False),
+        )
     )
     sim.apply_action(d.decision_id, action)
     elapsed = (time.perf_counter() - start) * 1000

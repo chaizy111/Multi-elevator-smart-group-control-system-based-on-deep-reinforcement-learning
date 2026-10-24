@@ -123,10 +123,15 @@ export function Evaluation({
     () => ({
       color: ["#177e73", "#b98330", "#586aa6", "#91a9bd"],
       tooltip: { trigger: "item" as const },
-      legend: { bottom: 0 },
-      xAxis: { type: "value" as const, name: "运行距离 / 层" },
+      legend: { type: "scroll" as const, bottom: 0, left: 16, right: 16 },
+      xAxis: {
+        type: "value" as const,
+        name: "运行距离 / 层",
+        nameLocation: "middle" as const,
+        nameGap: 30,
+      },
       yAxis: { type: "value" as const, name: "平均等待 / 秒" },
-      grid: { left: 55, top: 35, right: 55, bottom: 50 },
+      grid: { left: 55, top: 35, right: 55, bottom: 100 },
       series: grouped.map((g) => ({
         name: g.controller,
         type: "scatter" as const,
@@ -391,6 +396,7 @@ export function Evaluation({
               </div>
               <Chart
                 option={option}
+                className="chart--tradeoff"
                 label="各策略每条Trace的等待和距离散点图"
               />
             </section>

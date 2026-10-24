@@ -1,5 +1,7 @@
 # rl
 
+默认基础路径已恢复首版`ppo-curriculum`训练与建模；共享Attention、双任务actor-critic、四目标奖励、原时间GAE/PPO和T0→T3流程均与`18fd731`一致。本轮只在显式开启候选输入时扩展派梯头。[默认模型流程](前端PPO建模与流程.md)、[恢复说明](../maintenance/baseline-restore.md)。第二轮两项对照仅[离线留存](../../references/round2/README.md)，第三轮已删除，当前不启用候选先验、残差、塑形或门控。
+
 网络遵循实施方案9节尺寸：路线8→32→32的有效楼层mean/max，基础24与路线64送入共享88→128→128；两层4头attention后重新清零padding。楼层、请求和global编码形成96维context；Dispatch逐梯共享评分，Reposition按subject和有效均值，critic按有效mean/max。无电梯编号位置embedding，支持去attention的同输入消融。
 
 PPO按事件实际间隔计算gamma^(dt/10)和lambda^(dt/10)。自然终止不bootstrap，截断使用旧episode最终观测，所有episode边界阻断优势递推。rollout尾部不结束episode。采样时保存mask，更新复用相同mask。双头熵、梯度、样本数和原始成本写入updates.csv。
@@ -13,3 +15,7 @@ PPO按事件实际间隔计算gamma^(dt/10)和lambda^(dt/10)。自然终止不bo
 注册CPU模型位置：`artifacts/models/ppo-curriculum/`。以当前实际 `progress.json` 与 `updates.csv` 为准，未完成进程不能声明已完成。
 
 [当前模型的优化路线](优化路线.md)从现有派梯/距离分项、验证覆盖和消融出发，区分已观察证据与待验证假设；列出目标约束、基线引导、重定位专项、预算和新盲测要求。它是后续研发建议，不表示已实施新优化或已经达到效果目标。
+
+## 当前候选输入研究
+
+[候选后果输入PPO](candidate-ppo.md)提供逐梯插单预测给网络学习，默认开关关闭；上一轮专用优化已清理，固定规则只作离线对照。

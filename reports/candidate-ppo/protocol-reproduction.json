@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "scopes": {
+    "long": 45,
+    "generalization": 150,
+    "pressure": 6
+  },
+  "results_used": false,
+  "frozen_rows_exact": true
+}

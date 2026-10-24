@@ -1,0 +1,33 @@
+{
+  "status": "PASSED",
+  "removed_paths": [
+    "artifacts/minimal-ppo",
+    "reports/minimal-ppo",
+    ".cache/minimal-ppo",
+    ".cache/pytest",
+    "docs/rl/minimal-ppo.md",
+    "src/elevator_control/research/minimal_ppo.py",
+    "src/elevator_control/rl/diagnostics.py",
+    "tests/unit/test_minimal_ppo.py"
+  ],
+  "removed_counts": {
+    "t3_models": 15,
+    "registered_models": 3
+  },
+  "preserved_model_sha256": {
+    "artifacts/models/ppo-no-fairness/weights.pt": "1c17b0acf45515188202bbffec70f483fa2417888570ade82593390b90e909bc",
+    "artifacts/models/ppo-dispatch-only/weights.pt": "64271db1764043b07e83258c385cf19f37b88df5a9328c45226835a762b1db6b",
+    "artifacts/models/ppo-curriculum/weights.pt": "1a8600fdbecbd2933afed8f4d9fd8c8651f8b88858d9ceffb5f6feccb3cf68c1",
+    "artifacts/models/ppo-seed202/weights.pt": "58ed9772a7b71f928489ac9421cfe0f71122fb785f438d7db37e5e715b768ea0",
+    "artifacts/models/ppo-smoke/weights.pt": "837296a75475810fc7cfbb9c0f9173f43bdd0c32343bd6dd2da8b0e2b6b32190",
+    "artifacts/models/ppo-no-attention/weights.pt": "8f81e29df0fc5a8d53f3e2078733cd35c52d2c158fa933b7fd76c3ff463eac79",
+    "artifacts/models/ppo-seed101/weights.pt": "e39120f87c4da21907bf7036b655ef26b0456d744faff6745846fc3e63d8b3a8",
+    "artifacts/models/ppo-seed303/weights.pt": "f5224d4ff9923d01f4a696e7a7c89f2890fe590c526a448e0ebb821db4309a34",
+    "artifacts/references/round2/models/ppo-opt-s401-n200000-e1/weights.pt": "d38817cd60caa86651bff5c9b06fe1e3be9daaf450a7d3fca6f873907cd78aa3"
+  },
+  "old_training_source_restored": true,
+  "old_seed_ranges_reserved_as_used": [
+    51000000,
+    57000001
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "algorithm_target_achieved": false,
+  "training_decisions": 1560000,
+  "training_jobs": 12,
+  "pytest": 87,
+  "vitest": 2,
+  "playwright": 5,
+  "raw_audit": {
+    "status": "PASSED",
+    "runs": 1892,
+    "passenger_rows": 61813
+  },
+  "previous_minimal_results_deleted": true,
+  "original_default_preserved": true
+}

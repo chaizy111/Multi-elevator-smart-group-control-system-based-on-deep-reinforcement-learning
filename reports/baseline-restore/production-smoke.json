@@ -1,0 +1,85 @@
+{
+  "status": "PASSED",
+  "model_id": "ppo-curriculum",
+  "model_hash": "1a8600fdbecbd2933afed8f4d9fd8c8651f8b88858d9ceffb5f6feccb3cf68c1",
+  "run_id": "run-3ff8cd6d884043a6",
+  "passenger_rows_audited": 3,
+  "final": {
+    "sample_count": 3,
+    "picked_count": 3,
+    "completed_count": 3,
+    "unpicked": 0,
+    "unfinished": 0,
+    "mean_wait_s": 7.149579333333334,
+    "p95_wait_s": 8.704873800000001,
+    "max_wait_s": 8.8,
+    "mean_travel_s": 11.333333333333334,
+    "mean_system_time_s": 18.482912666666667,
+    "long_wait_ratio": 0.0,
+    "throughput_per_min": 2.0,
+    "completion_ratio": 1.0,
+    "conditional_wait": false,
+    "censored_mean_wait_lower_bound_s": 7.149579333333334,
+    "long_wait_cohort_lower_bound": 0.0,
+    "long_wait_unknown_count": 0,
+    "eligible_for_ranking": true,
+    "floor_fairness": {
+      "1": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "2": {
+        "count": 1,
+        "mean_wait_s": 4.8,
+        "p95_wait_s": 4.8
+      },
+      "3": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "4": {
+        "count": 2,
+        "mean_wait_s": 8.324369,
+        "p95_wait_s": 8.752436900000001
+      },
+      "5": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      }
+    },
+    "worst_floor_mean_wait_s": 8.324369,
+    "distance_floors": 10.0,
+    "distance_m": 30.0,
+    "reposition_distance_floors": 0.0,
+    "empty_distance_floors": 4.0,
+    "loaded_distance_floors": 6.0,
+    "energy_proxy": 13.299999999999997,
+    "door_cycles": 5,
+    "starts": 5,
+    "drain_time_s": 17.247939,
+    "drain_timeout": false,
+    "costs": {
+      "wait": 21.448738,
+      "ride": 34.00000000000001,
+      "energy": 13.299999999999997,
+      "fairness": 0.0
+    },
+    "utilization": {
+      "E1": {
+        "busy": 0.4571627981487192,
+        "service": 0.4571627981487192,
+        "reposition": 0.0,
+        "door": 0.2031834658438752
+      },
+      "E2": {
+        "busy": 0.4910267091226984,
+        "service": 0.4910267091226984,
+        "reposition": 0.0,
+        "door": 0.3217071542528025
+      }
+    }
+  }
+}

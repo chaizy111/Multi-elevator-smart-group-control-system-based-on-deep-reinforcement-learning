@@ -3,6 +3,8 @@ import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 import { existsSync } from "node:fs";
 const root = resolve(fileURLToPath(new URL(".", import.meta.url)), "..");
+// Keep direct npm invocations consistent with scripts/project_env.sh.
+process.env.PLAYWRIGHT_BROWSERS_PATH ??= resolve(root, ".cache/playwright");
 const python =
   process.env.ELEVATOR_PYTHON ??
   (existsSync(resolve(root, ".venv/bin/python"))

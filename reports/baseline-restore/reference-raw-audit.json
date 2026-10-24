@@ -1,0 +1,12 @@
+{
+  "status": "PASSED",
+  "scope": "retained two R2 policies only; archived historical inputs, not a new test",
+  "runs": 2740,
+  "passenger_rows": 141530,
+  "matrices": {
+    "optimization-generalization": 800,
+    "optimization-long": 120,
+    "optimization-pressure": 20,
+    "optimization-standard": 1800
+  }
+}

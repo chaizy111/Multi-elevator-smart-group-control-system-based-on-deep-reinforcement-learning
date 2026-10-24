@@ -15,6 +15,7 @@ class RLController:
         torch.set_num_threads(1)
         self.model, self.metadata = load_model(model_id, root)
         self.model_hash = self.metadata["sha256"]
+        self.requires_candidates = self.model.candidate_inputs
         self.last_probabilities: list[float] | None = None
         self.force_stay = force_stay or self.metadata["training_config"].get("dispatch_only", False)
 

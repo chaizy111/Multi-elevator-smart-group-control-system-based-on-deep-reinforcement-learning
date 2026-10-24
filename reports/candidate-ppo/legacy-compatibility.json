@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "model_hashes_unchanged": 9,
+  "original_models": [
+    "ppo-no-fairness",
+    "ppo-dispatch-only",
+    "ppo-curriculum",
+    "ppo-seed202",
+    "ppo-smoke",
+    "ppo-no-attention",
+    "ppo-seed101",
+    "ppo-seed303"
+  ],
+  "real_public_states": 24,
+  "outputs_bitwise_unchanged": true,
+  "actual_legacy_training_decisions": 128,
+  "network_tensors": 56,
+  "updates_and_rng_bitwise_equal": true
+}

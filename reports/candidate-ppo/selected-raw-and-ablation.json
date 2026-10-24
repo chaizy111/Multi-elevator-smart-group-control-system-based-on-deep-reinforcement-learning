@@ -1,0 +1,70 @@
+{
+  "status": "PASSED",
+  "runs": 1215,
+  "summary": {
+    "consequences-s801-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 13.139903845792142,
+      "p95_wait_s": 33.097422376296294,
+      "distance_floors": 147.9481481481482
+    },
+    "consequences-s802-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 14.922907258059654,
+      "p95_wait_s": 41.628616761111104,
+      "distance_floors": 152.24444444444444
+    },
+    "consequences-s803-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 13.329796227152157,
+      "p95_wait_s": 34.506505717777756,
+      "distance_floors": 160.52592592592597
+    },
+    "control-s801-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 26.244876063465288,
+      "p95_wait_s": 82.72658229703701,
+      "distance_floors": 199.24444444444444
+    },
+    "control-s802-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 23.824419955775568,
+      "p95_wait_s": 74.39200430185183,
+      "distance_floors": 190.7851851851852
+    },
+    "control-s803-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 26.560229986380207,
+      "p95_wait_s": 81.10190596518517,
+      "distance_floors": 188.32592592592596
+    },
+    "zero-input:consequences-s801-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 22.70519447241154,
+      "p95_wait_s": 69.95385209407407,
+      "distance_floors": 213.22962962962995
+    },
+    "zero-input:consequences-s802-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 24.05170127956991,
+      "p95_wait_s": 71.80053332370369,
+      "distance_floors": 200.8666666666667
+    },
+    "zero-input:consequences-s803-n200000": {
+      "complete": true,
+      "runs": 135,
+      "mean_wait_s": 23.18376095484551,
+      "p95_wait_s": 71.62420118185183,
+      "distance_floors": 222.37037037037055
+    }
+  },
+  "same_checkpoint_without_consequences": "zero-input policies mask only the six features; no retraining"
+}

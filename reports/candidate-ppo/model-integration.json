@@ -1,0 +1,28 @@
+{
+  "status": "PASSED",
+  "models": [
+    "ppo-consequences-s801-n200000",
+    "ppo-consequences-s802-n200000",
+    "ppo-consequences-s803-n200000"
+  ],
+  "api_worker_matches_offline": true,
+  "runs": [
+    {
+      "building": [
+        5,
+        2
+      ],
+      "run_id": "run-52ca817a4c0b4958",
+      "passengers": 7
+    },
+    {
+      "building": [
+        30,
+        8
+      ],
+      "run_id": "run-f474c9fb7c7547c9",
+      "passengers": 10
+    }
+  ],
+  "active_by_default": false
+}

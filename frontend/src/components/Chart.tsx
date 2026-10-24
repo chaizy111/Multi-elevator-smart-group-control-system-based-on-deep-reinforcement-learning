@@ -5,9 +5,11 @@ import type { EChartsOption } from "echarts";
 export function Chart({
   option,
   label,
+  className = "",
 }: {
   option: EChartsOption;
   label: string;
+  className?: string;
 }) {
   const node = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -21,5 +23,12 @@ export function Chart({
       chart.dispose();
     };
   }, [option]);
-  return <div className="chart" role="img" aria-label={label} ref={node} />;
+  return (
+    <div
+      className={`chart ${className}`.trim()}
+      role="img"
+      aria-label={label}
+      ref={node}
+    />
+  );
 }

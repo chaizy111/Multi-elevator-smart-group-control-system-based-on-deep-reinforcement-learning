@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETED_NEGATIVE",
+  "budget": 200000,
+  "selected_models": [
+    {
+      "id": "consequences-s801-n200000",
+      "checkpoint": "artifacts/candidate-ppo/training/consequences-s801-n200000/checkpoints/best.pt",
+      "seed": 801,
+      "group": "consequences",
+      "budget": 200000,
+      "selected_step": 143360,
+      "feasible": true,
+      "wait": 13.139903845792142,
+      "p95": 33.097422376296294,
+      "distance": 147.94814814814816,
+      "violation": 0.0,
+      "learned_input_norm": 1.7148076295852661
+    },
+    {
+      "id": "consequences-s802-n200000",
+      "checkpoint": "artifacts/candidate-ppo/training/consequences-s802-n200000/checkpoints/best.pt",
+      "seed": 802,
+      "group": "consequences",
+      "budget": 200000,
+      "selected_step": 143360,
+      "feasible": true,
+      "wait": 14.922907258059654,
+      "p95": 41.628616761111104,
+      "distance": 152.24444444444444,
+      "violation": 0.0,
+      "learned_input_norm": 1.0491808652877808
+    },
+    {
+      "id": "consequences-s803-n200000",
+      "checkpoint": "artifacts/candidate-ppo/training/consequences-s803-n200000/checkpoints/best.pt",
+      "seed": 803,
+      "group": "consequences",
+      "budget": 200000,
+      "selected_step": 200000,
+      "feasible": false,
+      "wait": 13.329796227152157,
+      "p95": 34.506505717777756,
+      "distance": 160.52592592592592,
+      "violation": 0.03917464473327703,
+      "learned_input_norm": 1.237735629081726
+    }
+  ],
+  "confirmation_opened": false,
+  "final_opened": false,
+  "target_achieved": false,
+  "reason": "bounded development gate failed"
+}

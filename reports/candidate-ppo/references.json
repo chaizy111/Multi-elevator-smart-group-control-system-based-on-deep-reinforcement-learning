@@ -1,0 +1,37 @@
+{
+  "eta": {
+    "complete": true,
+    "runs": 135,
+    "mean_wait_s": 35.87722912555935,
+    "p95_wait_s": 132.74662630148146,
+    "distance_floors": 147.11851851851853
+  },
+  "eta_zone": {
+    "complete": true,
+    "runs": 135,
+    "mean_wait_s": 25.959769974595513,
+    "p95_wait_s": 106.31033752814814,
+    "distance_floors": 175.89629629629633
+  },
+  "fixed-rule": {
+    "complete": true,
+    "runs": 135,
+    "mean_wait_s": 11.35461017346689,
+    "p95_wait_s": 27.02523023259258,
+    "distance_floors": 137.0888888888889
+  },
+  "ppo-curriculum": {
+    "complete": true,
+    "runs": 135,
+    "mean_wait_s": 24.403047110419102,
+    "p95_wait_s": 75.0210746111111,
+    "distance_floors": 199.6740740740741
+  },
+  "round_robin": {
+    "complete": true,
+    "runs": 135,
+    "mean_wait_s": 25.636289838312816,
+    "p95_wait_s": 80.76957408851851,
+    "distance_floors": 222.31111111111113
+  }
+}

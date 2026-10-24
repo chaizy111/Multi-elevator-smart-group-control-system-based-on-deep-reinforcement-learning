@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "model_ids": [
+    "ppo-curriculum",
+    "ppo-dispatch-only",
+    "ppo-no-attention",
+    "ppo-no-fairness",
+    "ppo-seed101",
+    "ppo-seed202",
+    "ppo-seed303",
+    "ppo-smoke"
+  ],
+  "public_states": 24,
+  "output": "bitwise identical to before restore",
+  "curriculum_sha256": "1a8600fdbecbd2933afed8f4d9fd8c8651f8b88858d9ceffb5f6feccb3cf68c1"
+}

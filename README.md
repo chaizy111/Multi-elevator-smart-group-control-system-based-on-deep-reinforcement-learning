@@ -6,6 +6,14 @@
 
 [零基础前端使用手册](docs/frontend/用户使用手册.md) · [PPO与经典算法的数据解读](reports/formal/策略效果解读.md) · [后续优化路线](docs/rl/优化路线.md)
 
+## 当前冻结基线（2026-10-24）
+
+已完成[候选后果输入PPO研究](docs/rl/candidate-ppo.md)：只增强神经网络输入，由PPO学习评分。开发等待由原PPO的24.40秒降至13.80秒，固定规则为11.35秒；完整效果目标尚未通过，确认/最终未打开，见[研究报告](reports/candidate-ppo/report.md)。上一轮最小改动实验产物已删除，默认仍为原始ppo-curriculum。
+
+首版运行路径以提交`18fd731`为基准，原配置和奖励保留，默认使用原始`ppo-curriculum`，未重训或覆盖其权重。第二轮“仅候选代价+固定规则”与“同样规则+PPO调整”两项对照已[离线归档](references/round2/README.md)，不出现在当前模型/训练/实验入口；第三轮及后续产物已删除，第二轮仅保留原页面预设401模型及对应固定规则。当前仍保留首版消融和多seed模型，默认PPO为`ppo-curriculum`。
+
+[当前PPO建模与算法流程](docs/rl/前端PPO建模与流程.md) · [恢复说明](docs/maintenance/baseline-restore.md) · [恢复验收](reports/baseline-restore/acceptance.md)。下文命令与历史首版实验均对应原始PPO流程；后续优化请使用新模型ID与独立输出目录。
+
 ## 启动
 
 在项目根目录，使用已配置的 conda 环境：

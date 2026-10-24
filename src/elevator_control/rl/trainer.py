@@ -3,6 +3,7 @@
 import csv
 import importlib.metadata
 import json
+import math
 import platform
 import random
 import signal
@@ -14,14 +15,15 @@ from typing import cast
 
 import numpy as np
 import torch
-from pydantic import Field
+from pydantic import Field, field_validator
 
 from elevator_control.config.schema import Pattern, Schema, SimulationConfig, canonical_hash
 from elevator_control.env.environment import ElevatorEnv
 from elevator_control.evaluation.metrics import calculate, reward_from_costs
 from elevator_control.rl.buffer import generalized_advantages
-from elevator_control.rl.checkpoint import VERSIONS, check_versions, save_checkpoint
+from elevator_control.rl.checkpoint import initialize_network, save_checkpoint, versions_for
 from elevator_control.rl.network import ActorCritic, tensor_observations
+from elevator_control.rl.validation import expanded_validation, validation_score
 from elevator_control.storage.artifacts import atomic_json
 
 HELD_OUT = {(12, 3), (18, 5)}
@@ -52,6 +54,18 @@ class TrainingConfig(Schema):
     stage: str = "T0"
     simulation: SimulationConfig = Field(default_factory=SimulationConfig)
     scenarios: list[SimulationConfig] = Field(default_factory=list)
+    candidate_inputs: bool = False
+    validation_scenarios: list[SimulationConfig] = Field(default_factory=list)
+    validation_limits: dict[str, float] = Field(default_factory=dict)
+    validate_initial: bool = False
+
+    @field_validator("validation_limits")
+    @classmethod
+    def validate_limits(cls, limits):
+        allowed = {"mean_wait_s", "p95_wait_s", "distance_floors"}
+        if any(k not in allowed or not math.isfinite(v) or v <= 0 for k, v in limits.items()):
+            raise ValueError("validation limits must be supported, positive and finite")
+        return limits
 
 
 def configure_torch(seed: int):
@@ -100,6 +114,8 @@ def enforce_dispatch_only(obs: dict, enabled: bool):
 
 
 def validate_policy(model: ActorCritic, config: TrainingConfig, device: str) -> dict:
+    if config.validation_scenarios:
+        return expanded_validation(model, config, device)
     # Immutable seed range disjoint from training; never used for optimizer updates.
     configs = []
     for i, base in enumerate((config.scenarios or [config.simulation])[:3]):
@@ -108,7 +124,7 @@ def validate_policy(model: ActorCritic, config: TrainingConfig, device: str) -> 
         configs.append(cfg)
     results = []
     for cfg in configs:
-        env = ElevatorEnv(cfg)
+        env = ElevatorEnv(cfg, candidate_inputs=config.candidate_inputs)
         obs, _ = env.reset(seed=cfg.seed)
         enforce_dispatch_only(obs, config.dispatch_only)
         while env.sim and not env.sim.done:
@@ -151,12 +167,16 @@ def train(
     *,
     resume: str | None = None,
     initialize: str | None = None,
+    migrate_candidate_inputs: bool = False,
 ) -> Path:
     configure_torch(config.seed)
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     device = config.device
-    model = ActorCritic(attention=config.attention).to(device)
+    model = ActorCritic(attention=config.attention, candidate_inputs=config.candidate_inputs).to(
+        device
+    )
+    versions = versions_for(config.candidate_inputs)
     optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate, eps=1e-5)
     rng = np.random.default_rng(config.seed)
     steps, update, episodes, truncated_episodes = 0, 0, 0, 0
@@ -165,8 +185,9 @@ def train(
     saved_seeds: list[int] = []
     if resume or initialize:
         data = torch.load(str(resume or initialize), map_location=device, weights_only=False)
-        check_versions(data["versions"])
-        model.load_state_dict(data["network"])
+        initialize_network(
+            model, data, migrate_candidate_inputs=migrate_candidate_inputs and not resume
+        )
         if resume:
             saved = TrainingConfig.model_validate(data["config"])
             if canonical_hash(saved) != canonical_hash(config):
@@ -195,7 +216,7 @@ def train(
             test_seed_range=[9001, 99999],
             test_seed_note="test evaluation 9001..99999 is reserved; training seed collisions checked below",
             held_out_buildings=sorted(HELD_OUT),
-            versions=VERSIONS,
+            versions=versions,
             training_trace_seeds=[],
         ),
     )
@@ -208,7 +229,7 @@ def train(
         cfg = sample_config(config, rng)
         cfg.seed = int(rng.integers(100000, 1000000))
         used_seeds.append(cfg.seed)
-        env = ElevatorEnv(cfg)
+        env = ElevatorEnv(cfg, candidate_inputs=config.candidate_inputs)
         obs, _ = env.reset(seed=cfg.seed)
         enforce_dispatch_only(obs, config.dispatch_only)
         assert env.sim is not None
@@ -250,7 +271,7 @@ def train(
             truncated_episodes=truncated_episodes,
             training_trace_seeds=used_seeds.copy(),
             config=config.model_dump(mode="json"),
-            versions=VERSIONS,
+            versions=versions,
             rng=rng.bit_generator.state,
             torch_rng=torch.get_rng_state(),
             python_rng=random.getstate(),
@@ -262,11 +283,26 @@ def train(
                 for n in ["torch", "numpy", "gymnasium", "pydantic"]
             },
             platform=platform.platform(),
+            selection="complete; constraints then mean wait then P95"
+            if config.validation_scenarios
+            else "complete-service validation cost; P95 tie break",
             resume_semantics="statistical; update boundary checkpoint, reset simulator episodes",
         )
         save_checkpoint(output / "checkpoints/last.pt", payload)
         return payload
 
+    if config.validate_initial and not resume:
+        model.eval()
+        latest_validation = validate_policy(model, config, device)
+        if config.validation_scenarios:
+            atomic_json(output / "validation-results" / "0.json", latest_validation)
+            best = validation_score(latest_validation)
+        else:
+            best = (latest_validation["cost"], latest_validation["p95"] or 0)
+        payload = checkpoint()
+        if latest_validation["complete"]:
+            save_checkpoint(output / "checkpoints/best.pt", payload)
+        model.train()
     stop_requested = False
     previous_handler = None
     if threading.current_thread() is threading.main_thread():
@@ -476,7 +512,13 @@ def train(
                         complete=latest_validation["complete"],
                     ),
                 )
-                score = (latest_validation["cost"], latest_validation["p95"] or 0)
+                if config.validation_scenarios:
+                    atomic_json(output / "validation-results" / f"{steps}.json", latest_validation)
+                score = (
+                    validation_score(latest_validation)
+                    if config.validation_scenarios
+                    else (latest_validation["cost"], latest_validation["p95"] or 0)
+                )
                 improved = latest_validation["complete"] and score < best
                 if improved:
                     best = score
@@ -556,7 +598,7 @@ def train(
                 validation_seeds=[2000000 + i for i in range(min(3, len(config.scenarios) or 1))],
                 test_seed_range=[9001, 99999],
                 held_out_buildings=sorted(HELD_OUT),
-                versions=VERSIONS,
+                versions=versions,
             ),
         )
     (output / "training.log").write_text(

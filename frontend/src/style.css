@@ -358,6 +358,19 @@ textarea:focus {
 input:invalid {
   border-color: #cb8e68;
 }
+
+.check-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 12px 0;
+}
+
+.check-option input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
 textarea {
   font-size: 11px;
   line-height: 1.6;
@@ -755,6 +768,9 @@ dd {
 .chart {
   height: 270px;
   width: 100%;
+}
+.chart--tradeoff {
+  height: 330px;
 }
 .table-scroll {
   overflow: auto;

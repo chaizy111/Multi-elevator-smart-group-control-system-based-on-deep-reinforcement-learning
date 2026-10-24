@@ -1,0 +1,13 @@
+
+> elevator-control-web@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.4 /Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/frontend
+
+ ✓ src/components/Building.test.ts (2 tests) 1ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  01:14:19
+   Duration  162ms (transform 20ms, setup 0ms, collect 21ms, tests 1ms, environment 0ms, prepare 35ms)

@@ -1,0 +1,78 @@
+{
+  "status": "PASSED",
+  "baseline_commit": "18fd731",
+  "identical_baseline_files": 93,
+  "training_and_runtime_exactly_restored": true,
+  "first_release_models": [
+    "ppo-curriculum",
+    "ppo-dispatch-only",
+    "ppo-no-attention",
+    "ppo-no-fairness",
+    "ppo-seed101",
+    "ppo-seed202",
+    "ppo-seed303",
+    "ppo-smoke"
+  ],
+  "offline_reference_models": [
+    "ppo-opt-s401-n200000-e1"
+  ],
+  "removed_fourth_round_models": 23,
+  "all_preserved_weights_unchanged": true,
+  "sqlite_integrity": "ok",
+  "historical_models_absent_from_active_index": true,
+  "quality_checks": 10,
+  "pytest": 79,
+  "vitest": 2,
+  "playwright": 5,
+  "production_api_counts": {
+    "models": {
+      "items": 8
+    },
+    "training-runs": {
+      "items": 10
+    },
+    "experiments": {
+      "items": 30
+    },
+    "traces": {
+      "items": 6
+    }
+  },
+  "production_health": {
+    "schema_version": 1,
+    "version": "0.1.0",
+    "ready": true,
+    "workers": 0,
+    "queued": 0
+  },
+  "default_ppo": "ppo-curriculum",
+  "frozen_git_ref": "refs/archive/pre-curriculum-restore-20261024",
+  "frozen_tree": "f7a5e6f0e662d808e0e8e507472d3531ba614e6b",
+  "local_links_checked": 93,
+  "missing_links": [],
+  "committed": false,
+  "git_changes_staged": true,
+  "generated_svg_xml_valid": true,
+  "archival_model_outputs_bitwise_unchanged": true,
+  "offline_reference_policy_ids": [
+    "ppo:ppo-opt-s401-n200000-e1",
+    "prior:ppo-opt-s401-n200000-e1"
+  ],
+  "offline_reference_archive": "references/round2",
+  "removed_third_round_models": 9,
+  "removed_second_round_replicas": [
+    402,
+    403
+  ],
+  "retained_reference_runs": 2740,
+  "retained_reference_paired_traces": 1370,
+  "retained_reference_passenger_rows": 141530,
+  "latest_scope": "Only R2 fixed rules and same rules plus seed401 PPO; remove R3 and later",
+  "latest_archive_verification": "reference-compatibility.json",
+  "latest_raw_audit": "reference-raw-audit.json",
+  "quality_suite_scope": "Full suite passed after baseline restore; latest changes archive/documents only",
+  "latest_ruff_check": "PASSED",
+  "latest_format_check": "PASSED",
+  "retained_reference_pairing_verified": true,
+  "reference_archive_neural_weight_files": 1
+}

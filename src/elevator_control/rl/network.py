@@ -8,6 +8,7 @@ from torch import nn
 from torch.distributions import Categorical
 
 ARCHITECTURE_VERSION = "shared-attention-128-v1"
+CANDIDATE_ARCHITECTURE_VERSION = "shared-attention-insertion-input-v1"
 
 
 def mlp(*sizes: int) -> nn.Sequential:
@@ -49,16 +50,17 @@ class AttentionBlock(nn.Module):
 
 
 class ActorCritic(nn.Module):
-    def __init__(self, *, attention: bool = True):
+    def __init__(self, *, attention: bool = True, candidate_inputs: bool = False):
         super().__init__()
         self.use_attention = attention
+        self.candidate_inputs = candidate_inputs
         self.route_encoder = mlp(8, 32, 32)
         self.elevator_encoder = mlp(88, 128, 128)
         self.blocks = nn.ModuleList([AttentionBlock(), AttentionBlock()] if attention else [])
         self.floor_encoder = mlp(9, 32, 32)
         self.request_encoder = mlp(5, 32, 32)
         self.global_encoder = mlp(86, 64, 64)
-        self.dispatch = mlp(224, 128, 1)
+        self.dispatch = mlp(230 if candidate_inputs else 224, 128, 1)
         self.reposition = mlp(352, 128, 5)
         self.critic = mlp(352, 128, 1)
 
@@ -77,9 +79,10 @@ class ActorCritic(nn.Module):
             torch.cat((obs["global"].float(), floors, obs["decision_kind"].float()), -1)
         )
         context = torch.cat((request, global_context), -1)
-        dispatch = self.dispatch(torch.cat((h, context[:, None, :].expand(-1, 8, -1)), -1)).squeeze(
-            -1
-        )
+        dispatch_input = torch.cat((h, context[:, None, :].expand(-1, 8, -1)), -1)
+        if self.candidate_inputs:
+            dispatch_input = torch.cat((dispatch_input, obs["candidates"].float()), -1)
+        dispatch = self.dispatch(dispatch_input).squeeze(-1)
         summary = pool(h, em)
         subject = (h * (obs["elevators"][:, :, 23] * em).unsqueeze(-1)).sum(1)
         reposition = self.reposition(torch.cat((subject, summary[:, :128], context), -1))

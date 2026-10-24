@@ -1,0 +1,14 @@
+/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.venv/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+device=cpu seed=813 budget=128 output=.cache/candidate-ppo/legacy/old validation=2000000+ stage=T0
+step=32 update=1 episodes=1 loss=-0.0051/0.3620 dispatch/reposition=28/4 rate=446/s
+step=64 update=2 episodes=3 loss=-0.0023/0.7016 dispatch/reposition=28/4 rate=371/s
+step=96 update=3 episodes=5 loss=-0.0021/0.1021 dispatch/reposition=28/4 rate=443/s
+step=128 update=4 episodes=7 loss=-0.0002/0.0810 dispatch/reposition=28/4 rate=455/s
+completed steps=128 checkpoint=.cache/candidate-ppo/legacy/old/checkpoints/last.pt
+device=cpu seed=813 budget=128 output=.cache/candidate-ppo/legacy/new validation=2000000+ stage=T0
+step=32 update=1 episodes=1 loss=-0.0051/0.3620 dispatch/reposition=28/4 rate=406/s
+step=64 update=2 episodes=3 loss=-0.0023/0.7016 dispatch/reposition=28/4 rate=321/s
+step=96 update=3 episodes=5 loss=-0.0021/0.1021 dispatch/reposition=28/4 rate=413/s
+step=128 update=4 episodes=7 loss=-0.0002/0.0810 dispatch/reposition=28/4 rate=367/s
+completed steps=128 checkpoint=.cache/candidate-ppo/legacy/new/checkpoints/last.pt

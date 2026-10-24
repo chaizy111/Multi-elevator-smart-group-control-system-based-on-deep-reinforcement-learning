@@ -1,0 +1,34 @@
+[
+  {
+    "scope": "optimization-generalization",
+    "runs": 800,
+    "paired_traces": 400,
+    "prior_wait": 13.19024055218373,
+    "ppo_wait": 13.434175637851766,
+    "complete": true
+  },
+  {
+    "scope": "optimization-pressure",
+    "runs": 20,
+    "paired_traces": 10,
+    "prior_wait": 213.48291245390982,
+    "ppo_wait": 213.80629156670736,
+    "complete": true
+  },
+  {
+    "scope": "optimization-standard",
+    "runs": 1800,
+    "paired_traces": 900,
+    "prior_wait": 10.967653524032938,
+    "ppo_wait": 11.07272060537097,
+    "complete": true
+  },
+  {
+    "scope": "optimization-long",
+    "runs": 120,
+    "paired_traces": 60,
+    "prior_wait": 9.538603998530654,
+    "ppo_wait": 9.466532308994411,
+    "complete": true
+  }
+]

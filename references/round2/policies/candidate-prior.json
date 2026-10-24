@@ -1,0 +1,16 @@
+{
+  "policy_id": "prior:ppo-opt-s401-n200000-e1",
+  "kind": "fixed_candidate_prior",
+  "weights": [
+    1.0,
+    0.2,
+    0.0,
+    1.0,
+    0.2,
+    0.0
+  ],
+  "dtype": "float32",
+  "reposition": "Stay",
+  "neural_weights": false,
+  "candidate_features_version": "public-insertion6-v2"
+}

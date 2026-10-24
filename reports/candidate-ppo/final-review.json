@@ -1,0 +1,45 @@
+{
+  "status": "PASSED",
+  "original_weights_unchanged": 9,
+  "active_models": 8,
+  "reference_neural_models": 1,
+  "research_models": [
+    {
+      "id": "ppo-consequences-s801-n200000",
+      "sha256": "20d535bf28256426600e9898933fef997917248a37f5a8e820b42a95c2620ecf",
+      "parameters": 427399
+    },
+    {
+      "id": "ppo-consequences-s802-n200000",
+      "sha256": "3cb52d4bbd5095f6ead814bce2105c842853f5db5ddf02c06081f6e360a7e238",
+      "parameters": 427399
+    },
+    {
+      "id": "ppo-consequences-s803-n200000",
+      "sha256": "70450dc1f329a61b8f7efcfe415d3875e3b28b98a13f40fcf5b143b4fa926289",
+      "parameters": 427399
+    }
+  ],
+  "training_jobs": 12,
+  "fine_tuning_decisions": 1560000,
+  "old_results_absent": true,
+  "unopened_scopes": [
+    "confirmation",
+    "final",
+    "long",
+    "generalization",
+    "pressure"
+  ],
+  "local_document_links": 101,
+  "normalized_generator_whitespace": [
+    "reports/browser-export.svg",
+    "reports/candidate-ppo/learning-curves.svg",
+    "reports/quality/frontend-types.log",
+    "reports/quality/frontend-unit.log",
+    "reports/candidate-ppo/quality/frontend-types.log",
+    "reports/candidate-ppo/quality/frontend-unit.log"
+  ],
+  "svg_xml_valid": true,
+  "full_quality_checks": 10,
+  "pytest": 87
+}
