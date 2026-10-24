@@ -1,0 +1,7 @@
+# Opaque deliverables must never undergo text conversion or whitespace repair.
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.pt binary
+# Genuine training CSV uses CRLF; preserve checksums and allow its line ending.
+assets/release/**/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

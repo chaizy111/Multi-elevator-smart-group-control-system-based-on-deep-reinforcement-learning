@@ -23,11 +23,11 @@ def main():
         ("round_robin", Baseline("round_robin")),
         ("eta", Baseline("eta")),
         ("eta_zone", Baseline("eta_zone")),
-        ("ppo", RLController("ppo-curriculum")),
+        ("ppo", RLController("ppo-consequences-s801-n200000")),
     ]:
         run_config = config.model_copy(deep=True)
         run_config.controller = ControllerConfig.model_validate(
-            dict(name=name, model_id="ppo-curriculum" if name == "ppo" else None)
+            dict(name=name, model_id="ppo-consequences-s801-n200000" if name == "ppo" else None)
         )
         sim = run_simulation(run_config, reloaded, controller)
         metrics = calculate(sim)

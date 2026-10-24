@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "seed": 9001,
+  "building": {
+    "floor_count": 12,
+    "elevator_count": 4,
+    "capacity": 12,
+    "lobby_floor": 1,
+    "floor_height_m": 3.0,
+    "initial_floors": null
+  },
+  "physics": {
+    "seconds_per_floor": 2.0,
+    "door_open_s": 2.0,
+    "door_close_s": 2.0,
+    "board_s_per_person": 0.8,
+    "alight_s_per_person": 0.8,
+    "empty_distance_weight": 1.0,
+    "loaded_distance_weight": 1.3,
+    "door_cycle_weight": 0.2,
+    "start_weight": 0.1
+  },
+  "simulation": {
+    "arrival_horizon_s": 120.0,
+    "max_drain_s": 1800.0,
+    "snapshot_interval_s": 1.0,
+    "max_passengers": 100000,
+    "start_time_of_day_s": 28800.0,
+    "max_events": 10000000
+  },
+  "traffic": {
+    "pattern": "morning",
+    "arrival_rate_per_min": 12.0,
+    "segments": [],
+    "bursts": []
+  },
+  "controller": {
+    "name": "ppo",
+    "model_id": "ppo-consequences-s801-n200000"
+  },
+  "reposition": {
+    "idle_review_s": 30.0,
+    "cooldown_s": 30.0,
+    "enabled": true
+  },
+  "metrics": {
+    "long_wait_threshold_s": 60.0
+  },
+  "reward": {
+    "wait_weight": 1.0,
+    "ride_weight": 0.2,
+    "energy_weight": 0.05,
+    "fairness_weight": 0.5,
+    "passenger_scale": 10.0,
+    "time_scale_s": 60.0,
+    "distance_scale_floors": 10.0,
+    "long_wait_threshold_s": 60.0
+  }
+}

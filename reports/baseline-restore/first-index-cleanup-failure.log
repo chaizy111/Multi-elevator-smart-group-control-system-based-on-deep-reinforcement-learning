@@ -1,1 +1,0 @@
-First attempt: sqlite3.OperationalError: database table is locked. WAL checkpoint ran inside a write transaction; that transaction rolled back. Retried with explicit commit before WAL checkpoint, succeeded.

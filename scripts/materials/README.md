@@ -1,0 +1,7 @@
+# 材料生成
+
+build_documents.py从docs/coursework的同一Markdown生成Word和PDF，依赖python-docx/reportlab/Pillow。它使用standard_business_brief样式、显式DXA表格与中文字体；当前PDF用本机STHeiti嵌入字形。Word缺少LibreOffice渲染核验，输出结构检查与PDF逐页检查分别记录。
+
+build_presentation.mjs使用Codex随附artifact-tool 2.7.8的presentation JSX，按页创建可编辑文字、图形与条形图，并插入实际UI截图。再次构建需要该工件运行时；它不是系统运行必需依赖。教师可直接用PowerPoint或WPS修改最终PPTX，无需生成工具。
+
+材料依赖与仿真环境分离；默认启动程序不导入这些工具。原稿、实际截图和冻结数据保留在仓库中，禁止用新生成的虚构值替换研究结果。

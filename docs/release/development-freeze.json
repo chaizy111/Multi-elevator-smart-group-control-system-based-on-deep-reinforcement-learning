@@ -1,0 +1,71 @@
+{
+  "source_commit": "4adf1be3ec93c22da9f6331aefe020e13a4e460b",
+  "branch": "dev",
+  "models": [
+    {
+      "id": "ppo-no-fairness",
+      "source": "artifacts/models/ppo-no-fairness",
+      "sha256": "1c17b0acf45515188202bbffec70f483fa2417888570ade82593390b90e909bc"
+    },
+    {
+      "id": "ppo-dispatch-only",
+      "source": "artifacts/models/ppo-dispatch-only",
+      "sha256": "64271db1764043b07e83258c385cf19f37b88df5a9328c45226835a762b1db6b"
+    },
+    {
+      "id": "ppo-curriculum",
+      "source": "artifacts/models/ppo-curriculum",
+      "sha256": "1a8600fdbecbd2933afed8f4d9fd8c8651f8b88858d9ceffb5f6feccb3cf68c1"
+    },
+    {
+      "id": "ppo-seed202",
+      "source": "artifacts/models/ppo-seed202",
+      "sha256": "58ed9772a7b71f928489ac9421cfe0f71122fb785f438d7db37e5e715b768ea0"
+    },
+    {
+      "id": "ppo-smoke",
+      "source": "artifacts/models/ppo-smoke",
+      "sha256": "837296a75475810fc7cfbb9c0f9173f43bdd0c32343bd6dd2da8b0e2b6b32190"
+    },
+    {
+      "id": "ppo-no-attention",
+      "source": "artifacts/models/ppo-no-attention",
+      "sha256": "8f81e29df0fc5a8d53f3e2078733cd35c52d2c158fa933b7fd76c3ff463eac79"
+    },
+    {
+      "id": "ppo-seed101",
+      "source": "artifacts/models/ppo-seed101",
+      "sha256": "e39120f87c4da21907bf7036b655ef26b0456d744faff6745846fc3e63d8b3a8"
+    },
+    {
+      "id": "ppo-seed303",
+      "source": "artifacts/models/ppo-seed303",
+      "sha256": "f5224d4ff9923d01f4a696e7a7c89f2890fe590c526a448e0ebb821db4309a34"
+    },
+    {
+      "id": "ppo-consequences-s801-n200000",
+      "source": "artifacts/candidate-ppo/models/ppo-consequences-s801-n200000",
+      "sha256": "20d535bf28256426600e9898933fef997917248a37f5a8e820b42a95c2620ecf"
+    },
+    {
+      "id": "ppo-consequences-s802-n200000",
+      "source": "artifacts/candidate-ppo/models/ppo-consequences-s802-n200000",
+      "sha256": "3cb52d4bbd5095f6ead814bce2105c842853f5db5ddf02c06081f6e360a7e238"
+    },
+    {
+      "id": "ppo-consequences-s803-n200000",
+      "source": "artifacts/candidate-ppo/models/ppo-consequences-s803-n200000",
+      "sha256": "70450dc1f329a61b8f7efcfe415d3875e3b28b98a13f40fcf5b143b4fa926289"
+    },
+    {
+      "id": "ppo-opt-s401-n200000-e1",
+      "source": "artifacts/references/round2/models/ppo-opt-s401-n200000-e1",
+      "sha256": "d38817cd60caa86651bff5c9b06fe1e3be9daaf450a7d3fca6f873907cd78aa3"
+    }
+  ],
+  "artifact_files": 274571,
+  "artifact_bytes": 10063716161,
+  "raw_artifacts_policy": "Original ignored artifacts remain in project/artifacts; no raw run files deleted. Branch includes frozen registered weights and inventory, not 10GB raw archives.",
+  "latest_model": "ppo-consequences-s801-n200000",
+  "no_new_training": true
+}

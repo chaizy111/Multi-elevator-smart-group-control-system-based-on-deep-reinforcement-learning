@@ -1,0 +1,34 @@
+{
+  "status": "STRUCTURAL_PASSED_VISUAL_UNAVAILABLE",
+  "preset": "standard_business_brief",
+  "override": "Chinese body font 宋体; PDF embedded STHeiti",
+  "documents": [
+    {
+      "file": "submission/00_问题陈述与需求设计.docx",
+      "sha256": "a9999327246c3c49ef1f8aa38c5eecf2c3a86ace9f4918e5c7bd055928fe7bfb",
+      "tables": 2,
+      "structural_check": "PASSED"
+    },
+    {
+      "file": "submission/01_课程项目报告.docx",
+      "sha256": "69a23877d7a246ba325bd71fd103b1843b60f8c913b2134ca01e956e85ac1dc2",
+      "tables": 5,
+      "structural_check": "PASSED"
+    },
+    {
+      "file": "submission/03_个人总结草稿.docx",
+      "sha256": "c305c6ef9611d43a0051b70b8eb3d9984e3d027beaff51db728912e709d8fb1d",
+      "tables": 0,
+      "structural_check": "PASSED"
+    }
+  ],
+  "docx_visual_render": false,
+  "reason": "LibreOffice/soffice absent; attempted canonical render logged under .cache/submission/document-qa/docx-render.log",
+  "soffice": null,
+  "pdf_pages": {
+    "00_问题陈述与需求设计.pdf": 2,
+    "01_课程项目报告.pdf": 8,
+    "03_个人总结草稿.pdf": 4
+  },
+  "pdf_visual_inspection": "All pages inspected from independent PDFKit renders; this does not validate Word pagination"
+}

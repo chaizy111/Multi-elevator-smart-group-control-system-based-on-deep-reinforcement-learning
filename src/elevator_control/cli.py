@@ -12,6 +12,9 @@ def serve(host: str = "127.0.0.1", port: int = 8000):
     """Serve HTTP API and production frontend with one coordinator."""
     import uvicorn
 
+    from elevator_control.submission import prepare
+
+    prepare()
     uvicorn.run("elevator_control.backend.app:create_app", factory=True, host=host, port=port)
 
 
@@ -111,6 +114,7 @@ def train(
     output: str | None = None,
     resume: str | None = None,
     initialize: str | None = None,
+    migrate_candidate_inputs: bool = False,
 ):
     """Train a real dual-head PPO; budgets are explicit in the configuration."""
     from pathlib import Path
@@ -127,10 +131,22 @@ def train(
         destination = output or str(Path(resume).parent.parent)
     elif config:
         cfg = TrainingConfig.model_validate(yaml.safe_load(Path(config).read_text()))
-        destination = output or "artifacts/training/" + Path(config).stem
+        from elevator_control.storage.paths import artifact_root
+
+        destination = output or str(artifact_root() / "training" / Path(config).stem)
     else:
         raise typer.BadParameter("--config or --resume required")
-    typer.echo(str(run_training(cfg, destination, resume=resume, initialize=initialize)))
+    typer.echo(
+        str(
+            run_training(
+                cfg,
+                destination,
+                resume=resume,
+                initialize=initialize,
+                migrate_candidate_inputs=migrate_candidate_inputs,
+            )
+        )
+    )
 
 
 model_app = typer.Typer(no_args_is_help=True)

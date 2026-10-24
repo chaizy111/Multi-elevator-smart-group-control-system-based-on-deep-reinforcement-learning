@@ -1,7 +1,0 @@
-scope,baseline,mean_wait_scenario_wins,scenarios
-standard_all,eta,24,45
-standard_all,eta_zone,11,45
-standard_all,round_robin,4,45
-standard_medium,eta,7,15
-standard_medium,eta_zone,4,15
-standard_medium,round_robin,0,15

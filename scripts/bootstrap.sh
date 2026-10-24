@@ -14,3 +14,5 @@ fi
 UV_PYTHON_DOWNLOADS=never "$PROJECT_UV" sync --frozen --extra dev --python "$(command -v python)"
 npm --prefix frontend ci --cache "$PWD/.cache/npm" --no-audit --no-fund
 npm --prefix frontend run build
+
+"$PWD/.venv/bin/python" -m elevator_control.submission

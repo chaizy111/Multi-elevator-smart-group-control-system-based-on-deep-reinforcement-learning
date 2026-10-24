@@ -69,7 +69,9 @@ for (const [floors, elevators, policy] of [
     await page.getByLabel("到达率（人/分钟）", { exact: true }).fill("20");
     await page.getByLabel("调度算法").selectOption(policy);
     if (policy === "ppo")
-      await page.getByLabel("已训练模型").selectOption("ppo-curriculum");
+      await page
+        .getByLabel("已训练模型")
+        .selectOption("ppo-consequences-s801-n200000");
     await page.getByLabel("运行速度", { exact: true }).selectOption("0");
     await page.getByRole("button", { name: "启动仿真 →", exact: true }).click();
     await expect(page.getByTestId("run-status")).toHaveText("已完成");
@@ -100,13 +102,20 @@ test("same-trace experiment, confidence intervals, real training curves", async 
   await page.getByLabel("电梯数量", { exact: true }).fill("2");
   await page.getByLabel("到达窗口（秒）", { exact: true }).fill("30");
   await page.getByRole("button", { name: "03 实验评价" }).click();
-  await page.getByLabel("实验模型").selectOption("ppo-curriculum");
+  await page
+    .getByLabel("实验模型")
+    .selectOption("ppo-consequences-s801-n200000");
   await page.getByRole("button", { name: "运行同流对比", exact: true }).click();
   await expect(page.getByTestId("experiment-status")).toContainText(
     "COMPLETED",
   );
   await expect(
-    page.getByRole("cell", { name: "ppo:ppo-curriculum", exact: true }).first(),
+    page
+      .getByRole("cell", {
+        name: "ppo:ppo-consequences-s801-n200000",
+        exact: true,
+      })
+      .first(),
   ).toBeVisible();
   await expect(
     page.getByRole("link", {
@@ -131,12 +140,15 @@ test("same-trace experiment, confidence intervals, real training curves", async 
     fullPage: true,
   });
   await page.getByRole("button", { name: "04 训练与模型" }).click();
-  await page.getByLabel("训练记录").selectOption("t3");
+  await page.getByLabel("训练记录").selectOption("consequences-s801-n200000");
   await expect(
     page.getByRole("img", { name: "真实训练Reward和固定验证成本曲线" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("heading", { name: "ppo-curriculum", exact: true }),
+    page.getByRole("heading", {
+      name: "ppo-consequences-s801-n200000",
+      exact: true,
+    }),
   ).toBeVisible();
   await page.screenshot({
     path: resolve("..", "reports", "browser-training.png"),

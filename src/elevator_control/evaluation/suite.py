@@ -35,9 +35,12 @@ def evaluate_suite(
     *,
     model_ids: list[str] | None = None,
     resume=False,
-    model_root: str | Path = "artifacts/models",
+    model_root: str | Path | None = None,
     workers: int = 1,
 ) -> Path:
+    from elevator_control.storage.paths import artifact_root
+
+    model_root = model_root if model_root is not None else artifact_root() / "models"
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     policies = list(suite.get("controllers", ["round_robin", "eta", "eta_zone"]))

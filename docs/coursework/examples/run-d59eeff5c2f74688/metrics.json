@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "metrics_version": "cohort-v2-all-floors",
+  "termination_reason": "completed",
+  "at_horizon": {
+    "sample_count": 26,
+    "picked_count": 24,
+    "completed_count": 14,
+    "unpicked": 2,
+    "unfinished": 12,
+    "mean_wait_s": 10.773107333333334,
+    "p95_wait_s": 22.157723099999988,
+    "max_wait_s": 24.8,
+    "mean_travel_s": 14.685714285714289,
+    "mean_system_time_s": 25.263550214285715,
+    "long_wait_ratio": 0.0,
+    "throughput_per_min": 7.0,
+    "completion_ratio": 0.5384615384615384,
+    "conditional_wait": true,
+    "censored_mean_wait_lower_bound_s": 10.058501499999998,
+    "long_wait_cohort_lower_bound": 0.0,
+    "long_wait_unknown_count": 2,
+    "eligible_for_ranking": false,
+    "floor_fairness": {
+      "1": {
+        "count": 15,
+        "mean_wait_s": 9.809672866666665,
+        "p95_wait_s": 17.74271419999999
+      },
+      "2": {
+        "count": 1,
+        "mean_wait_s": 4.8,
+        "p95_wait_s": 4.8
+      },
+      "3": {
+        "count": 2,
+        "mean_wait_s": 11.789290000000001,
+        "p95_wait_s": 12.0999079
+      },
+      "4": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "5": {
+        "count": 1,
+        "mean_wait_s": 16.238566,
+        "p95_wait_s": 16.238566
+      },
+      "6": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "7": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "8": {
+        "count": 1,
+        "mean_wait_s": 7.454901,
+        "p95_wait_s": 7.454901
+      },
+      "9": {
+        "count": 1,
+        "mean_wait_s": 6.8,
+        "p95_wait_s": 6.8
+      },
+      "10": {
+        "count": 1,
+        "mean_wait_s": 17.07159,
+        "p95_wait_s": 17.07159
+      },
+      "11": {
+        "count": 1,
+        "mean_wait_s": 10.665846,
+        "p95_wait_s": 10.665846
+      },
+      "12": {
+        "count": 1,
+        "mean_wait_s": 24.8,
+        "p95_wait_s": 24.8
+      }
+    },
+    "worst_floor_mean_wait_s": 24.8,
+    "distance_floors": 94.603422,
+    "energy_proxy": 123.78444860000045
+  },
+  "final": {
+    "sample_count": 26,
+    "picked_count": 26,
+    "completed_count": 26,
+    "unpicked": 0,
+    "unfinished": 0,
+    "mean_wait_s": 10.406789961538463,
+    "p95_wait_s": 21.559354499999998,
+    "max_wait_s": 24.8,
+    "mean_travel_s": 27.38461538461538,
+    "mean_system_time_s": 37.791405346153844,
+    "long_wait_ratio": 0.0,
+    "throughput_per_min": 7.0,
+    "completion_ratio": 1.0,
+    "conditional_wait": false,
+    "censored_mean_wait_lower_bound_s": 10.406789961538463,
+    "long_wait_cohort_lower_bound": 0.0,
+    "long_wait_unknown_count": 0,
+    "eligible_for_ranking": true,
+    "floor_fairness": {
+      "1": {
+        "count": 17,
+        "mean_wait_s": 9.362767999999999,
+        "p95_wait_s": 16.983776799999994
+      },
+      "2": {
+        "count": 1,
+        "mean_wait_s": 4.8,
+        "p95_wait_s": 4.8
+      },
+      "3": {
+        "count": 2,
+        "mean_wait_s": 11.789290000000001,
+        "p95_wait_s": 12.0999079
+      },
+      "4": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "5": {
+        "count": 1,
+        "mean_wait_s": 16.238566,
+        "p95_wait_s": 16.238566
+      },
+      "6": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "7": {
+        "count": 0,
+        "mean_wait_s": null,
+        "p95_wait_s": null
+      },
+      "8": {
+        "count": 1,
+        "mean_wait_s": 7.454901,
+        "p95_wait_s": 7.454901
+      },
+      "9": {
+        "count": 1,
+        "mean_wait_s": 6.8,
+        "p95_wait_s": 6.8
+      },
+      "10": {
+        "count": 1,
+        "mean_wait_s": 17.07159,
+        "p95_wait_s": 17.07159
+      },
+      "11": {
+        "count": 1,
+        "mean_wait_s": 10.665846,
+        "p95_wait_s": 10.665846
+      },
+      "12": {
+        "count": 1,
+        "mean_wait_s": 24.8,
+        "p95_wait_s": 24.8
+      }
+    },
+    "worst_floor_mean_wait_s": 24.8,
+    "distance_floors": 109.0,
+    "distance_m": 327.0,
+    "reposition_distance_floors": 2.0,
+    "empty_distance_floors": 26.0,
+    "loaded_distance_floors": 83.0000000000001,
+    "energy_proxy": 144.90000000000035,
+    "door_cycles": 38,
+    "starts": 34,
+    "drain_time_s": 50.52775,
+    "drain_timeout": false,
+    "costs": {
+      "wait": 270.5765390000002,
+      "ride": 711.9999999999999,
+      "energy": 144.90000000000035,
+      "fairness": 0.0
+    },
+    "utilization": {
+      "E1": {
+        "busy": 0.8890048687090529,
+        "service": 0.8890048687090529,
+        "reposition": 0.0,
+        "door": 0.3846881226076105
+      },
+      "E2": {
+        "busy": 0.6685128959949345,
+        "service": 0.645056303153007,
+        "reposition": 0.023456592841927488,
+        "door": 0.2814791141031297
+      },
+      "E3": {
+        "busy": 0.21814631342992552,
+        "service": 0.21814631342992552,
+        "reposition": 0.0,
+        "door": 0.11259164564125196
+      },
+      "E4": {
+        "busy": 0.6380193253004286,
+        "service": 0.6380193253004286,
+        "reposition": 0.0,
+        "door": 0.35654021119729756
+      }
+    }
+  }
+}

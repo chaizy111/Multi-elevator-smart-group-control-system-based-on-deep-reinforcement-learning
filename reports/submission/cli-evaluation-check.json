@@ -1,0 +1,8 @@
+{
+  "status": "PASSED",
+  "suite": "configs/evaluation/submission.yaml",
+  "runs": 8,
+  "trace_count": 2,
+  "passengers_audited": 232,
+  "role": "Known demonstration inputs; not independent research samples"
+}

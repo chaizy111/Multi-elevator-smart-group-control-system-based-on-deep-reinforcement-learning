@@ -1,0 +1,151 @@
+{
+  "status": "PASSED",
+  "source_root": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache/submission/clean-source",
+  "runtime_root": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache/submission/clean-source/artifacts/submission",
+  "no_development_archives": true,
+  "installed": {
+    "root": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache/submission/clean-source/artifacts/submission",
+    "default_model": "ppo-consequences-s801-n200000",
+    "files": 28
+  },
+  "models": 4,
+  "actual_training_records": 3,
+  "curve_last_step": 200000,
+  "cli_run": "/Users/chaizhenye/Desktop/Multi-elevator-smart-group-control-system-based-on-deep-reinforcement-learning/.cache/submission/clean-source/artifacts/submission/runs/run-6507c8cd0df4",
+  "worker_run": "run-94ef0d833fd04f21",
+  "worker_metrics": {
+    "schema_version": 1,
+    "metrics_version": "cohort-v2-all-floors",
+    "termination_reason": "completed",
+    "at_horizon": {
+      "sample_count": 11,
+      "picked_count": 5,
+      "completed_count": 0,
+      "unpicked": 6,
+      "unfinished": 11,
+      "mean_wait_s": 7.386203399999999,
+      "p95_wait_s": 10.157375,
+      "max_wait_s": 10.454651,
+      "mean_travel_s": null,
+      "mean_system_time_s": null,
+      "long_wait_ratio": 0.0,
+      "throughput_per_min": 0.0,
+      "completion_ratio": 0.0,
+      "conditional_wait": true,
+      "censored_mean_wait_lower_bound_s": 9.878787636363635,
+      "long_wait_cohort_lower_bound": 0.0,
+      "long_wait_unknown_count": 6,
+      "eligible_for_ranking": false,
+      "floor_fairness": {
+        "1": {
+          "count": 2,
+          "mean_wait_s": 7.3869205000000004,
+          "p95_wait_s": 10.14787795
+        },
+        "2": {
+          "count": 1,
+          "mean_wait_s": 6.643453,
+          "p95_wait_s": 6.643453
+        },
+        "3": {
+          "count": 1,
+          "mean_wait_s": 6.545452,
+          "p95_wait_s": 6.545452
+        },
+        "4": {
+          "count": 0,
+          "mean_wait_s": null,
+          "p95_wait_s": null
+        },
+        "5": {
+          "count": 1,
+          "mean_wait_s": 8.968271,
+          "p95_wait_s": 8.968271
+        }
+      },
+      "worst_floor_mean_wait_s": 8.968271,
+      "distance_floors": 14.4239435,
+      "energy_proxy": 17.151126549999997
+    },
+    "final": {
+      "sample_count": 11,
+      "picked_count": 11,
+      "completed_count": 11,
+      "unpicked": 0,
+      "unfinished": 0,
+      "mean_wait_s": 16.993000272727272,
+      "p95_wait_s": 48.0,
+      "max_wait_s": 57.2,
+      "mean_travel_s": 25.672727272727276,
+      "mean_system_time_s": 42.665727545454544,
+      "long_wait_ratio": 0.0,
+      "throughput_per_min": 0.0,
+      "completion_ratio": 1.0,
+      "conditional_wait": false,
+      "censored_mean_wait_lower_bound_s": 16.99300027272727,
+      "long_wait_cohort_lower_bound": 0.0,
+      "long_wait_unknown_count": 0,
+      "eligible_for_ranking": true,
+      "floor_fairness": {
+        "1": {
+          "count": 2,
+          "mean_wait_s": 7.3869205000000004,
+          "p95_wait_s": 10.14787795
+        },
+        "2": {
+          "count": 2,
+          "mean_wait_s": 13.1503005,
+          "p95_wait_s": 19.00646325
+        },
+        "3": {
+          "count": 3,
+          "mean_wait_s": 10.367310999999999,
+          "p95_wait_s": 17.755894299999998
+        },
+        "4": {
+          "count": 1,
+          "mean_wait_s": 9.778357,
+          "p95_wait_s": 9.778357
+        },
+        "5": {
+          "count": 3,
+          "mean_wait_s": 34.98942366666667,
+          "p95_wait_s": 55.36
+        }
+      },
+      "worst_floor_mean_wait_s": 34.98942366666667,
+      "distance_floors": 29.0,
+      "distance_m": 87.0,
+      "reposition_distance_floors": 0.0,
+      "empty_distance_floors": 10.0,
+      "loaded_distance_floors": 18.999999999999996,
+      "energy_proxy": 38.600000000000016,
+      "door_cycles": 13,
+      "starts": 13,
+      "drain_time_s": 43.145833,
+      "drain_timeout": false,
+      "costs": {
+        "wait": 186.92300300000005,
+        "ride": 282.39999999999986,
+        "energy": 38.600000000000016,
+        "fairness": 0.0
+      },
+      "utilization": {
+        "E1": {
+          "busy": 0.9241811491845339,
+          "service": 0.9241811491845339,
+          "reposition": 0.0,
+          "door": 0.5140415859369597
+        },
+        "E2": {
+          "busy": 0.8202791264951484,
+          "service": 0.8202791264951484,
+          "reposition": 0.0,
+          "door": 0.43748220079741246
+        }
+      }
+    }
+  },
+  "exact_match_offline": true,
+  "built_frontend_served": true
+}

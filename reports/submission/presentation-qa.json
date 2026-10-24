@@ -1,0 +1,26 @@
+{
+  "status": "PASSED",
+  "slides": 12,
+  "editable_shapes": 245,
+  "media": 2,
+  "out_of_bounds": [],
+  "kicker_centers_aligned": true,
+  "full_size_slides_visually_inspected": 12,
+  "profile": "engineering-platform",
+  "score": {
+    "story": 5,
+    "specificity": 5,
+    "rhythm": 4,
+    "whitespace": 5,
+    "chart_clarity": 5,
+    "typography": 4,
+    "restraint": 5,
+    "precision": 5,
+    "coherence": 5
+  },
+  "total": 43,
+  "out_of": 45,
+  "reference": "none",
+  "tradeoff": "Small UI screenshot labels are supporting proof; the main metrics are large editable native text.",
+  "charts": "Authored editable bar primitives, no native chart parts required; labels and lengths recomputed from frozen values."
+}

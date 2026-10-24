@@ -1,0 +1,30 @@
+{
+  "status": "PASSED",
+  "frozen_dev": "bc0fef6",
+  "algorithm_files_byte_identical": 19,
+  "original_designs_byte_identical": 2,
+  "development_model_hashes_unchanged": 12,
+  "release_files_verified": 28,
+  "original_inventory_files": 274571,
+  "original_inventory_critical_hashes_verified": 24862,
+  "original_missing": [],
+  "original_size_changes": [
+    "artifacts/baseline-restore/server.log"
+  ],
+  "operational_log_note": "Only baseline-restore/server.log grew when the idle old server was gracefully shut down; no scientific archive changed.",
+  "local_links_checked": 87,
+  "missing_links": [],
+  "unopened_scopes": [
+    "artifacts/candidate-ppo/evaluation/confirmation",
+    "artifacts/candidate-ppo/evaluation/final",
+    "artifacts/candidate-ppo/evaluation/long",
+    "artifacts/candidate-ppo/evaluation/generalization",
+    "artifacts/candidate-ppo/evaluation/pressure"
+  ],
+  "quality_checks": 10,
+  "python_tests": 90,
+  "frontend_unit_tests": 2,
+  "browser_e2e_tests": 5,
+  "fresh_source_runtime": "PASSED",
+  "docx_visual_render": "UNAVAILABLE - no LibreOffice; PDFs separately verified"
+}

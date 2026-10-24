@@ -34,7 +34,13 @@ export function Training({ models }: { models: Model[] }) {
         .then((v) => {
           if (active) {
             setRuns(v.items);
-            setId((old) => old || v.items.at(-1)?.id || "");
+            setId(
+              (old) =>
+                old ||
+                v.items.find((r) => r.id === "consequences-s801-n200000")?.id ||
+                v.items.at(-1)?.id ||
+                "",
+            );
           }
         })
         .catch((e) => {
@@ -321,8 +327,8 @@ export function Training({ models }: { models: Model[] }) {
         )}
       </section>
       <section className="panel compact">
-        <h3>最短训练与注册命令</h3>
-        <pre>{`conda activate elevator\nsource scripts/project_env.sh\npython -m elevator_control.cli train --config configs/training/smoke.yaml --output artifacts/training/smoke\npython -m elevator_control.cli model register --checkpoint artifacts/training/smoke/checkpoints/best.pt --model-id ppo-smoke`}</pre>
+        <h3>复现提交模型的训练与注册命令</h3>
+        <pre>{`conda activate elevator\nsource scripts/project_env.sh\npython -m elevator_control.cli train --config configs/training/submission.yaml --initialize assets/release/curriculum-initializer.pt --migrate-candidate-inputs --output artifacts/submission/training/replay-801\npython -m elevator_control.cli model register --checkpoint artifacts/submission/training/replay-801/checkpoints/best.pt --model-id ppo-replay-801`}</pre>
         <p className="muted">
           T0只验证工程流程；完整课程和正式多seed结果见项目
           reports/。best根据固定验证集选择，last保留最终更新。

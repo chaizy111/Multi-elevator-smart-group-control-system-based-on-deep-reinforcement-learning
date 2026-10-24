@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "submission/00_问题陈述与需求设计.docx",
+      "bytes": 41692,
+      "sha256": "a9999327246c3c49ef1f8aa38c5eecf2c3a86ace9f4918e5c7bd055928fe7bfb"
+    },
+    {
+      "path": "submission/00_问题陈述与需求设计.pdf",
+      "bytes": 214604,
+      "sha256": "d892dc5f40dedab5dc99957daaf107f7f7b76bf767250ff69ebfd162c2a4cebe"
+    },
+    {
+      "path": "submission/01_课程项目报告.docx",
+      "bytes": 304063,
+      "sha256": "69a23877d7a246ba325bd71fd103b1843b60f8c913b2134ca01e956e85ac1dc2"
+    },
+    {
+      "path": "submission/01_课程项目报告.pdf",
+      "bytes": 574354,
+      "sha256": "b1d388ecbb08de18cf843169f7fa1c45cdb1656727cf5aac129e49b6f8f85507"
+    },
+    {
+      "path": "submission/02_多电梯群控项目演示.pptx",
+      "bytes": 168185,
+      "sha256": "f9aad7625a4845f0c2e91d718abb034300ec15b0d89418002cdc39cb14d07a37"
+    },
+    {
+      "path": "submission/03_个人总结草稿.docx",
+      "bytes": 40717,
+      "sha256": "c305c6ef9611d43a0051b70b8eb3d9984e3d027beaff51db728912e709d8fb1d"
+    },
+    {
+      "path": "submission/03_个人总结草稿.pdf",
+      "bytes": 204312,
+      "sha256": "38ac0717b59d1c125d5fa0c1651554ddd2a48e811f8258d0bcd5f9458021d594"
+    }
+  ]
+}

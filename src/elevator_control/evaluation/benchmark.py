@@ -18,7 +18,7 @@ def benchmark(
     config: SimulationConfig,
     *,
     requests: int | None = None,
-    model_id="ppo-curriculum",
+    model_id="ppo-consequences-s801-n200000",
     output="reports/benchmark.json",
 ) -> dict:
     cfg = config.model_copy(deep=True)
@@ -65,7 +65,9 @@ def benchmark(
         else "configured stochastic trace",
         inference=None,
     )
-    model_path = Path("artifacts/models") / model_id
+    from elevator_control.storage.paths import artifact_root
+
+    model_path = artifact_root() / "models" / model_id
     if model_path.exists():
         import torch
 
@@ -75,7 +77,7 @@ def benchmark(
 
         torch.set_num_threads(1)
         model, metadata = load_model(model_id)
-        obs, _ = ElevatorEnv(config).reset(seed=cfg.seed)
+        obs, _ = ElevatorEnv(config, candidate_inputs=model.candidate_inputs).reset(seed=cfg.seed)
         tensor = tensor_observations(obs)
         samples = []
         with torch.no_grad():

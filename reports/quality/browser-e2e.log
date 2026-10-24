@@ -2,33 +2,33 @@
 > elevator-control-web@0.1.0 test:e2e
 > playwright test
 
-[2m[WebServer] [22mINFO:     Started server process [15577]
+[2m[WebServer] [22mINFO:     Started server process [28343]
 [2m[WebServer] [22mINFO:     Waiting for application startup.
 [2m[WebServer] [22mINFO:     Application startup complete.
 [2m[WebServer] [22mINFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
 
 Running 5 tests using 1 worker
 
-(node:15583) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28375) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:15583) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28375) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-[2m[WebServer] [22mINFO:     127.0.0.1:50219 - "WebSocket /ws/v1/simulations/run-5d07c6d26a6f4d86" [accepted]
+[2m[WebServer] [22mINFO:     127.0.0.1:55490 - "WebSocket /ws/v1/simulations/run-4be5bc0524c94c83" [accepted]
 [2m[WebServer] [22mINFO:     connection open
-[2m[WebServer] [22mINFO:     127.0.0.1:50220 - "WebSocket /ws/v1/simulations/run-766a0386da6a40ba" [accepted]
+[2m[WebServer] [22mINFO:     127.0.0.1:55491 - "WebSocket /ws/v1/simulations/run-955dc8a366bb490d" [accepted]
 [2m[WebServer] [22mINFO:     connection open
-  ✓  1 tests/e2e/application.spec.ts:3:1 › 5F2E ETA: configure, pause, resume, export, reset (2.3s)
-[2m[WebServer] [22mINFO:     127.0.0.1:50227 - "WebSocket /ws/v1/simulations/run-7f559782ca784069" [accepted]
+  ✓  1 tests/e2e/application.spec.ts:3:1 › 5F2E ETA: configure, pause, resume, export, reset (2.4s)
+[2m[WebServer] [22mINFO:     127.0.0.1:55498 - "WebSocket /ws/v1/simulations/run-c8d8890e128c4c7a" [accepted]
 [2m[WebServer] [22mINFO:     connection open
   ✓  2 tests/e2e/application.spec.ts:93:3 › 12F4E round_robin: actual run and trained model (1.2s)
-[2m[WebServer] [22mINFO:     127.0.0.1:50231 - "WebSocket /ws/v1/simulations/run-494899e8dd7d42f2" [accepted]
+[2m[WebServer] [22mINFO:     127.0.0.1:55502 - "WebSocket /ws/v1/simulations/run-fc4c1d935ee6417d" [accepted]
 [2m[WebServer] [22mINFO:     connection open
-  ✓  3 tests/e2e/application.spec.ts:93:3 › 30F8E ppo: actual run and trained model (3.2s)
+  ✓  3 tests/e2e/application.spec.ts:93:3 › 30F8E ppo: actual run and trained model (3.3s)
   ✓  4 tests/e2e/application.spec.ts:139:1 › same-trace experiment, confidence intervals, real training curves (4.7s)
-[2m[WebServer] [22mINFO:     127.0.0.1:50241 - "WebSocket /ws/v1/simulations/run-37c8837d929d49fe" [accepted]
+[2m[WebServer] [22mINFO:     127.0.0.1:55510 - "WebSocket /ws/v1/simulations/run-ef2fefa032bd4118" [accepted]
 [2m[WebServer] [22mINFO:     connection open
-[2m[WebServer] [22mINFO:     127.0.0.1:50244 - "WebSocket /ws/v1/simulations/run-54f277cc0e4347dd" [accepted]
+[2m[WebServer] [22mINFO:     127.0.0.1:55513 - "WebSocket /ws/v1/simulations/run-d8e28df3da02492a" [accepted]
 [2m[WebServer] [22mINFO:     connection open
   ✓  5 tests/e2e/application.spec.ts:209:1 › narrow viewport preserves configuration and simulation controls (1.3s)
 
-  5 passed (15.0s)
+  5 passed (15.2s)

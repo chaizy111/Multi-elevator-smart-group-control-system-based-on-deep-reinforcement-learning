@@ -17,3 +17,7 @@ frontend/dist/
 frontend/test-results/
 frontend/playwright-report/
 *.tsbuildinfo
+
+outputs/
+submission/*源码*.zip
+submission/*交付*.zip

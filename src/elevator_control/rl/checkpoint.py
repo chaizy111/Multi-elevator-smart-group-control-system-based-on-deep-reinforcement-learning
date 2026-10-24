@@ -17,6 +17,7 @@ from elevator_control.rl.network import (
 from elevator_control.simulator.engine import SIMULATOR_VERSION
 from elevator_control.simulator.route_planner import ROUTE_VERSION
 from elevator_control.storage.artifacts import atomic_json
+from elevator_control.storage.paths import artifact_root
 
 VERSIONS = dict(
     simulator=SIMULATOR_VERSION,
@@ -69,12 +70,12 @@ def save_checkpoint(path: Path, data: dict):
     temp.replace(path)
 
 
-def register(checkpoint: str | Path, model_id: str, root: str | Path = "artifacts/models") -> Path:
+def register(checkpoint: str | Path, model_id: str, root: str | Path | None = None) -> Path:
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}", model_id):
         raise ValueError("invalid model_id")
     data = torch.load(checkpoint, map_location="cpu", weights_only=False)
     check_versions(data["versions"], candidate_inputs=data["config"].get("candidate_inputs", False))
-    path = Path(root) / model_id
+    path = (Path(root) if root is not None else artifact_root() / "models") / model_id
     if path.exists():
         raise ValueError("model_id already exists; register a new immutable ID")
     path.mkdir(parents=True)
@@ -100,16 +101,16 @@ def register(checkpoint: str | Path, model_id: str, root: str | Path = "artifact
     atomic_json(path / "validation_metrics.json", data.get("validation", {}))
     from elevator_control.storage.repository import Repository
 
-    repo = Repository(Path(root).parent / "index.sqlite3")
+    repo = Repository(path.parent.parent / "index.sqlite3")
     repo.create(model_id, "model", metadata)
     repo.update(model_id, status="COMPLETED")
     return path
 
 
-def load_model(model_id: str, root: str | Path = "artifacts/models") -> tuple[ActorCritic, dict]:
+def load_model(model_id: str, root: str | Path | None = None) -> tuple[ActorCritic, dict]:
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}", model_id):
         raise ValueError("invalid model_id")
-    path = Path(root) / model_id
+    path = (Path(root) if root is not None else artifact_root() / "models") / model_id
     metadata = json.loads((path / "metadata.json").read_text())
     candidate_inputs = metadata.get("training_config", {}).get("candidate_inputs", False)
     check_versions(metadata["versions"], candidate_inputs=candidate_inputs)

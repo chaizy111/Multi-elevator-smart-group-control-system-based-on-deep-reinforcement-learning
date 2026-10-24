@@ -11,7 +11,7 @@ from elevator_control.rl.network import tensor_observations
 class RLController:
     requires_observation = True
 
-    def __init__(self, model_id: str, *, force_stay: bool = False, root="artifacts/models"):
+    def __init__(self, model_id: str, *, force_stay: bool = False, root=None):
         torch.set_num_threads(1)
         self.model, self.metadata = load_model(model_id, root)
         self.model_hash = self.metadata["sha256"]

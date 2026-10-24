@@ -1,17 +1,9 @@
 # evaluation
 
-评价以 [0,H) 到达 cohort 为单位。等待以登梯完成为终点，乘梯以离梯完成为终点。未接齐时等待均值明确 conditional，另给全体下界；未送齐或零样本不参与排名。at_horizon 与 final 分别计算，Throughput 永远以 H 内送达人数/H分钟计，不把 drain 当窗口吞吐。
+评价以[0,H)到达cohort为单位，等待终点为登梯完成，乘梯终点为离梯完成。未接齐时等待均值明确为conditional，另给全体下界；未送齐或零样本不参与排名。at_horizon与final分别计算，Throughput始终按H内送达人数/H分钟计，不把drain当作窗口吞吐。
 
-suite 固定 seed，先生成 trace，再共用字节运行所有策略。scenario_hash 核对配置、物理、trace、内核和路线版本；图表从 runs.csv 生成。差值按 trace 配对，并对 trace 做2000次 bootstrap。快照间隔不进入可比性哈希。smoke 仅开发验证，不能冒充正式实验。
+suite固定seed，先生成Trace，再共用字节运行所有策略。scenario_hash核对配置、物理、Trace、内核和路线版本；图表从runs.csv生成。差值按Trace配对，bootstrap以Trace为抽样单位。快照间隔不进入可比性哈希。当前可直接运行的四策略配置为configs/evaluation/submission.yaml，命令见[评价说明](../evaluation.md)。
 
-## 正式矩阵
+原始审计函数scripts/audit_experiments.py中的audit(path)从乘客CSV、事件与电梯轨迹独立重算指标，供测试和研究核验复用。时间戳用Decimal恢复整数微秒，避免把恰好60秒误算为大于60秒。该文件的main入口针对dev旧完整矩阵，不是提交版快速检查；main使用scripts/run_quality.py的真实链路及[提交演示原始审计](../../reports/submission/screenshot-audit.json)。
 
-`prepare_formal.py`在训练/评价前冻结所有配置与split。标准45格×20trace×6策略（3基线+3独立PPO）；generalization为30格×20trace×4策略；mixed为20trace×6；ablation为15格×20trace×6；pressure为2格×5trace×5。常规到达窗口120秒，常规drain7200秒（压力矩阵1800秒），快照5秒。短窗口与有界60000决策预算均是本次实验限制，不能声称百万步训练或长时稳态结论。
-
-重新训练的Dispatch-only、无Attention、无公平性采用与seed101完整模型相同的60000预算。Stay干预直接使用同一完整checkpoint，仅禁用重定位；与重新训练Dispatch-only分别报告。
-
-离线重算CSV时间戳时先还原整数微秒再相减，特别是严格`wait > 60s`阈值。直接用二进制浮点相减可能把恰好60秒变成60.00000000000001，造成错误长等待比例。`scripts/audit_experiments.py`使用Decimal恢复微秒，独立核对全部当前运行。
-
-`report_sections.py`仅从完整矩阵的运行索引生成消融、泛化和压力汇总，不参与模拟或选模。消融区间先按scenario与trace_hash配对，再以完整seed101为参照；重新训练与强制Stay分别标识。域汇总为每Trace指标的描述性平均，不能当作乘客级独立样本推断。压力表保留未完成cohort，汇总等待下界，避免条件均值误导。
-
-`scripts/compare_baselines.py`复算完整standard与中负载子集的三基线对比；校验每条Trace恰有6种策略且不重复，PPO三个独立训练模型等权平均，再计算相对基线的比例变化。场景胜出数按每场景20条Trace的均值比较，只作描述，不表示显著性。输出与原中负载目标判定交叉核对，解读见[策略效果解读](../../reports/formal/策略效果解读.md)。
+standard、mixed、generalization、ablation、pressure与split_manifest保留原输入定义，供最新研究模块及实验契约测试使用；相关旧报告和完整复算脚本已冻结至dev。report_sections.py保留通用矩阵汇总能力，不能将其历史seed101消融定义混入最新三微调seed的结论。当前效果说明见[课程报告](../coursework/课程项目报告.md)，原始研究门槛见reports/candidate-ppo。

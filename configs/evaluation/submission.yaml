@@ -1,0 +1,19 @@
+controllers:
+  - round_robin
+  - eta
+  - eta_zone
+  - ppo:ppo-consequences-s801-n200000
+scenarios:
+  - name: course-demo-12F4E-morning
+    seeds: [9001, 9002]
+    config:
+      building:
+        floor_count: 12
+        elevator_count: 4
+        capacity: 12
+      simulation:
+        arrival_horizon_s: 120
+        max_drain_s: 1800
+      traffic:
+        pattern: morning
+        arrival_rate_per_min: 12

@@ -1,0 +1,372 @@
+{"time_us": 9243055, "type": "arrival", "passenger_id": "P0000001"}
+{"time_us": 9243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 9243055, "end_us": 11243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 10814217, "type": "arrival", "passenger_id": "P0000002"}
+{"time_us": 10814217, "type": "open_start", "elevator": "E2", "stop": {"floor": 1, "pickup_ids": ["P0000002"], "dropoff_ids": []}}
+{"time_us": 11243055, "type": "move_end", "elevator": "E1", "floor": 2}
+{"time_us": 11243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 11243055, "end_us": 13243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 12814217, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 13243055, "type": "move_end", "elevator": "E1", "floor": 3}
+{"time_us": 13243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 13243055, "end_us": 15243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 13614217, "type": "board", "elevator": "E2", "passenger_id": "P0000002"}
+{"time_us": 15243055, "type": "move_end", "elevator": "E1", "floor": 4}
+{"time_us": 15243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 4, "to_floor": 5, "start_us": 15243055, "end_us": 17243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 15614217, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 15614217, "end_us": 17614217, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 17070490, "type": "arrival", "passenger_id": "P0000003"}
+{"time_us": 17070490, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 17070490, "end_us": 19070490, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 17243055, "type": "move_end", "elevator": "E1", "floor": 5}
+{"time_us": 17243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 17243055, "end_us": 19243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 17614217, "type": "move_end", "elevator": "E2", "floor": 2}
+{"time_us": 17614217, "type": "open_start", "elevator": "E2", "stop": {"floor": 2, "pickup_ids": [], "dropoff_ids": ["P0000002"]}}
+{"time_us": 19070490, "type": "move_end", "elevator": "E3", "floor": 2}
+{"time_us": 19070490, "type": "open_start", "elevator": "E3", "stop": {"floor": 2, "pickup_ids": ["P0000003"], "dropoff_ids": []}}
+{"time_us": 19243055, "type": "move_end", "elevator": "E1", "floor": 6}
+{"time_us": 19243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 19243055, "end_us": 21243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 19614217, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 20414217, "type": "alight", "elevator": "E2", "passenger_id": "P0000002"}
+{"time_us": 21070490, "type": "open", "elevator": "E3", "passenger_id": null}
+{"time_us": 21243055, "type": "move_end", "elevator": "E1", "floor": 7}
+{"time_us": 21243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 7, "to_floor": 8, "start_us": 21243055, "end_us": 23243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 21870490, "type": "board", "elevator": "E3", "passenger_id": "P0000003"}
+{"time_us": 23243055, "type": "move_end", "elevator": "E1", "floor": 8}
+{"time_us": 23243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 8, "to_floor": 9, "start_us": 23243055, "end_us": 25243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 23870490, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 23870490, "end_us": 25870490, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 25243055, "type": "move_end", "elevator": "E1", "floor": 9}
+{"time_us": 25243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 9, "to_floor": 10, "start_us": 25243055, "end_us": 27243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 25593156, "type": "arrival", "passenger_id": "P0000004"}
+{"time_us": 25593156, "type": "open_start", "elevator": "E4", "stop": {"floor": 1, "pickup_ids": ["P0000004"], "dropoff_ids": []}}
+{"time_us": 25870490, "type": "move_end", "elevator": "E3", "floor": 3}
+{"time_us": 25870490, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 25870490, "end_us": 27870490, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 27243055, "type": "move_end", "elevator": "E1", "floor": 10}
+{"time_us": 27243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 10, "to_floor": 11, "start_us": 27243055, "end_us": 29243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 27593156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 27870490, "type": "move_end", "elevator": "E3", "floor": 4}
+{"time_us": 27870490, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 4, "to_floor": 5, "start_us": 27870490, "end_us": 29870490, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 28393156, "type": "board", "elevator": "E4", "passenger_id": "P0000004"}
+{"time_us": 29243055, "type": "move_end", "elevator": "E1", "floor": 11}
+{"time_us": 29243055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 11, "to_floor": 12, "start_us": 29243055, "end_us": 31243055, "purpose": "SERVICE", "generation": 1}}
+{"time_us": 29870490, "type": "move_end", "elevator": "E3", "floor": 5}
+{"time_us": 29870490, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 29870490, "end_us": 31870490, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 30000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 30000000, "end_us": 32000000, "purpose": "REPOSITION", "generation": 6}}
+{"time_us": 30393156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 30393156, "end_us": 32393156, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 31243055, "type": "move_end", "elevator": "E1", "floor": 12}
+{"time_us": 31243055, "type": "open_start", "elevator": "E1", "stop": {"floor": 12, "pickup_ids": ["P0000001"], "dropoff_ids": []}}
+{"time_us": 31870490, "type": "move_end", "elevator": "E3", "floor": 6}
+{"time_us": 31870490, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 31870490, "end_us": 33870490, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 32000000, "type": "move_end", "elevator": "E2", "floor": 3}
+{"time_us": 32000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 32000000, "end_us": 34000000, "purpose": "REPOSITION", "generation": 6}}
+{"time_us": 32393156, "type": "move_end", "elevator": "E4", "floor": 2}
+{"time_us": 32393156, "type": "open_start", "elevator": "E4", "stop": {"floor": 2, "pickup_ids": [], "dropoff_ids": ["P0000004"]}}
+{"time_us": 33243055, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 33774086, "type": "arrival", "passenger_id": "P0000005"}
+{"time_us": 33870490, "type": "move_end", "elevator": "E3", "floor": 7}
+{"time_us": 33870490, "type": "open_start", "elevator": "E3", "stop": {"floor": 7, "pickup_ids": [], "dropoff_ids": ["P0000003"]}}
+{"time_us": 34000000, "type": "move_end", "elevator": "E2", "floor": 4}
+{"time_us": 34000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 4, "to_floor": 3, "start_us": 34000000, "end_us": 36000000, "purpose": "SERVICE", "generation": 7}}
+{"time_us": 34043055, "type": "board", "elevator": "E1", "passenger_id": "P0000001"}
+{"time_us": 34393156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 34755143, "type": "arrival", "passenger_id": "P0000006"}
+{"time_us": 35193156, "type": "alight", "elevator": "E4", "passenger_id": "P0000004"}
+{"time_us": 35870490, "type": "open", "elevator": "E3", "passenger_id": null}
+{"time_us": 36000000, "type": "move_end", "elevator": "E2", "floor": 3}
+{"time_us": 36000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 3, "to_floor": 2, "start_us": 36000000, "end_us": 38000000, "purpose": "SERVICE", "generation": 7}}
+{"time_us": 36043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 12, "to_floor": 11, "start_us": 36043055, "end_us": 38043055, "purpose": "SERVICE", "generation": 3}}
+{"time_us": 36670490, "type": "alight", "elevator": "E3", "passenger_id": "P0000003"}
+{"time_us": 37193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 2, "to_floor": 1, "start_us": 37193156, "end_us": 39193156, "purpose": "SERVICE", "generation": 6}}
+{"time_us": 37404489, "type": "arrival", "passenger_id": "P0000007"}
+{"time_us": 38000000, "type": "move_end", "elevator": "E2", "floor": 2}
+{"time_us": 38000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 2, "to_floor": 1, "start_us": 38000000, "end_us": 40000000, "purpose": "SERVICE", "generation": 7}}
+{"time_us": 38043055, "type": "move_end", "elevator": "E1", "floor": 11}
+{"time_us": 38043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 11, "to_floor": 10, "start_us": 38043055, "end_us": 40043055, "purpose": "SERVICE", "generation": 4}}
+{"time_us": 39193156, "type": "move_end", "elevator": "E4", "floor": 1}
+{"time_us": 39193156, "type": "open_start", "elevator": "E4", "stop": {"floor": 1, "pickup_ids": ["P0000006"], "dropoff_ids": []}}
+{"time_us": 40000000, "type": "move_end", "elevator": "E2", "floor": 1}
+{"time_us": 40000000, "type": "open_start", "elevator": "E2", "stop": {"floor": 1, "pickup_ids": ["P0000005"], "dropoff_ids": []}}
+{"time_us": 40043055, "type": "move_end", "elevator": "E1", "floor": 10}
+{"time_us": 40043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 10, "to_floor": 9, "start_us": 40043055, "end_us": 42043055, "purpose": "SERVICE", "generation": 4}}
+{"time_us": 41193156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 41993156, "type": "board", "elevator": "E4", "passenger_id": "P0000006"}
+{"time_us": 42000000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 42043055, "type": "move_end", "elevator": "E1", "floor": 9}
+{"time_us": 42043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 9, "to_floor": 8, "start_us": 42043055, "end_us": 44043055, "purpose": "SERVICE", "generation": 4}}
+{"time_us": 42800000, "type": "board", "elevator": "E2", "passenger_id": "P0000005"}
+{"time_us": 43993156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 43993156, "end_us": 45993156, "purpose": "SERVICE", "generation": 8}}
+{"time_us": 44043055, "type": "move_end", "elevator": "E1", "floor": 8}
+{"time_us": 44043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 8, "to_floor": 7, "start_us": 44043055, "end_us": 46043055, "purpose": "SERVICE", "generation": 4}}
+{"time_us": 44800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 44800000, "end_us": 46800000, "purpose": "SERVICE", "generation": 9}}
+{"time_us": 45307875, "type": "arrival", "passenger_id": "P0000008"}
+{"time_us": 45993156, "type": "move_end", "elevator": "E4", "floor": 2}
+{"time_us": 45993156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 2, "to_floor": 1, "start_us": 45993156, "end_us": 47993156, "purpose": "SERVICE", "generation": 9}}
+{"time_us": 46043055, "type": "move_end", "elevator": "E1", "floor": 7}
+{"time_us": 46043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 7, "to_floor": 6, "start_us": 46043055, "end_us": 48043055, "purpose": "SERVICE", "generation": 4}}
+{"time_us": 46800000, "type": "move_end", "elevator": "E2", "floor": 2}
+{"time_us": 46800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 46800000, "end_us": 48800000, "purpose": "SERVICE", "generation": 9}}
+{"time_us": 47105860, "type": "arrival", "passenger_id": "P0000009"}
+{"time_us": 47993156, "type": "move_end", "elevator": "E4", "floor": 1}
+{"time_us": 47993156, "type": "open_start", "elevator": "E4", "stop": {"floor": 1, "pickup_ids": ["P0000008", "P0000009"], "dropoff_ids": []}}
+{"time_us": 48043055, "type": "move_end", "elevator": "E1", "floor": 6}
+{"time_us": 48043055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 6, "to_floor": 5, "start_us": 48043055, "end_us": 50043055, "purpose": "SERVICE", "generation": 4}}
+{"time_us": 48528410, "type": "arrival", "passenger_id": "P0000010"}
+{"time_us": 48800000, "type": "move_end", "elevator": "E2", "floor": 3}
+{"time_us": 48800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 48800000, "end_us": 50800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 49993156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 50043055, "type": "move_end", "elevator": "E1", "floor": 5}
+{"time_us": 50043055, "type": "open_start", "elevator": "E1", "stop": {"floor": 5, "pickup_ids": ["P0000007"], "dropoff_ids": ["P0000001"]}}
+{"time_us": 50793156, "type": "board", "elevator": "E4", "passenger_id": "P0000008"}
+{"time_us": 50800000, "type": "move_end", "elevator": "E2", "floor": 4}
+{"time_us": 50800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 4, "to_floor": 5, "start_us": 50800000, "end_us": 52800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 51593156, "type": "board", "elevator": "E4", "passenger_id": "P0000009"}
+{"time_us": 52043055, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 52800000, "type": "move_end", "elevator": "E2", "floor": 5}
+{"time_us": 52800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 52800000, "end_us": 54800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 52843055, "type": "alight", "elevator": "E1", "passenger_id": "P0000001"}
+{"time_us": 53593156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 53593156, "end_us": 55593156, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 53643055, "type": "board", "elevator": "E1", "passenger_id": "P0000007"}
+{"time_us": 54800000, "type": "move_end", "elevator": "E2", "floor": 6}
+{"time_us": 54800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 54800000, "end_us": 56800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 55593156, "type": "move_end", "elevator": "E4", "floor": 2}
+{"time_us": 55593156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 55593156, "end_us": 57593156, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 55643055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 55643055, "end_us": 57643055, "purpose": "SERVICE", "generation": 6}}
+{"time_us": 56800000, "type": "move_end", "elevator": "E2", "floor": 7}
+{"time_us": 56800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 7, "to_floor": 8, "start_us": 56800000, "end_us": 58800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 57593156, "type": "move_end", "elevator": "E4", "floor": 3}
+{"time_us": 57593156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 57593156, "end_us": 59593156, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 57643055, "type": "move_end", "elevator": "E1", "floor": 6}
+{"time_us": 57643055, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 57643055, "end_us": 59643055, "purpose": "SERVICE", "generation": 6}}
+{"time_us": 58800000, "type": "move_end", "elevator": "E2", "floor": 8}
+{"time_us": 58800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 8, "to_floor": 9, "start_us": 58800000, "end_us": 60800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 59593156, "type": "move_end", "elevator": "E4", "floor": 4}
+{"time_us": 59593156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 4, "to_floor": 5, "start_us": 59593156, "end_us": 61593156, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 59643055, "type": "move_end", "elevator": "E1", "floor": 7}
+{"time_us": 59643055, "type": "open_start", "elevator": "E1", "stop": {"floor": 7, "pickup_ids": [], "dropoff_ids": ["P0000007"]}}
+{"time_us": 60792765, "type": "arrival", "passenger_id": "P0000011"}
+{"time_us": 60792765, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 7, "to_floor": 8, "start_us": 60792765, "end_us": 62792765, "purpose": "SERVICE", "generation": 6}}
+{"time_us": 60800000, "type": "move_end", "elevator": "E2", "floor": 9}
+{"time_us": 60800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 9, "to_floor": 10, "start_us": 60800000, "end_us": 62800000, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 61593156, "type": "move_end", "elevator": "E4", "floor": 5}
+{"time_us": 61593156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 61593156, "end_us": 63593156, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 61643055, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 62443055, "type": "alight", "elevator": "E1", "passenger_id": "P0000007"}
+{"time_us": 62792765, "type": "move_end", "elevator": "E3", "floor": 8}
+{"time_us": 62792765, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 8, "to_floor": 9, "start_us": 62792765, "end_us": 64792765, "purpose": "SERVICE", "generation": 6}}
+{"time_us": 62800000, "type": "move_end", "elevator": "E2", "floor": 10}
+{"time_us": 62800000, "type": "open_start", "elevator": "E2", "stop": {"floor": 10, "pickup_ids": ["P0000010"], "dropoff_ids": []}}
+{"time_us": 63593156, "type": "move_end", "elevator": "E4", "floor": 6}
+{"time_us": 63593156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 63593156, "end_us": 65593156, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 64792765, "type": "move_end", "elevator": "E3", "floor": 9}
+{"time_us": 64792765, "type": "open_start", "elevator": "E3", "stop": {"floor": 9, "pickup_ids": ["P0000011"], "dropoff_ids": []}}
+{"time_us": 64800000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 65593156, "type": "move_end", "elevator": "E4", "floor": 7}
+{"time_us": 65593156, "type": "open_start", "elevator": "E4", "stop": {"floor": 7, "pickup_ids": [], "dropoff_ids": ["P0000008", "P0000006"]}}
+{"time_us": 65600000, "type": "board", "elevator": "E2", "passenger_id": "P0000010"}
+{"time_us": 66792765, "type": "open", "elevator": "E3", "passenger_id": null}
+{"time_us": 67592765, "type": "board", "elevator": "E3", "passenger_id": "P0000011"}
+{"time_us": 67593156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 67600000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 10, "to_floor": 11, "start_us": 67600000, "end_us": 69600000, "purpose": "SERVICE", "generation": 12}}
+{"time_us": 67737880, "type": "arrival", "passenger_id": "P0000012"}
+{"time_us": 68393156, "type": "alight", "elevator": "E4", "passenger_id": "P0000008"}
+{"time_us": 69193156, "type": "alight", "elevator": "E4", "passenger_id": "P0000006"}
+{"time_us": 69592765, "type": "move_start", "elevator": "E3", "segment": {"from_floor": 9, "to_floor": 10, "start_us": 69592765, "end_us": 71592765, "purpose": "SERVICE", "generation": 8}}
+{"time_us": 69600000, "type": "move_end", "elevator": "E2", "floor": 11}
+{"time_us": 69600000, "type": "open_start", "elevator": "E2", "stop": {"floor": 11, "pickup_ids": [], "dropoff_ids": ["P0000005"]}}
+{"time_us": 70548997, "type": "arrival", "passenger_id": "P0000013"}
+{"time_us": 71193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 7, "to_floor": 6, "start_us": 71193156, "end_us": 73193156, "purpose": "SERVICE", "generation": 16}}
+{"time_us": 71592765, "type": "move_end", "elevator": "E3", "floor": 10}
+{"time_us": 71592765, "type": "open_start", "elevator": "E3", "stop": {"floor": 10, "pickup_ids": [], "dropoff_ids": ["P0000011"]}}
+{"time_us": 71600000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 72400000, "type": "alight", "elevator": "E2", "passenger_id": "P0000005"}
+{"time_us": 73193156, "type": "move_end", "elevator": "E4", "floor": 6}
+{"time_us": 73193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 6, "to_floor": 5, "start_us": 73193156, "end_us": 75193156, "purpose": "SERVICE", "generation": 16}}
+{"time_us": 73592765, "type": "open", "elevator": "E3", "passenger_id": null}
+{"time_us": 74127750, "type": "arrival", "passenger_id": "P0000014"}
+{"time_us": 74127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 7, "to_floor": 6, "start_us": 74127750, "end_us": 76127750, "purpose": "SERVICE", "generation": 9}}
+{"time_us": 74261848, "type": "arrival", "passenger_id": "P0000015"}
+{"time_us": 74392765, "type": "alight", "elevator": "E3", "passenger_id": "P0000011"}
+{"time_us": 74400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 11, "to_floor": 10, "start_us": 74400000, "end_us": 76400000, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 75193156, "type": "move_end", "elevator": "E4", "floor": 5}
+{"time_us": 75193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 5, "to_floor": 4, "start_us": 75193156, "end_us": 77193156, "purpose": "SERVICE", "generation": 16}}
+{"time_us": 76127750, "type": "move_end", "elevator": "E1", "floor": 6}
+{"time_us": 76127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 6, "to_floor": 5, "start_us": 76127750, "end_us": 78127750, "purpose": "SERVICE", "generation": 10}}
+{"time_us": 76283202, "type": "arrival", "passenger_id": "P0000016"}
+{"time_us": 76400000, "type": "move_end", "elevator": "E2", "floor": 10}
+{"time_us": 76400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 10, "to_floor": 9, "start_us": 76400000, "end_us": 78400000, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 77193156, "type": "move_end", "elevator": "E4", "floor": 4}
+{"time_us": 77193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 4, "to_floor": 3, "start_us": 77193156, "end_us": 79193156, "purpose": "SERVICE", "generation": 16}}
+{"time_us": 78127750, "type": "move_end", "elevator": "E1", "floor": 5}
+{"time_us": 78127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 5, "to_floor": 4, "start_us": 78127750, "end_us": 80127750, "purpose": "SERVICE", "generation": 11}}
+{"time_us": 78400000, "type": "move_end", "elevator": "E2", "floor": 9}
+{"time_us": 78400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 9, "to_floor": 8, "start_us": 78400000, "end_us": 80400000, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 79193156, "type": "move_end", "elevator": "E4", "floor": 3}
+{"time_us": 79193156, "type": "open_start", "elevator": "E4", "stop": {"floor": 3, "pickup_ids": ["P0000013"], "dropoff_ids": []}}
+{"time_us": 80127750, "type": "move_end", "elevator": "E1", "floor": 4}
+{"time_us": 80127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 4, "to_floor": 3, "start_us": 80127750, "end_us": 82127750, "purpose": "SERVICE", "generation": 11}}
+{"time_us": 80400000, "type": "move_end", "elevator": "E2", "floor": 8}
+{"time_us": 80400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 8, "to_floor": 7, "start_us": 80400000, "end_us": 82400000, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 80935825, "type": "arrival", "passenger_id": "P0000017"}
+{"time_us": 81193156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 81993156, "type": "board", "elevator": "E4", "passenger_id": "P0000013"}
+{"time_us": 82127750, "type": "move_end", "elevator": "E1", "floor": 3}
+{"time_us": 82127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 3, "to_floor": 2, "start_us": 82127750, "end_us": 84127750, "purpose": "SERVICE", "generation": 11}}
+{"time_us": 82400000, "type": "move_end", "elevator": "E2", "floor": 7}
+{"time_us": 82400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 7, "to_floor": 6, "start_us": 82400000, "end_us": 84400000, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 83745099, "type": "arrival", "passenger_id": "P0000018"}
+{"time_us": 83993156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 3, "to_floor": 2, "start_us": 83993156, "end_us": 85993156, "purpose": "SERVICE", "generation": 19}}
+{"time_us": 84127750, "type": "move_end", "elevator": "E1", "floor": 2}
+{"time_us": 84127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 2, "to_floor": 1, "start_us": 84127750, "end_us": 86127750, "purpose": "SERVICE", "generation": 11}}
+{"time_us": 84400000, "type": "move_end", "elevator": "E2", "floor": 6}
+{"time_us": 84400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 84400000, "end_us": 86400000, "purpose": "SERVICE", "generation": 15}}
+{"time_us": 85993156, "type": "move_end", "elevator": "E4", "floor": 2}
+{"time_us": 85993156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 2, "to_floor": 1, "start_us": 85993156, "end_us": 87993156, "purpose": "SERVICE", "generation": 19}}
+{"time_us": 86127750, "type": "move_end", "elevator": "E1", "floor": 1}
+{"time_us": 86127750, "type": "open_start", "elevator": "E1", "stop": {"floor": 1, "pickup_ids": ["P0000014", "P0000015", "P0000016"], "dropoff_ids": []}}
+{"time_us": 86400000, "type": "move_end", "elevator": "E2", "floor": 7}
+{"time_us": 86400000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 7, "to_floor": 8, "start_us": 86400000, "end_us": 88400000, "purpose": "SERVICE", "generation": 15}}
+{"time_us": 87193329, "type": "arrival", "passenger_id": "P0000019"}
+{"time_us": 87993156, "type": "move_end", "elevator": "E4", "floor": 1}
+{"time_us": 87993156, "type": "open_start", "elevator": "E4", "stop": {"floor": 1, "pickup_ids": ["P0000012", "P0000017"], "dropoff_ids": []}}
+{"time_us": 88127750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 88400000, "type": "move_end", "elevator": "E2", "floor": 8}
+{"time_us": 88400000, "type": "open_start", "elevator": "E2", "stop": {"floor": 8, "pickup_ids": ["P0000018"], "dropoff_ids": []}}
+{"time_us": 88927750, "type": "board", "elevator": "E1", "passenger_id": "P0000014"}
+{"time_us": 89727750, "type": "board", "elevator": "E1", "passenger_id": "P0000015"}
+{"time_us": 89993156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 90400000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 90527750, "type": "board", "elevator": "E1", "passenger_id": "P0000016"}
+{"time_us": 90793156, "type": "board", "elevator": "E4", "passenger_id": "P0000012"}
+{"time_us": 91200000, "type": "board", "elevator": "E2", "passenger_id": "P0000018"}
+{"time_us": 91593156, "type": "board", "elevator": "E4", "passenger_id": "P0000017"}
+{"time_us": 91784552, "type": "arrival", "passenger_id": "P0000020"}
+{"time_us": 92527750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 92527750, "end_us": 94527750, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 93200000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 8, "to_floor": 9, "start_us": 93200000, "end_us": 95200000, "purpose": "SERVICE", "generation": 17}}
+{"time_us": 93593156, "type": "open_start", "elevator": "E4", "stop": {"floor": 1, "pickup_ids": ["P0000020"], "dropoff_ids": []}}
+{"time_us": 94527750, "type": "move_end", "elevator": "E1", "floor": 2}
+{"time_us": 94527750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 94527750, "end_us": 96527750, "purpose": "SERVICE", "generation": 14}}
+{"time_us": 95200000, "type": "move_end", "elevator": "E2", "floor": 9}
+{"time_us": 95200000, "type": "open_start", "elevator": "E2", "stop": {"floor": 9, "pickup_ids": [], "dropoff_ids": ["P0000018"]}}
+{"time_us": 95593156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 96134154, "type": "arrival", "passenger_id": "P0000021"}
+{"time_us": 96393156, "type": "board", "elevator": "E4", "passenger_id": "P0000020"}
+{"time_us": 96527750, "type": "move_end", "elevator": "E1", "floor": 3}
+{"time_us": 96527750, "type": "open_start", "elevator": "E1", "stop": {"floor": 3, "pickup_ids": ["P0000019"], "dropoff_ids": []}}
+{"time_us": 97200000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 98000000, "type": "alight", "elevator": "E2", "passenger_id": "P0000018"}
+{"time_us": 98393156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 98393156, "end_us": 100393156, "purpose": "SERVICE", "generation": 24}}
+{"time_us": 98527750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 99327750, "type": "board", "elevator": "E1", "passenger_id": "P0000019"}
+{"time_us": 100000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 9, "to_floor": 10, "start_us": 100000000, "end_us": 102000000, "purpose": "SERVICE", "generation": 20}}
+{"time_us": 100393156, "type": "move_end", "elevator": "E4", "floor": 2}
+{"time_us": 100393156, "type": "open_start", "elevator": "E4", "stop": {"floor": 2, "pickup_ids": [], "dropoff_ids": ["P0000012"]}}
+{"time_us": 101327750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 101327750, "end_us": 103327750, "purpose": "SERVICE", "generation": 16}}
+{"time_us": 102000000, "type": "move_end", "elevator": "E2", "floor": 10}
+{"time_us": 102000000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 10, "to_floor": 11, "start_us": 102000000, "end_us": 104000000, "purpose": "SERVICE", "generation": 20}}
+{"time_us": 102393156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 103193156, "type": "alight", "elevator": "E4", "passenger_id": "P0000012"}
+{"time_us": 103327750, "type": "move_end", "elevator": "E1", "floor": 4}
+{"time_us": 103327750, "type": "open_start", "elevator": "E1", "stop": {"floor": 4, "pickup_ids": [], "dropoff_ids": ["P0000019", "P0000014"]}}
+{"time_us": 103491019, "type": "arrival", "passenger_id": "P0000022"}
+{"time_us": 104000000, "type": "move_end", "elevator": "E2", "floor": 11}
+{"time_us": 104000000, "type": "open_start", "elevator": "E2", "stop": {"floor": 11, "pickup_ids": ["P0000021"], "dropoff_ids": []}}
+{"time_us": 105193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 105193156, "end_us": 107193156, "purpose": "SERVICE", "generation": 26}}
+{"time_us": 105327750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 105535323, "type": "arrival", "passenger_id": "P0000023"}
+{"time_us": 106000000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 106127750, "type": "alight", "elevator": "E1", "passenger_id": "P0000019"}
+{"time_us": 106800000, "type": "board", "elevator": "E2", "passenger_id": "P0000021"}
+{"time_us": 106927750, "type": "alight", "elevator": "E1", "passenger_id": "P0000014"}
+{"time_us": 107193156, "type": "move_end", "elevator": "E4", "floor": 3}
+{"time_us": 107193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 107193156, "end_us": 109193156, "purpose": "SERVICE", "generation": 26}}
+{"time_us": 108800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 11, "to_floor": 10, "start_us": 108800000, "end_us": 110800000, "purpose": "SERVICE", "generation": 22}}
+{"time_us": 108927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 4, "to_floor": 3, "start_us": 108927750, "end_us": 110927750, "purpose": "SERVICE", "generation": 20}}
+{"time_us": 109193156, "type": "move_end", "elevator": "E4", "floor": 4}
+{"time_us": 109193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 4, "to_floor": 5, "start_us": 109193156, "end_us": 111193156, "purpose": "SERVICE", "generation": 26}}
+{"time_us": 110800000, "type": "move_end", "elevator": "E2", "floor": 10}
+{"time_us": 110800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 10, "to_floor": 9, "start_us": 110800000, "end_us": 112800000, "purpose": "SERVICE", "generation": 22}}
+{"time_us": 110927750, "type": "move_end", "elevator": "E1", "floor": 3}
+{"time_us": 110927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 3, "to_floor": 2, "start_us": 110927750, "end_us": 112927750, "purpose": "SERVICE", "generation": 20}}
+{"time_us": 111193156, "type": "move_end", "elevator": "E4", "floor": 5}
+{"time_us": 111193156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 111193156, "end_us": 113193156, "purpose": "SERVICE", "generation": 26}}
+{"time_us": 112800000, "type": "move_end", "elevator": "E2", "floor": 9}
+{"time_us": 112800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 9, "to_floor": 8, "start_us": 112800000, "end_us": 114800000, "purpose": "SERVICE", "generation": 22}}
+{"time_us": 112927750, "type": "move_end", "elevator": "E1", "floor": 2}
+{"time_us": 112927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 2, "to_floor": 1, "start_us": 112927750, "end_us": 114927750, "purpose": "SERVICE", "generation": 20}}
+{"time_us": 113193156, "type": "move_end", "elevator": "E4", "floor": 6}
+{"time_us": 113193156, "type": "open_start", "elevator": "E4", "stop": {"floor": 6, "pickup_ids": [], "dropoff_ids": ["P0000017"]}}
+{"time_us": 114079980, "type": "arrival", "passenger_id": "P0000024"}
+{"time_us": 114800000, "type": "move_end", "elevator": "E2", "floor": 8}
+{"time_us": 114800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 8, "to_floor": 7, "start_us": 114800000, "end_us": 116800000, "purpose": "SERVICE", "generation": 22}}
+{"time_us": 114927750, "type": "move_end", "elevator": "E1", "floor": 1}
+{"time_us": 114927750, "type": "open_start", "elevator": "E1", "stop": {"floor": 1, "pickup_ids": ["P0000022", "P0000023", "P0000024"], "dropoff_ids": []}}
+{"time_us": 115193156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 115993156, "type": "alight", "elevator": "E4", "passenger_id": "P0000017"}
+{"time_us": 116800000, "type": "move_end", "elevator": "E2", "floor": 7}
+{"time_us": 116800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 7, "to_floor": 6, "start_us": 116800000, "end_us": 118800000, "purpose": "SERVICE", "generation": 22}}
+{"time_us": 116927750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 117727750, "type": "board", "elevator": "E1", "passenger_id": "P0000022"}
+{"time_us": 117959795, "type": "arrival", "passenger_id": "P0000025"}
+{"time_us": 117993156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 117993156, "end_us": 119993156, "purpose": "SERVICE", "generation": 28}}
+{"time_us": 118527750, "type": "board", "elevator": "E1", "passenger_id": "P0000023"}
+{"time_us": 118800000, "type": "move_end", "elevator": "E2", "floor": 6}
+{"time_us": 118800000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 6, "to_floor": 5, "start_us": 118800000, "end_us": 120800000, "purpose": "SERVICE", "generation": 22}}
+{"time_us": 119073742, "type": "arrival", "passenger_id": "P0000026"}
+{"time_us": 119327750, "type": "board", "elevator": "E1", "passenger_id": "P0000024"}
+{"time_us": 119993156, "type": "move_end", "elevator": "E4", "floor": 7}
+{"time_us": 119993156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 7, "to_floor": 8, "start_us": 119993156, "end_us": 121993156, "purpose": "SERVICE", "generation": 28}}
+{"time_us": 120800000, "type": "move_end", "elevator": "E2", "floor": 5}
+{"time_us": 120800000, "type": "open_start", "elevator": "E2", "stop": {"floor": 5, "pickup_ids": [], "dropoff_ids": ["P0000021"]}}
+{"time_us": 121327750, "type": "open_start", "elevator": "E1", "stop": {"floor": 1, "pickup_ids": ["P0000025", "P0000026"], "dropoff_ids": []}}
+{"time_us": 121993156, "type": "move_end", "elevator": "E4", "floor": 8}
+{"time_us": 121993156, "type": "open_start", "elevator": "E4", "stop": {"floor": 8, "pickup_ids": [], "dropoff_ids": ["P0000013"]}}
+{"time_us": 122800000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 123327750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 123600000, "type": "alight", "elevator": "E2", "passenger_id": "P0000021"}
+{"time_us": 123993156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 124127750, "type": "board", "elevator": "E1", "passenger_id": "P0000025"}
+{"time_us": 124793156, "type": "alight", "elevator": "E4", "passenger_id": "P0000013"}
+{"time_us": 124927750, "type": "board", "elevator": "E1", "passenger_id": "P0000026"}
+{"time_us": 125600000, "type": "move_start", "elevator": "E2", "segment": {"from_floor": 5, "to_floor": 4, "start_us": 125600000, "end_us": 127600000, "purpose": "SERVICE", "generation": 24}}
+{"time_us": 126793156, "type": "move_start", "elevator": "E4", "segment": {"from_floor": 8, "to_floor": 9, "start_us": 126793156, "end_us": 128793156, "purpose": "SERVICE", "generation": 30}}
+{"time_us": 126927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 1, "to_floor": 2, "start_us": 126927750, "end_us": 128927750, "purpose": "SERVICE", "generation": 27}}
+{"time_us": 127600000, "type": "move_end", "elevator": "E2", "floor": 4}
+{"time_us": 127600000, "type": "open_start", "elevator": "E2", "stop": {"floor": 4, "pickup_ids": [], "dropoff_ids": ["P0000010"]}}
+{"time_us": 128793156, "type": "move_end", "elevator": "E4", "floor": 9}
+{"time_us": 128793156, "type": "open_start", "elevator": "E4", "stop": {"floor": 9, "pickup_ids": [], "dropoff_ids": ["P0000020", "P0000009"]}}
+{"time_us": 128927750, "type": "move_end", "elevator": "E1", "floor": 2}
+{"time_us": 128927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 2, "to_floor": 3, "start_us": 128927750, "end_us": 130927750, "purpose": "SERVICE", "generation": 27}}
+{"time_us": 129600000, "type": "open", "elevator": "E2", "passenger_id": null}
+{"time_us": 130400000, "type": "alight", "elevator": "E2", "passenger_id": "P0000010"}
+{"time_us": 130793156, "type": "open", "elevator": "E4", "passenger_id": null}
+{"time_us": 130927750, "type": "move_end", "elevator": "E1", "floor": 3}
+{"time_us": 130927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 3, "to_floor": 4, "start_us": 130927750, "end_us": 132927750, "purpose": "SERVICE", "generation": 27}}
+{"time_us": 131593156, "type": "alight", "elevator": "E4", "passenger_id": "P0000020"}
+{"time_us": 132393156, "type": "alight", "elevator": "E4", "passenger_id": "P0000009"}
+{"time_us": 132927750, "type": "move_end", "elevator": "E1", "floor": 4}
+{"time_us": 132927750, "type": "open_start", "elevator": "E1", "stop": {"floor": 4, "pickup_ids": [], "dropoff_ids": ["P0000025", "P0000022"]}}
+{"time_us": 134927750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 135727750, "type": "alight", "elevator": "E1", "passenger_id": "P0000025"}
+{"time_us": 136527750, "type": "alight", "elevator": "E1", "passenger_id": "P0000022"}
+{"time_us": 138527750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 4, "to_floor": 5, "start_us": 138527750, "end_us": 140527750, "purpose": "SERVICE", "generation": 29}}
+{"time_us": 140527750, "type": "move_end", "elevator": "E1", "floor": 5}
+{"time_us": 140527750, "type": "open_start", "elevator": "E1", "stop": {"floor": 5, "pickup_ids": [], "dropoff_ids": ["P0000016", "P0000015"]}}
+{"time_us": 142527750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 143327750, "type": "alight", "elevator": "E1", "passenger_id": "P0000016"}
+{"time_us": 144127750, "type": "alight", "elevator": "E1", "passenger_id": "P0000015"}
+{"time_us": 146127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 5, "to_floor": 6, "start_us": 146127750, "end_us": 148127750, "purpose": "SERVICE", "generation": 31}}
+{"time_us": 148127750, "type": "move_end", "elevator": "E1", "floor": 6}
+{"time_us": 148127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 6, "to_floor": 7, "start_us": 148127750, "end_us": 150127750, "purpose": "SERVICE", "generation": 31}}
+{"time_us": 150127750, "type": "move_end", "elevator": "E1", "floor": 7}
+{"time_us": 150127750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 7, "to_floor": 8, "start_us": 150127750, "end_us": 152127750, "purpose": "SERVICE", "generation": 31}}
+{"time_us": 152127750, "type": "move_end", "elevator": "E1", "floor": 8}
+{"time_us": 152127750, "type": "open_start", "elevator": "E1", "stop": {"floor": 8, "pickup_ids": [], "dropoff_ids": ["P0000023"]}}
+{"time_us": 154127750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 154927750, "type": "alight", "elevator": "E1", "passenger_id": "P0000023"}
+{"time_us": 156927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 8, "to_floor": 9, "start_us": 156927750, "end_us": 158927750, "purpose": "SERVICE", "generation": 33}}
+{"time_us": 158927750, "type": "move_end", "elevator": "E1", "floor": 9}
+{"time_us": 158927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 9, "to_floor": 10, "start_us": 158927750, "end_us": 160927750, "purpose": "SERVICE", "generation": 33}}
+{"time_us": 160927750, "type": "move_end", "elevator": "E1", "floor": 10}
+{"time_us": 160927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 10, "to_floor": 11, "start_us": 160927750, "end_us": 162927750, "purpose": "SERVICE", "generation": 33}}
+{"time_us": 162927750, "type": "move_end", "elevator": "E1", "floor": 11}
+{"time_us": 162927750, "type": "move_start", "elevator": "E1", "segment": {"from_floor": 11, "to_floor": 12, "start_us": 162927750, "end_us": 164927750, "purpose": "SERVICE", "generation": 33}}
+{"time_us": 164927750, "type": "move_end", "elevator": "E1", "floor": 12}
+{"time_us": 164927750, "type": "open_start", "elevator": "E1", "stop": {"floor": 12, "pickup_ids": [], "dropoff_ids": ["P0000026", "P0000024"]}}
+{"time_us": 166927750, "type": "open", "elevator": "E1", "passenger_id": null}
+{"time_us": 167727750, "type": "alight", "elevator": "E1", "passenger_id": "P0000026"}
+{"time_us": 168527750, "type": "alight", "elevator": "E1", "passenger_id": "P0000024"}

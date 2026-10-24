@@ -86,13 +86,16 @@ def passenger_rows(sim: Simulator) -> list[dict]:
 
 def archive(
     sim: Simulator,
-    root: str | Path = "artifacts/runs",
+    root: str | Path | None = None,
     *,
     run_id: str | None = None,
     controller_name: str | None = None,
     model_hash: str | None = None,
     controller_version: str | None = None,
 ) -> Path:
+    from elevator_control.storage.paths import artifact_root
+
+    root = root if root is not None else artifact_root() / "runs"
     path = Path(root) / (run_id or ("run-" + uuid.uuid4().hex[:12]))
     path.mkdir(parents=True, exist_ok=True)
     config = sim.config.model_dump(mode="json")

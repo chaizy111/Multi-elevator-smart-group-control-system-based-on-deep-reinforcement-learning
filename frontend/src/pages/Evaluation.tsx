@@ -26,7 +26,8 @@ export function Evaluation({
   onRun: (id: string) => void;
 }) {
   const [modelId, setModelId] = useState(
-    models.find((m) => m.model_id === "ppo-curriculum")?.model_id ??
+    models.find((m) => m.model_id === "ppo-consequences-s801-n200000")
+      ?.model_id ??
       models[0]?.model_id ??
       "",
   );

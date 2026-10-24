@@ -28,6 +28,7 @@ from elevator_control.config.schema import (
 )
 from elevator_control.domain.models import us
 from elevator_control.storage.artifacts import atomic_json
+from elevator_control.storage.paths import artifact_root as runtime_root
 from elevator_control.traffic.trace import Record, TrafficTrace, generate
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
@@ -91,9 +92,7 @@ def trace_signature(cfg: SimulationConfig) -> str:
 def create_app(
     artifact_root: str | Path | None = None, *, max_workers: int | None = None
 ) -> FastAPI:
-    root = Path(
-        artifact_root or os.environ.get("ELEVATOR_ARTIFACTS", str(PROJECT_ROOT / "artifacts"))
-    ).resolve()
+    root = Path(artifact_root or runtime_root()).resolve()
     if not root.is_relative_to(PROJECT_ROOT):
         raise ValueError("artifacts must remain within project directory")
 

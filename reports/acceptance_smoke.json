@@ -4,7 +4,7 @@
     {
       "controller": "round_robin",
       "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
-      "run_id": "run-6a8b6175e276",
+      "run_id": "run-a3d8fd7131da",
       "metrics": {
         "sample_count": 8,
         "picked_count": 8,
@@ -87,7 +87,7 @@
     {
       "controller": "eta",
       "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
-      "run_id": "run-9978c3e3d8d3",
+      "run_id": "run-d67f3f20c96f",
       "metrics": {
         "sample_count": 8,
         "picked_count": 8,
@@ -170,7 +170,7 @@
     {
       "controller": "eta_zone",
       "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
-      "run_id": "run-4448ef0a32fe",
+      "run_id": "run-97eaf5f82e6b",
       "metrics": {
         "sample_count": 8,
         "picked_count": 8,
@@ -253,36 +253,36 @@
     {
       "controller": "ppo",
       "trace_hash": "e667cde8c67c725029ea47dcb9568516d467f2998778c80e007ce64f17172049",
-      "run_id": "run-d55d846ad8b8",
+      "run_id": "run-3ad9a60d41b4",
       "metrics": {
         "sample_count": 8,
         "picked_count": 8,
         "completed_count": 8,
         "unpicked": 0,
         "unfinished": 0,
-        "mean_wait_s": 7.316642249999999,
-        "p95_wait_s": 9.66135465,
-        "max_wait_s": 9.71018,
-        "mean_travel_s": 9.9,
-        "mean_system_time_s": 17.21664225,
+        "mean_wait_s": 6.8836636250000005,
+        "p95_wait_s": 12.49890245,
+        "max_wait_s": 13.6,
+        "mean_travel_s": 9.7,
+        "mean_system_time_s": 16.583663625,
         "long_wait_ratio": 0.0,
-        "throughput_per_min": 2.0,
+        "throughput_per_min": 2.5,
         "completion_ratio": 1.0,
         "conditional_wait": false,
-        "censored_mean_wait_lower_bound_s": 7.316642249999999,
+        "censored_mean_wait_lower_bound_s": 6.8836636250000005,
         "long_wait_cohort_lower_bound": 0.0,
         "long_wait_unknown_count": 0,
         "eligible_for_ranking": true,
         "floor_fairness": {
           "1": {
             "count": 1,
-            "mean_wait_s": 6.8,
-            "p95_wait_s": 6.8
+            "mean_wait_s": 10.454007,
+            "p95_wait_s": 10.454007
           },
           "2": {
             "count": 4,
-            "mean_wait_s": 7.3332844999999995,
-            "p95_wait_s": 9.68925485
+            "mean_wait_s": 4.353825499999999,
+            "p95_wait_s": 4.8
           },
           "3": {
             "count": 0,
@@ -291,8 +291,8 @@
           },
           "4": {
             "count": 3,
-            "mean_wait_s": 7.466666666666668,
-            "p95_wait_s": 8.8
+            "mean_wait_s": 9.066666666666666,
+            "p95_wait_s": 13.12
           },
           "5": {
             "count": 0,
@@ -300,35 +300,35 @@
             "p95_wait_s": null
           }
         },
-        "worst_floor_mean_wait_s": 7.466666666666668,
+        "worst_floor_mean_wait_s": 10.454007,
         "distance_floors": 23.0,
         "distance_m": 69.0,
-        "reposition_distance_floors": 0.0,
-        "empty_distance_floors": 10.999999999999998,
+        "reposition_distance_floors": 2.0,
+        "empty_distance_floors": 11.0,
         "loaded_distance_floors": 12.000000000000002,
-        "energy_proxy": 30.799999999999997,
+        "energy_proxy": 30.89999999999999,
         "door_cycles": 14,
-        "starts": 14,
-        "drain_time_s": 19.922206,
+        "starts": 15,
+        "drain_time_s": 16.322206,
         "drain_timeout": false,
         "costs": {
-          "wait": 58.533138,
-          "ride": 79.20000000000003,
-          "energy": 30.799999999999997,
+          "wait": 55.069309000000004,
+          "ride": 77.60000000000002,
+          "energy": 30.89999999999999,
           "fairness": 0.0
         },
         "utilization": {
           "E1": {
-            "busy": 0.5145716470479318,
-            "service": 0.5145716470479318,
+            "busy": 0.5428315912082584,
+            "service": 0.5428315912082584,
             "reposition": 0.0,
-            "door": 0.28587313724885105
+            "door": 0.32276472990761323
           },
           "E2": {
-            "busy": 0.30588425685627063,
-            "service": 0.30588425685627063,
-            "reposition": 0.0,
-            "door": 0.20582865881917273
+            "busy": 0.2992909313688777,
+            "service": 0.2699486831954583,
+            "reposition": 0.029342248173419377,
+            "door": 0.18192193867520018
           }
         }
       }

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "run_id": "run-d59eeff5c2f74688",
+  "status": "COMPLETED",
+  "simulator_version": "event-v3-arrival-cooldown",
+  "route_version": "insertion-16-v1",
+  "metrics_version": "cohort-v2-all-floors",
+  "config_hash": "6c06ad90dfccf4a7648ade589e73990686d3eaa1e01d8d6c472b41f4c56b48de",
+  "trace_hash": "0d01c39e7d1fccf06a9a0f0597fac3e14a09afc68947d2b616cdcfa6ccc864a7",
+  "generator_version": "poisson-od-v2-quantized-window",
+  "scenario_hash": "c694188119ae7cb81cc8df66599948e7060a4bb6168412a4defff4ff2b9451de",
+  "controller": "ppo",
+  "model_hash": "20d535bf28256426600e9898933fef997917248a37f5a8e820b42a95c2620ecf",
+  "controller_version": null,
+  "python": "3.11.17",
+  "termination_reason": "completed"
+}

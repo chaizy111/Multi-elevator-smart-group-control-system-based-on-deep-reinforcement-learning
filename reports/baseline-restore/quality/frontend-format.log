@@ -1,6 +1,0 @@
-
-> elevator-control-web@0.1.0 format:check
-> prettier --check "src/**/*.{ts,tsx,css}" "tests/**/*.ts" *.config.ts
-
-Checking formatting...
-All matched files use Prettier code style!

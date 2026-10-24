@@ -237,7 +237,7 @@ export function Configuration({
                 <option value="round_robin">Round Robin · 轮转</option>
                 <option value="eta">ETA · 最早接人</option>
                 <option value="eta_zone">ETA-Zone · 热度重定位</option>
-                <option value="ppo">PPO · 双任务强化学习</option>
+                <option value="ppo">PPO · 后果输入双任务强化学习</option>
               </select>
             </label>
             <label>

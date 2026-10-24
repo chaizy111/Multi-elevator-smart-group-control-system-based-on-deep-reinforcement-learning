@@ -26,11 +26,6 @@ jobs:
         run: |
           source scripts/project_env.sh
           node frontend/node_modules/playwright/cli.js install --with-deps chromium
-      - name: Train bounded CPU curriculum for real E2E fixtures
-        run: |
-          source scripts/project_env.sh
-          uv run elevator train --config configs/training/smoke.yaml --output artifacts/training/smoke
-          uv run python scripts/run_curriculum.py
       - name: Check physics, learning, API, types, builds and browser
         run: |
           source scripts/project_env.sh

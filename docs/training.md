@@ -1,24 +1,22 @@
 # 训练、模型与续训
 
-从项目根运行，先 `conda activate elevator` 和 `source scripts/project_env.sh`。隔离安装用户也可用 `uv run elevator` 替代 `python -m elevator_control.cli`。
+当前提交默认使用已经训练好的801模型，启动只复制和验证载荷，不执行训练。先在项目根激活elevator环境并执行`source scripts/project_env.sh`。复现本轮20万决策微调时使用新的输出目录与注册ID：
 
 ```bash
-python -m elevator_control.cli train --config configs/training/smoke.yaml --output artifacts/training/smoke
-python -m elevator_control.cli model register --checkpoint artifacts/training/smoke/checkpoints/best.pt --model-id ppo-smoke
-python scripts/run_curriculum.py
-python scripts/prepare_formal.py
-python scripts/run_formal_training.py --workers 3
+.venv/bin/python -m elevator_control.cli train --config configs/training/submission.yaml --initialize assets/release/curriculum-initializer.pt --migrate-candidate-inputs --output artifacts/submission/training/replay-801
+.venv/bin/python -m elevator_control.cli model register --checkpoint artifacts/submission/training/replay-801/checkpoints/best.pt --model-id ppo-replay-801
 ```
 
-T0一万决策用于真实双头工程验证；T1两万、T2四万、T3六万为本次有界CPU课程。正式3个独立seed和3个单因素消融各六万，不把这些记录称作20万/80万/200万建议预算的收敛验证。`configs/training/full.yaml`提供200万预算，启动是显式动作，demo不会隐式开始训练。
+初始化检查点为原课程T3获选模型；显式迁移将新增输入列补零，再用真实PPO更新学习。默认关闭迁移，语义不匹配仍会拒绝。配置包含4并行环境、每环境128步、minibatch256、4epoch、共享网络及135组开发验证。完整服务、P95和距离约束先决定可行性，再按等待选检查点。随包801训练预算200000、获选143360步，两者不同。
 
-`best.pt`按固定验证完整服务后成本/P95选择，可能早于最终预算；`last.pt`是最后保存边界。报告同时记录实际训练预算与选中checkpoint步数，避免混淆。
+`best.pt`是验证获选检查点；`last.pt`是最后保存边界。恢复已开始的新训练使用：
 
 ```bash
-python -m elevator_control.cli train --resume artifacts/training/t3/checkpoints/last.pt
-python -m elevator_control.cli train --config configs/training/full.yaml --output artifacts/training/full --initialize artifacts/training/t3/checkpoints/best.pt
+.venv/bin/python -m elevator_control.cli train --resume artifacts/submission/training/replay-801/checkpoints/last.pt
 ```
 
-resume必须同配置/版本，不改奖励或观察冒充同一训练。Ctrl+C在完整update边界保存；恢复时重置仿真episode，属于统计可复现续训，不承诺逐位连续轨迹。跨课程显式initialize并建立新目录。模型只接受受信任本地checkpoint，Web不开放pickle上传。
+resume必须同配置和语义版本，不改奖励或观测冒充同一训练。Ctrl+C在完整update边界保存；恢复时重置仿真episode，属于统计可复现续训，不承诺逐位连续轨迹。跨课程显式initialize并建立新目录。模型只接受受信任本地checkpoint，Web不开放pickle上传。
 
-日志包括两头样本/熵/梯度、loss/KL/clip fraction、原始四项成本、吞吐和截断率。episodes.csv保存每次reset的完整配置、seed和Trace哈希；split_manifest记录训练/验证/测试隔离和held-out建筑。CPU已实测，CUDA/MPS只作为显式设备选项，跨设备逐位一致性不保证。
+日志包含双头样本/熵/梯度、loss/KL/clip fraction、四项原始成本、吞吐与截断率。episodes.csv保存reset配置、seed和Trace哈希；split_manifest记录训练/验证/测试边界。开发验证参与选模，不能当作独立最终测试。
+
+smoke.yaml用于小规模工程验证，full.yaml及原T0—T3/消融配置保留作设计与回归参考；它们不等同于提交模型的训练配置。旧课程编排和完整历史复算工具留在dev，本分支不提供失效的旧命令。CUDA/MPS为显式选项，课堂推理使用CPU；跨设备不保证逐位一致。
